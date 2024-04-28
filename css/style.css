@@ -104,7 +104,7 @@ button {
   background-color: #fff;
   padding: 14px;
   margin: 8px 0 0 0;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
@@ -322,18 +322,7 @@ button {
 }
 
 /* Estilo para cada opción de respuesta */
-#opciones-container div {
-  background-color: #fff;
-  padding: 14px;
-  margin: 8px 0 0 0;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 1px solid rgba(187, 187, 187, 0.164);
-  color: #000;
-  transition: .3s ease;
-}
+
 
 /* Estilo para la opción de respuesta al pasar el cursor */
 #opciones-container div:hover {
@@ -363,6 +352,7 @@ button {
   color: white;
 }
 #pregunta-container {
+  margin-bottom: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
