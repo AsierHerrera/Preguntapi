@@ -1,0 +1,414 @@
+@font-face {
+  font-family: 'fredoka';
+  src: url('../fonts/Fredoka-VariableFont_wdth,wght.ttf');
+}
+
+body {
+  font-family: fredoka, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/Fondo2.jpg');
+  background-size: cover;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(33, 194, 235);
+  border-radius: 5px;
+  justify-content: center;
+  font-size: 3em;
+  text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+}
+
+.texto {
+  max-width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  background-color: white; /* Fondo blanco con 90% de opacidad */
+  margin-top: 2em;
+  border-radius: 5px;
+  justify-content: center;
+  font-size: 1.5em;
+  position: relative;
+}
+
+label[for="select-categoria"],
+label[for="select-dificultad"] {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  background-color: white; /* Fondo blanco con 90% de opacidad */
+  margin-top: 2em;
+  border-radius: 5px;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.Categorias {
+  margin-top: 1.5em;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: grid;
+}
+
+
+
+label {
+  margin-right: 10px;
+}
+
+select,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(33, 194, 235);
+  color: white;
+  cursor: pointer;
+}
+
+#pregunta-container,
+#resultado-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 320px;
+  margin: 0 auto; /* Agrega esta línea para centrar verticalmente */
+}
+
+#resultado-container {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Estilo para el contenedor de opciones */
+#opciones-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para cada opción de respuesta */
+#opciones-container div {
+  background-color: #fff;
+  padding: 14px;
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(187, 187, 187, 0.164);
+  color: #000;
+  transition: .3s ease;
+}
+
+/* Estilo para la opción de respuesta al pasar el cursor */
+#opciones-container div:hover {
+  background-color: rgba(24, 24, 24, 0.13);
+  border: 1px solid #bbb;
+}
+
+/* Estilo para el resultado correcto */
+/* Estilo para la opción de respuesta correcta */
+#opciones-container div.success {
+  background-color: green;
+  color: white;
+}
+
+/* Estilo para la opción de respuesta incorrecta */
+#opciones-container div.error {
+  background-color: red;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover; /* Ajustar el fondo para que se vea completo en dispositivos móviles */
+  }
+}
+
+/*bg*/
+/*txt*/
+/*success*/
+
+
+ button {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin: 20px auto;
+  color: rgb(33, 194, 235);
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px
+}
+
+ button:before,  button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgb(33, 194, 235);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+ button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+ button:after {
+  left: 0;
+  bottom: 0;
+}
+
+ button span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+ button span:before,  button span:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: rgb(33, 194, 235);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+ button span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+  
+}
+
+ button span:after {
+  left: 0;
+  bottom: 0;
+  
+}
+
+ button p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+ button p:before,  button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+ button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: rgb(33, 194, 235);
+}
+
+ button:hover:before,  button:hover:after {
+  width: 100%;
+}
+
+ button:hover span {
+  z-index: 1;
+}
+
+ button:hover span:before,  button:hover span:after {
+  height: 100%;
+}
+
+ button:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+ button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ button.start {
+  background-color: rgb(33, 194, 235);;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+ button.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+ button.start p:after {
+  color: rgb(33, 194, 235);
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  from {
+    top: -50%;
+  }
+}
+
+ button.start:hover:before,  button.start:hover:after {
+  display: none;
+}
+
+ button.start:hover span {
+  display: none;
+}
+
+ button:active {
+  outline: none;
+  border: none;
+}
+
+ button:focus {
+  outline: 0;
+}
+
+/* Cambios en el CSS para que se apliquen a elementos dinámicamente creados en JavaScript */
+
+/* Estilo para el contenedor de opciones */
+#opciones-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para cada opción de respuesta */
+#opciones-container div {
+  background-color: #fff;
+  padding: 14px;
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(187, 187, 187, 0.164);
+  color: #000;
+  transition: .3s ease;
+}
+
+/* Estilo para la opción de respuesta al pasar el cursor */
+#opciones-container div:hover {
+  background-color: rgba(24, 24, 24, 0.13);
+  border: 1px solid #bbb;
+}
+
+/* Estilo para el contenedor del resultado */
+#resultado-container {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  display: none;
+  transition: display .4s ease;
+}
+
+/* Estilo para el resultado correcto */
+/* Estilo para la opción de respuesta correcta */
+#opciones-container div.success {
+  background-color: green;
+  color: white;
+}
+
+/* Estilo para la opción de respuesta incorrecta */
+#opciones-container div.error {
+  background-color: red;
+  color: white;
+}
+#pregunta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 320px;
+  margin: 0 auto; /* Agrega esta línea para centrar verticalmente */
+}
+
+#resultado-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Agrega esta línea para centrar horizontalmente */
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 320px;
+  margin: 0 auto; /* Agrega esta línea para centrar verticalmente */
+  text-align: center;
+  font-size: 20px;
+  margin-left: auto; /* Centra el contenedor horizontalmente */
+  margin-right: auto; 
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover; /* Ajustar el fondo para que se vea completo en dispositivos móviles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80%;
+  }
+  button{
+    margin-bottom: 10em;
+  }
+  #pregunta-container{
+    margin-bottom: 3em;
+  }
+  #resultado-container {
+    margin-bottom: 3em;
+  }
+}

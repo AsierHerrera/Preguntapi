@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREGUNTAPI</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <section class="container">
+            <h1>PREGUNTAPI</h1>
+
+        </section>
+        <section class="texto">
+            <p>Selecciona un lenguaje de programación y una dificultad para poner a prueba tus conocimientos.</p>    
+        </section>
+        <section class="Categorias">
+
+            <label for="select-categoria">Selecciona una categoría:</label>
+            <select id="select-categoria">
+                <option value="">Selecciona una categoría</option>
+            </select>
+            <br>
+
+            <label for="select-dificultad">Selecciona una dificultad:</label>
+            <select id="select-dificultad">
+                <option value="">Selecciona una dificultad</option>
+                <option value="facil">Fácil</option>
+                <option value="normal">Normal</option>
+                <option value="dificil">Difícil</option>
+            </select>
+
+            <button id="btn-empezar"><p data-start="good luck!" data-text="start!" data-title="new game"></p></button>
+        </section>
+
+        <section id="pregunta-container"></section> <!-- Contenedor para mostrar la pregunta -->
+        <section id="resultado-container"></section> <!-- Contenedor para mostrar el resultado -->
+    </div>
+
+    <script src="/Js/preguntas.js" type="module"></script>
+    <script src="/Js/llamadasApi.js" type="module"></script>
+    <script src="/index.js" type="module"></script>
+</body>
+</html>
