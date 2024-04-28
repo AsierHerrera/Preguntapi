@@ -34,7 +34,7 @@ class Preguntas {
         //Para que sea intuitivo de cara al usuario se agrega un opcion que simplemente indica que seleccione la categoria,
         // le insertamos texto pero no tiene un valor real
         const defaultOption = document.createElement('option');
-        defaultOption.text = 'Selecciona una categoría';
+        defaultOption.text = 'Selecciona un lenguaje';
         defaultOption.value = ''; // Valor vacío
         selectCategoria.add(defaultOption);
         //Por cada categoria obtenida de la api creamos una opcion en el desplegable
