@@ -10,7 +10,7 @@ class Preguntas {
         this.respuestasCorrectas = 0;
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
-        }
+    }
     
     async obtenerInfo() {
         try {

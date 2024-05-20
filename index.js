@@ -1,4 +1,4 @@
-import Preguntas from '/Js/preguntas.js';
+import Preguntas from './js/preguntas.js';
 
 // Función para inicializar la aplicación
 function inicializarPreguntapi() {
