@@ -1,12 +1,13 @@
 {
-  "type": "module",
   "name": "preguntapi",
   "version": "1.0.0",
-  "description": "Descripción de tu proyecto",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "mongoose": "^8.4.0"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0"
   }
 }
