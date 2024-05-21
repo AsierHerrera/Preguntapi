@@ -23,7 +23,9 @@ class Preguntas {
     }
 
     mostrarCategorias() {
-        const resultadoContainer = document.getElementById('resultado-container');
+        const resultadoContainer = document.getElementByapp.use("/api",router);
+        app.use("/api",router);
+        Id('resultado-container');
         resultadoContainer.style.display = 'none';
         const preguntaContainer = document.getElementById('pregunta-container');
         preguntaContainer.style.display = 'none';
