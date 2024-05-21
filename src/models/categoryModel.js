@@ -6,6 +6,10 @@ const categorieschema  = new mongoose.Schema({
         required: true,
         unique: true
     },
+    count_questions: {
+        type: Number,
+        required: true
+    },
     link : {
         type: String,
         required: true,

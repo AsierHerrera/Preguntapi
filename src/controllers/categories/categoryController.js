@@ -1,4 +1,6 @@
 import categoryModel from "../../models/categoryModel.js";
+import questionModel from "../../models/questionModel.js";
+
 
 const getAll = async () => {
     try {
@@ -68,13 +70,14 @@ const getAllCategories = async () => {
     try {
         const categories = await categoryModel.find();
         const categoryData = await Promise.all(categories.map(async (category) => {
-            const count = await categoryModel.countDocuments({ category: category.name });
+            const count = await questionModel.countDocuments({ category: category.name });
             return {
                 name: category.name,
-                count_categories: count,
+                count_questions: count,
                 link: category.link
             };
         }));
+        console.log("CATEGORY", categoryData)
         return categoryData;
     } catch (error) {
         console.error(error);
