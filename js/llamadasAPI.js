@@ -1,9 +1,10 @@
 class Info {
   constructor() {
-    this.url = "https://www.preguntapi.dev/api/categories";
+    this.url = "https://www.localhost:3015/api/categories";
   }
 
   async obtenerInfoAPI(url) {
+    console.log("HOLAA MUNDO")
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -13,6 +14,7 @@ class Info {
       if (!data || data.length === 0) {
         throw new Error('Error al obtener los datos de la API: Respuesta sin datos válidos');
       }
+
       return data;
     } catch (error) {
       console.error('Error al obtener los datos de la API:', error.message);

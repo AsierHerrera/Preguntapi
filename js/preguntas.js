@@ -10,7 +10,7 @@ class Preguntas {
         this.respuestasCorrectas = 0;
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
-    }
+        }
     
     async obtenerInfo() {
         try {
@@ -23,9 +23,7 @@ class Preguntas {
     }
 
     mostrarCategorias() {
-        const resultadoContainer = document.getElementByapp.use("/api",router);
-        app.use("/api",router);
-        Id('resultado-container');
+        const resultadoContainer = document.getElementById('resultado-container');
         resultadoContainer.style.display = 'none';
         const preguntaContainer = document.getElementById('pregunta-container');
         preguntaContainer.style.display = 'none';
