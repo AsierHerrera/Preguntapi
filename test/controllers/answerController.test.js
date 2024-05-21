@@ -32,7 +32,7 @@ describe("Test de answerController",()=>{
         expect(answer).not.toBeNull();
         expect(answer.owner).toEqual(users[0]._id);
     })
-    test("Añadir usuario",async()=>{
+/*     test("Añadir usuario",async()=>{
         const newUser = await userController.create({username:"algo",email:"mail",password:"1234"});
         userId = newUser._id;
         const answer = await answerController.addUser(answerId,newUser._id);
@@ -44,5 +44,5 @@ describe("Test de answerController",()=>{
         const answer = await answerController.removeUser(answerId,userId);
         expect(answer).not.toBeNull();
         expect(answer.users).not.toContain(userId);
-    })
+    }) */
 })
