@@ -1,9 +1,9 @@
-import questionController from "./questionController.js";
+import categoryController from "./categoryController.js";
 
 const getAll = async (req, res) => {
     try {
-        const questions = await questionController.getAll();
-        res.json({ data: questions });
+        const categories = await categoryController.getAll();
+        res.json({ data: categories });
     } catch (error) {
         res.status(500).json({ message: "Error al obtener las preguntas" });
     }
@@ -12,9 +12,9 @@ const getAll = async (req, res) => {
 const getById = async (req, res) => {
     try {
         const id = req.params.id;
-        const question = await questionController.getById(id);
-        if (question) {
-            res.json({ data: question });
+        const category = await categoryController.getById(id);
+        if (category) {
+            res.json({ data: category });
         } else {
             res.status(404).json({ message: "Pregunta no encontrada" });
         }
@@ -26,8 +26,8 @@ const getById = async (req, res) => {
 const getByProperty = async (req, res) => {
     try {
         const { property, value } = req.query;
-        const questions = await questionController.getByProperty(property, value);
-        res.json({ data: questions });
+        const categories = await categoryController.getByProperty(property, value);
+        res.json({ data: categories });
     } catch (error) {
         res.status(500).json({ message: "Error al obtener las preguntas" });
     }
@@ -35,8 +35,8 @@ const getByProperty = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        const question = await questionController.create(req.body);
-        res.status(201).json({ data: question });
+        const category = await categoryController.create(req.body);
+        res.status(201).json({ data: category });
     } catch (error) {
         res.status(500).json({ message: "Error al crear la pregunta" });
     }
@@ -46,9 +46,9 @@ const create = async (req, res) => {
 const update = async (req, res) => {
     try {
         const id = req.params.id;
-        const question = await questionController.update(id, req.body);
-        if (question) {
-            res.json({ data: question });
+        const category = await categoryController.update(id, req.body);
+        if (category) {
+            res.json({ data: category });
         } else {
             res.status(404).json({ message: "Pregunta no encontrada" });
         }
@@ -60,9 +60,9 @@ const update = async (req, res) => {
 const remove = async (req, res) => {
     try {
         const id = req.params.id;
-        const question = await questionController.remove(id);
-        if (question) {
-            res.json({ message: "Pregunta eliminada", data: question });
+        const category = await categoryController.remove(id);
+        if (category) {
+            res.json({ message: "Pregunta eliminada", data: category });
         } else {
             res.status(404).json({ message: "Pregunta no encontrada" });
         }
@@ -74,9 +74,9 @@ const remove = async (req, res) => {
 const getByCategory = async (req, res) => {
     try {
         const category = req.params.category; // Obtener la categoría desde los parámetros de la URL
-        const questions = await questionController.getByCategory(category); // Obtener las preguntas de la categoría
-        if (questions.length > 0) {
-            res.json({ data: questions });
+        const categories = await categoryController.getByCategory(category); // Obtener las preguntas de la categoría
+        if (categories.length > 0) {
+            res.json({ data: categories });
         } else {
             res.status(404).json({ message: "No se encontraron preguntas para la categoría especificada" });
         }

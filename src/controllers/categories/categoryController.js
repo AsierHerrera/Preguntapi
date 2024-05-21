@@ -1,8 +1,8 @@
-import questionModel from "../../models/questionModel.js";
+import categoryModel from "../../models/categoryModel.js";
 
 const getAll = async () => {
     try {
-        return await questionModel.find();
+        return await categoryModel.find();
     } catch (error) {
         console.error(error);
         throw new Error('Error al obtener todas las preguntas');
@@ -11,7 +11,7 @@ const getAll = async () => {
 
 const getById = async (id) => {
     try {
-        return await questionModel.findById(id);
+        return await categoryModel.findById(id);
     } catch (error) {
         console.error(error);
         throw new Error('Error al obtener la pregunta por ID');
@@ -20,7 +20,7 @@ const getById = async (id) => {
 
 const getByProperty = async (property, value) => {
     try {
-        return await questionModel.find({ [property]: value });
+        return await categoryModel.find({ [property]: value });
     } catch (error) {
         console.error(error);
         throw new Error('Error al obtener preguntas por propiedad');
@@ -29,7 +29,7 @@ const getByProperty = async (property, value) => {
 
 const create = async (data) => {
     try {
-        return await questionModel.create(data);
+        return await categoryModel.create(data);
     } catch (error) {
         console.error(error);
         throw new Error('Error al crear la pregunta');
@@ -38,7 +38,7 @@ const create = async (data) => {
 
 const update = async (id, data) => {
     try {
-        return await questionModel.findByIdAndUpdate(id, data, { new: true });
+        return await categoryModel.findByIdAndUpdate(id, data, { new: true });
     } catch (error) {
         console.error(error);
         throw new Error('Error al actualizar la pregunta');
@@ -47,7 +47,7 @@ const update = async (id, data) => {
 
 const remove = async (id) => {
     try {
-        return await questionModel.findByIdAndDelete(id);
+        return await categoryModel.findByIdAndDelete(id);
     } catch (error) {
         console.error(error);
         throw new Error('Error al eliminar la pregunta');
@@ -56,8 +56,8 @@ const remove = async (id) => {
 
 const getByCategory = async (category) => {
     try {
-        const questions = await questionModel.find({ category });
-        return questions;
+        const categories = await categoryModel.find({ category });
+        return categories;
     } catch (error) {
         console.error(error);
         throw new Error('Error al obtener las preguntas por categoría');
@@ -68,10 +68,10 @@ const getAllCategories = async () => {
     try {
         const categories = await categoryModel.find();
         const categoryData = await Promise.all(categories.map(async (category) => {
-            const count = await questionModel.countDocuments({ category: category.name });
+            const count = await categoryModel.countDocuments({ category: category.name });
             return {
                 name: category.name,
-                count_questions: count,
+                count_categories: count,
                 link: category.link
             };
         }));
@@ -82,7 +82,7 @@ const getAllCategories = async () => {
     }
 };
 
-const questionController = {
+const categoryController = {
     getAll,
     getById,
     getByProperty,
@@ -93,4 +93,4 @@ const questionController = {
     getAllCategories
 };
 
-export default questionController;
+export default categoryController;
