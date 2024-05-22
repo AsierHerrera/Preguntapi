@@ -70,6 +70,7 @@ const getAllCategories = async () => {
     try {
         const categories = await categoryModel.find();
         const categoryData = await Promise.all(categories.map(async (category) => {
+            console.log("CATEWGORIA", category)
             const count = await questionModel.countDocuments({ category: category.name });
             return {
                 name: category.name,
