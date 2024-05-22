@@ -11,7 +11,7 @@ router.get("/",(req,res)=>{
     res.json({data:"hello api"});
 })
 router.use("/users",userRouter);
-router.use("/questions",questionRouter);
+router.use("/questions",isAuthenticated,questionRouter);
 router.use("/categories",categoryRouter);
 router.use("/",authRouter);
 

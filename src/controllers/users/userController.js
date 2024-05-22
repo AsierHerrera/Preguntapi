@@ -114,6 +114,23 @@ const remove = async(id) =>{
     }
 }
 
+const addQuestion = async(userId,questionId)=>{
+    try {
+        console.log("add question",userId)
+        const user = await getById(userId);
+        console.log("users",user);
+        if(!user.questions.includes(questionId)){
+            user.questions.push(questionId);
+            await user.save();
+            return user;
+        }
+        return user;
+    } catch (error) {
+        console.error(error);
+        return {error:"no se ha podido añadir la pregunta"};
+    }
+}
+
 export const functions = {
     getAll,
     getById,
@@ -122,7 +139,8 @@ export const functions = {
     register,
     create,
     update,
-    remove
+    remove,
+    addQuestion
 }
 
 export default functions;

@@ -35,7 +35,12 @@ const getByProperty = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        const question = await questionController.create(req.body);
+        //console.log("Llego a api controller")
+        const owner = req.user._id
+        //console.log("El owner es:", owner)
+        const data = {...req.body,owner};
+        //console.log("La data es:", owner)
+        const question = await questionController.create(data);
         res.status(201).json({ data: question });
     } catch (error) {
         res.status(500).json({ message: "Error al crear la pregunta" });
