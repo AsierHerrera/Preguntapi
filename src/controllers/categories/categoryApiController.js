@@ -3,7 +3,7 @@ import categoryController from "./categoryController.js";
 const getAll = async (req, res) => {
     try {
         const categories = await categoryController.getAll();
-        res.json({ data: categories });
+        res.json( categories );
     } catch (error) {
         res.status(500).json({ message: "Error al obtener las preguntas" });
     }

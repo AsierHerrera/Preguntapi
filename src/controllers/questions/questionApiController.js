@@ -76,7 +76,7 @@ const getByCategory = async (req, res) => {
         const category = req.params.category; // Obtener la categoría desde los parámetros de la URL
         const questions = await questionController.getByCategory(category); // Obtener las preguntas de la categoría
         if (questions.length > 0) {
-            res.json({ data: questions });
+            res.json( questions);
         } else {
             res.status(404).json({ message: "No se encontraron preguntas para la categoría especificada" });
         }

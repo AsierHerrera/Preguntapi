@@ -1,6 +1,6 @@
 class Info {
   constructor() {
-    this.url = "https://www.localhost:3015/api/categories";
+    this.url = "http://localhost:3015/api/categories/categories";
   }
 
   async obtenerInfoAPI(url) {
@@ -11,6 +11,7 @@ class Info {
         throw new Error('Error al obtener los datos de la API: Respuesta no válida');
       }
       const data = await response.json();
+      console.log("LA DATA ES", data)
       if (!data || data.length === 0) {
         throw new Error('Error al obtener los datos de la API: Respuesta sin datos válidos');
       }
@@ -43,6 +44,7 @@ class Info {
       try {
           const url = `${link}`;
           const data = await this.obtenerInfoAPI(url);
+          console.log("LA DATA DE OBTENER PREGUNTAS ES:", data)
           const preguntasDetalladas = data.map(pregunta => ({
             categoria: pregunta.category,
             nivel: pregunta.level,
