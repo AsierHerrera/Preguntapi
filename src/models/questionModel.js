@@ -10,8 +10,8 @@ const answerSchema = new mongoose.Schema({
 const questionSchema = new mongoose.Schema({
     id: {
         type: String,
-        required: true,
-        unique: true
+        required: false,
+        unique: false
     },
     category: {
         type: String,
@@ -37,7 +37,11 @@ const questionSchema = new mongoose.Schema({
         type: String,
         enum: ["UnAcepted", "Acepted"],
         default: "UnAcepted"
-    }
+    },
+    owner: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'user'
+    },
 }, { versionKey: false });
 
 const questionModel = mongoose.model("Question", questionSchema);

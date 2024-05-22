@@ -13,7 +13,9 @@ const isAuthenticated = async(req,res,next)=>{
         if(!user){
             return res.status(400).json({error:"No existe el usurio"});
         }
+        
         req.user = user;
+        console.log("Se carga bien req user", req.user)
         next();
         
     } catch (error) {

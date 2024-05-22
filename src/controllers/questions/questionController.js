@@ -1,7 +1,10 @@
 import questionModel from "../../models/questionModel.js";
+import userController from "../users/userController.js";
+
 
 const getAll = async () => {
     try {
+        console.log("SE printa todo")
         return await questionModel.find();
     } catch (error) {
         console.error(error);
@@ -29,7 +32,10 @@ const getByProperty = async (property, value) => {
 
 const create = async (data) => {
     try {
-        return await questionModel.create(data);
+        console.log("llego aqui")
+        const question = await questionModel.create(data);
+        await userController.addQuestion(data.owner,question._id);
+        return question
     } catch (error) {
         console.error(error);
         throw new Error('Error al crear la pregunta');

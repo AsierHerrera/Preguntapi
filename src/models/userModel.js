@@ -19,7 +19,13 @@ const userSchema  = new mongoose.Schema({
         type:String,
         enum : ["user","admin"],
         default: "user"
-    }
+    },
+    questions:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "question"
+        }
+    ]
 })
 
 const userModel = mongoose.model("user",userSchema);
