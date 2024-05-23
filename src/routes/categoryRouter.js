@@ -5,10 +5,10 @@ import categoryApiController from "../controllers/categories/categoryApiControll
 
 const router  = Router();
 
-router.get("/",categoryApiController.getAll);
+//router.get("/",categoryApiController.getAll);
 router.post("/",categoryApiController.create);
 router.get('/search', categoryApiController.getByProperty);
-router.get('/categories', categoryApiController.getAllCategories);
+router.get('/', categoryApiController.getAllCategories);
 router.get("/categories/:category",categoryApiController.getByCategory);
 router.put("/:id",categoryApiController.update);
 router.delete("/:id",categoryApiController.remove);
