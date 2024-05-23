@@ -1,18 +1,21 @@
 class Info {
   constructor() {
-    this.url = "https://www.preguntapi.dev/api/categories";
+    this.url = "http://localhost:3015/api/categories/categories";
   }
 
   async obtenerInfoAPI(url) {
+    console.log("HOLAA MUNDO")
     try {
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Error al obtener los datos de la API: Respuesta no válida');
       }
       const data = await response.json();
+      console.log("LA DATA ES", data)
       if (!data || data.length === 0) {
         throw new Error('Error al obtener los datos de la API: Respuesta sin datos válidos');
       }
+
       return data;
     } catch (error) {
       console.error('Error al obtener los datos de la API:', error.message);
@@ -41,6 +44,7 @@ class Info {
       try {
           const url = `${link}`;
           const data = await this.obtenerInfoAPI(url);
+          console.log("LA DATA DE OBTENER PREGUNTAS ES:", data)
           const preguntasDetalladas = data.map(pregunta => ({
             categoria: pregunta.category,
             nivel: pregunta.level,
@@ -55,5 +59,7 @@ class Info {
       }
   }
 }
+
+
 
 export default Info;
