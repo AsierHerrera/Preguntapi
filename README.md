@@ -45,7 +45,7 @@ Endpoint: `GET /api/categories`
 
 ### Preguntas por categoria
 
-Endpoint: `GET /api/questions/categories`
+Endpoint: `GET /api/questions/categories/css`
 
 ## Contribuciones
 
