@@ -16,6 +16,12 @@ Este proyecto consiste en una página web dedicada a proporcionar una experienci
 - **JavaScript**: Para interactuar con la API y mostrar los datos dinámicamente.
 
 - **PREGUNTAPI**: Se utiliza una API pública para obtener preguntas y respuestas actualizadas en diferentes categorías.
+  
+-  **Node.js y Express:** Para crear y gestionar la API que proporciona las preguntas y respuestas.
+    
+- **MongoDB y Mongoose:** Para gestionar la base de datos de usuarios y preguntas.
+  
+- **JSON Web Token (JWT):** Para la autenticación de usuarios.
 
 ## Instrucciones de uso
 
@@ -28,6 +34,18 @@ Este proyecto consiste en una página web dedicada a proporcionar una experienci
 4. Después de responder todas las preguntas, se mostrará tu puntaje total y la cantidad de respuestas correctas e incorrectas.
 
 ¡Disfruta desafiando tus conocimientos con nuestra página web de preguntas y respuestas!
+
+## API Endpoints
+
+La API ofrece varios endpoints para manejar las preguntas y la autenticación de usuarios.
+
+### Categorías de Preguntas
+
+Endpoint: `GET /api/categories`
+
+### Preguntas por categoria
+
+Endpoint: `GET /api/questions/categories`
 
 ## Contribuciones
 
