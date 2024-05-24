@@ -1,6 +1,6 @@
 class Info {
   constructor() {
-    this.url = "http://localhost:3015/api/categories/categories";
+    this.url = "http://localhost:3015/api/categories";
   }
 
   async obtenerInfoAPI(url) {
