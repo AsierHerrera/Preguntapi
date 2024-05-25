@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    
+    <div class="flex flex-row h-screen items-center justify-center">
+        <div class="flex items-center justify-center">
+            <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Register</h2>
+                <form id="register-form" class="space-y-4">
+                    <div class="flex flex-col">
+                        <label for="username" class="text-gray-800">Username:</label>
+                        <input type="text" id="username" name="username" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="password" class="text-gray-800">Password:</label>
+                        <input type="password" id="password" name="password" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="passwordRepeat" class="text-gray-800">Confirm Password:</label>
+                        <input type="password" id="passwordRepeat" name="passwordRepeat" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <button type="submit" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-md transition ease-in-out duration-150">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+</html>

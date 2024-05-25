@@ -66,7 +66,7 @@ const login = async(data) =>{
 }
 const register = async(data) => {
     const {email,username,password,passwordRepeat} = data;
-    if(!email || !username || !password || !passwordRepeat){
+    if(!username || !password || !passwordRepeat){
         return {error:"Falta alguno de los campos"};
     }
     if(password !== passwordRepeat){
