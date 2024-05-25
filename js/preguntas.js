@@ -10,6 +10,7 @@ class Preguntas {
         this.respuestasCorrectas = 0;
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
+        this.userid = localStorage.getItem('userId');
         }
     
     async obtenerInfo() {
@@ -183,15 +184,16 @@ class Preguntas {
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
 
         const scoreData = {
-            userId: this.userId, // Asegúrate de tener el ID del usuario disponible
-            category: this.categoriaSeleccionada,
+            userId: this.userid, // Asegúrate de tener el ID del usuario disponible
+            category: this.categoriaSeleccionada.nombre,
             difficulty: this.dificultadSeleccionada,
             score: this.respuestasCorrectas,
             totalQuestions: this.preguntasFiltradas.length
         };
+        console.log("EL SCORE DATA ES:", scoreData)
 
         try {
-            const response = await fetch('/api/scores', {
+            const response = await fetch('http://localhost:3015/api/score', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
