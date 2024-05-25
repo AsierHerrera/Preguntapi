@@ -44,14 +44,16 @@ class Info {
       try {
           const url = `${link}`;
           const data = await this.obtenerInfoAPI(url);
-          console.log("LA DATA DE OBTENER PREGUNTAS ES:", data)
+          
           const preguntasDetalladas = data.map(pregunta => ({
             categoria: pregunta.category,
             nivel: pregunta.level,
             pregunta: pregunta.question,
             respuestas: pregunta.answers,
-            respuestaCorrecta: pregunta.correct_answer
+            respuestaCorrecta: pregunta.correct_answer,
+            aceptada: pregunta.status
         }));
+          console.log("LA DATA DE OBTENER PREGUNTAS ES:", preguntasDetalladas)
           return preguntasDetalladas;
       } catch (error) {
           console.error('Error al obtener las preguntas de la categoría:', error.message);

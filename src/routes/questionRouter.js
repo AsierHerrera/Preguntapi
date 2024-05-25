@@ -6,6 +6,7 @@ import { isAuthenticated,isAdmin } from "../middlewares/authMiddleware.js";
 const router  = Router();
 
 router.get("/",questionApiController.getAll);
+router.put("/",isAdmin,questionApiController.globalUpdate);
 router.get("/:id",questionApiController.getById);
 router.post("/",isAuthenticated,questionApiController.create);
 router.put("/:id",isAdmin,questionApiController.update);
