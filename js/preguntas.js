@@ -175,13 +175,39 @@ class Preguntas {
     }
     
    
-    mostrarResultado() {// Aqui se muestra en pantalla la cantidad de respuestas correctas y la cantidad de preguntas contestadas
+    async mostrarResultado() {// Aqui se muestra en pantalla la cantidad de respuestas correctas y la cantidad de preguntas contestadas
         const resultadoContainer = document.getElementById('resultado-container');
         resultadoContainer.style.display = 'block';
         const preguntaContainer = document.getElementById('pregunta-container');
         preguntaContainer.style.display = 'none';
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
-    }
+
+        const scoreData = {
+            userId: this.userId, // Asegúrate de tener el ID del usuario disponible
+            category: this.categoriaSeleccionada,
+            difficulty: this.dificultadSeleccionada,
+            score: this.respuestasCorrectas,
+            totalQuestions: this.preguntasFiltradas.length
+        };
+
+        try {
+            const response = await fetch('/api/scores', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(scoreData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Error al guardar la puntuación');
+            }
+
+            console.log('Puntuación guardada correctamente');
+        } catch (error) {
+            console.error('Error:', error);
+        }
+}
 
 
 }
