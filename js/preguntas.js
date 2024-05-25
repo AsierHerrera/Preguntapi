@@ -96,7 +96,7 @@ class Preguntas {
         try {
             const preguntas = await this.info.obtenerPreguntasPorCategoria(this.categoriaSeleccionada.link);
             //Unicamente nos quedamos con las preguntas que en base a la dificultad seleccionada nos interesen
-            this.preguntasFiltradas = preguntas.filter(pregunta => pregunta.nivel === this.dificultadSeleccionada);
+            this.preguntasFiltradas = preguntas.filter(pregunta => pregunta.nivel === this.dificultadSeleccionada && pregunta.aceptada === "Acepted");
             //Una vez tenemos las preguntas filtradas por categoria y dificultad, llamamos a la funcion mostrarPregunta
             console.log(this.preguntasFiltradas)
             this.mostrarPregunta();

@@ -35,11 +35,11 @@ const getByProperty = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        //console.log("Llego a api controller")
+        console.log("Llego a api controller")
         const owner = req.user._id
-        //console.log("El owner es:", owner)
+        console.log("El owner es:", owner)
         const data = {...req.body,owner};
-        //console.log("La data es:", owner)
+        console.log("La data es:", data)
         const question = await questionController.create(data);
         res.status(201).json({ data: question });
     } catch (error) {
@@ -50,6 +50,7 @@ const create = async (req, res) => {
 
 const update = async (req, res) => {
     try {
+        console.log("El reqbody es en update:", req.body)
         const id = req.params.id;
         const question = await questionController.update(id, req.body);
         if (question) {
@@ -59,6 +60,21 @@ const update = async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({ message: "Error al actualizar la pregunta" });
+    }
+};
+
+const globalUpdate = async (req, res) => {
+    try {
+        console.log("llego aqui en el APICONTRROLLER")
+        console.log("El reqbody es:", req.body)
+        const question = await questionController.globalUpdate(req.body);
+        if (question) {
+            res.json({ data: question });
+        } else {
+            res.status(404).json({ message: "Pregunta no encontrada" });
+        }
+    } catch (error) {
+        res.status(500).json({ message: "Error al actualizar la pregunta de manera global" });
     }
 };
 
@@ -108,5 +124,6 @@ export default {
     update,
     getByCategory,
     getAllCategories,
+    globalUpdate,
     remove    
 };
