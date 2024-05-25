@@ -41,5 +41,11 @@
     <script src="../js/llamadasAPI.js" type="module"></script>
     <script src="../js/preguntas.js" type="module"></script>
     <script src="../index.js" type="module"></script>
+    <script>
+        // Redirigir al login si no hay un token en localStorage
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>
