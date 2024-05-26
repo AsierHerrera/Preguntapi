@@ -1,0 +1,6055 @@
+[{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00aa"
+  },
+  "id": "91",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál es la sintaxis correcta para imprimir por consola \"Hola mundo\" en Java?",
+  "answers": {
+    "answer_a": "Console.WriteLine(\"Hola mundo\")",
+    "answer_b": "print(\"Hola mundo\")",
+    "answer_c": "echo(\"Hola mundo\")",
+    "answer_d": "System.out.println(\"Hola mundo\")"
+  },
+  "correct_answer": "answer_d",
+  "status": "UnAcepted"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00ab"
+  },
+  "id": "232",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Cuál es la prefijo correcto para invocar al namespace standard de C++?",
+  "answers": {
+    "answer_a": "std::",
+    "answer_b": "standard::",
+    "answer_d": "stdio::"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00ac"
+  },
+  "id": "233",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Qué debe de retornar la función principal cuando el programa termina sin ningún problema?",
+  "answers": {
+    "answer_a": "200",
+    "answer_b": "success",
+    "answer_c": "OK",
+    "answer_d": "0"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00ad"
+  },
+  "id": "234",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Cómo introduces una variable de entrada por consola en C++?",
+  "answers": {
+    "answer_a": "int x = scanf(\"%19s\", str);",
+    "answer_b": "int x = std::cin >> str;",
+    "answer_c": "int x = input();",
+    "answer_d": "int x = scanner.nextLine();"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00ae"
+  },
+  "id": "235",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Qué tipo de dato es útil para representar el número 3.1416?",
+  "answers": {
+    "answer_a": "float",
+    "answer_b": "double",
+    "answer_c": "long double",
+    "answer_d": "Todas las mencionadas"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00af"
+  },
+  "id": "236",
+  "category": "cpp",
+  "level": "dificil",
+  "question": "¿Cuáles de estas constantes están definidas en la clase WindowEvent?",
+  "answers": {
+    "answer_a": "Todas las mencionadas",
+    "answer_b": "WINDOW_CLOSED",
+    "answer_c": "WINDOW_DEICONIFIED",
+    "answer_d": "WINDOW_ACTIVATED"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b0"
+  },
+  "id": "237",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Qué tipo de dato expresa que una función no va a retornar?",
+  "answers": {
+    "answer_a": "int*",
+    "answer_b": "string",
+    "answer_c": "void",
+    "answer_d": "int"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b1"
+  },
+  "id": "238",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál de estos ejemplos representa una asignación de valor?",
+  "answers": {
+    "answer_a": "int x = 1;",
+    "answer_b": "x = 1;",
+    "answer_c": "x { 1 };",
+    "answer_d": "Ninguno de los dos"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b2"
+  },
+  "id": "239",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál de estos ejemplos representa una definición de variable?",
+  "answers": {
+    "answer_a": "int x;",
+    "answer_b": "int x = 1;",
+    "answer_c": "int { x }",
+    "answer_d": "Ninguna es correcta"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b3"
+  },
+  "id": "240",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál de estos ejemplos inicializa de variable?",
+  "answers": {
+    "answer_a": "int x = 1;",
+    "answer_b": "int x( 1 );",
+    "answer_c": "int x{ 1 };",
+    "answer_d": "Todas son correctas"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b4"
+  },
+  "id": "241",
+  "category": "cpp",
+  "level": "dificil",
+  "question": "¿Cuál es la manera moderna y recomendada de inicializar una variable?",
+  "answers": {
+    "answer_a": "Inicialización por copia int x = 1;",
+    "answer_b": "Inicialización directa int x ( 1 ) ",
+    "answer_c": "Inicialización en llaves int x { 1 }",
+    "answer_d": "Todas las anteriores son correctas"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b5"
+  },
+  "id": "243",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Cuál es el paradigma de programación de C++?",
+  "answers": {
+    "answer_a": "Funcional",
+    "answer_b": "Logico funcional",
+    "answer_c": "Orientado a objetos",
+    "answer_d": "Orientado a componentes"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b6"
+  },
+  "id": "244",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Podemos usar librerías de C en C++?",
+  "answers": {
+    "answer_a": "No",
+    "answer_b": "Sí",
+    "answer_c": "Sí, solo las standard",
+    "answer_d": "No, no se puede usar librerías de lenguajes diferentes"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b7"
+  },
+  "id": "245",
+  "category": "cpp",
+  "level": "facil",
+  "question": "¿Cuál es un ejemplo de macro en C++?",
+  "answers": {
+    "answer_a": "#define MY_LIB",
+    "answer_b": "const pi { 3.1416 }",
+    "answer_c": "#if GTEST ... #endif",
+    "answer_d": "Opción a y c"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b8"
+  },
+  "id": "246",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Para qué se usan las macros?",
+  "answers": {
+    "answer_a": "Trabajar constantes durante la ejecución",
+    "answer_b": "Trabajar constantes durante la compilación",
+    "answer_c": "Comentar el código",
+    "answer_d": "Trabajar con el linker"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00b9"
+  },
+  "id": "247",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Qué proyectos usan C++ actualmente?",
+  "answers": {
+    "answer_a": "El kernel de Linux",
+    "answer_b": "Minecraft",
+    "answer_c": "La mayoría de proyectos de Videojuegos",
+    "answer_d": "Todos los anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00ba"
+  },
+  "id": "248",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál de estos métodos puedo saber el valor del tamaño de un tipo de dato?",
+  "answers": {
+    "answer_a": "SifeOf()",
+    "answer_b": "size_of()",
+    "answer_c": "size()",
+    "answer_d": "size_t()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00bb"
+  },
+  "id": "249",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál es la manera mas eficiente de usar banderas en C++ en caso de tener un hardware limitado?",
+  "answers": {
+    "answer_a": "Con el tipo de dato booleano",
+    "answer_b": "Con el tipo de dato entero y valores 1 y 0",
+    "answer_c": "Con manipuladores de bits",
+    "answer_d": "No es necesario el compilador de C++ hace eficiente el software sin importar el hardware"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00bc"
+  },
+  "id": "250",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál es la diferencia entre un signed integer y un unsigned integer?",
+  "answers": {
+    "answer_a": "El rango de bits que pueden tener las variables en memoria",
+    "answer_b": "Los valores unsigned no pueden ser negativos",
+    "answer_c": "Las dos anteriores",
+    "answer_d": "No tiene diferencia alguna"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00bd"
+  },
+  "id": "251",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Se pueden hacer pruebas unitarias en C++?",
+  "answers": {
+    "answer_a": "No",
+    "answer_b": "Sí, solo en algunos compiladores",
+    "answer_c": "Sí",
+    "answer_d": "No, en todos los estándares"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00be"
+  },
+  "id": "252",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Qué es un puntero?",
+  "answers": {
+    "answer_a": "Un tipo de dato que puede apuntar a una dirección en memoria",
+    "answer_b": "Un objeto",
+    "answer_c": "Una estructura de dato",
+    "answer_d": "Una función"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00bf"
+  },
+  "id": "253",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Qué es un desborde de datos?",
+  "answers": {
+    "answer_a": "No existe ese término",
+    "answer_b": "Los datos se convierten en 0 en caso de que el máximo tamaño de tipo de dato sea alcanzado",
+    "answer_c": "Los datos se convierten en el primer valor de bit en caso de que el máximo tamaño de tipo de dato se alcanzado",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c0"
+  },
+  "id": "254",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Qué suite de pruebas unitarias están disponibles en C++?",
+  "answers": {
+    "answer_a": "Google test",
+    "answer_b": "Jest",
+    "answer_c": "Jasmine",
+    "answer_d": "Test.cpp"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c1"
+  },
+  "id": "255",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de crear un objeto llamado myObj de MyClass?",
+  "answers": {
+    "answer_a": "int myObj = MyClass()",
+    "answer_b": "MyClass myObj = MyClass()",
+    "answer_c": "MyClass* myObj = new MyClass()",
+    "answer_d": "Las dos anteriores"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c2"
+  },
+  "id": "256",
+  "category": "cpp",
+  "level": "normal",
+  "question": "Con el manejo de memoria de C++ ¿Es posible provocar un error en todo el equipo donde se esta programando?",
+  "answers": {
+    "answer_a": "No",
+    "answer_b": "Sí, si es que usas un equipo Windows",
+    "answer_c": "Sí, en todos los equipos"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c3"
+  },
+  "id": "257",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Un software construido en C++ en equipo Linux puede ser ejecutado en Windows?",
+  "answers": {
+    "answer_a": "No, las arquitecturas son diferentes",
+    "answer_b": "Sí, con una correcta configuración",
+    "answer_c": "Solo con un transpilador"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c4"
+  },
+  "id": "258",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál es la ventaja de C++ contra Java, Kotlin, JavaScript, Python?",
+  "answers": {
+    "answer_a": "El manejo de punteros",
+    "answer_b": "El nivel que puedes manipular el hardware",
+    "answer_c": "El manejo de memoria",
+    "answer_d": "Todas las anteriores"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c5"
+  },
+  "id": "259",
+  "category": "cpp",
+  "level": "normal",
+  "question": "Para que las subclases de cualquier paquete tengan acceso a los miembros de una superclase. ¿Cuál es el acceso más restrictivo que cumple este objetivo?",
+  "answers": {
+    "answer_a": "public",
+    "answer_b": "private",
+    "answer_c": "protected"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9305a1750f8de5da00c6"
+  },
+  "id": "260",
+  "category": "cpp",
+  "level": "normal",
+  "question": "¿Cuál es sistema de versionado en el lenguaje C++?",
+  "answers": {
+    "answer_a": "Versionado tradicional",
+    "answer_b": "Estándar ISO",
+    "answer_c": "Estándar propio",
+    "answer_d": "Es rolling release"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e151"
+  },
+  "id": "282",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis correcta para mostrar por consola \"Hello World\" en C#?",
+  "answers": {
+    "answer_a": "Console.WriteLine(\"Hello World\");",
+    "answer_b": "print (\"Hello World\");",
+    "answer_c": "System.out.println(\"Hello World\");",
+    "answer_d": "cout << \"Hello World\";"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e152"
+  },
+  "id": "283",
+  "category": "csharp",
+  "level": "facil",
+  "question": "C# es un alias de C++.",
+  "answers": {
+    "answer_a": "Falso",
+    "answer_b": "Verdadero"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e153"
+  },
+  "id": "284",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cómo se insertan COMENTARIOS en el código en C#?",
+  "answers": {
+    "answer_a": "// Esto es un comentario",
+    "answer_b": "# Esto es un comentario",
+    "answer_c": "/* Esto es un comentario"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e154"
+  },
+  "id": "285",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué tipo de datos se utiliza para crear una variable que debe almacenar texto?",
+  "answers": {
+    "answer_a": "myString",
+    "answer_b": "Txt",
+    "answer_c": "str",
+    "answer_d": "string"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e155"
+  },
+  "id": "286",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cómo se crea una variable con el valor numérico 5?",
+  "answers": {
+    "answer_a": "int x = 5;",
+    "answer_b": "x = 5;",
+    "answer_c": "double x = 5;",
+    "answer_d": "num x = 5"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e156"
+  },
+  "id": "287",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cómo se crea una variable con el número flotante 2,8?",
+  "answers": {
+    "answer_a": "double x = 2.8D;",
+    "answer_b": "byte x = 2.8",
+    "answer_c": "int x = 2.8D;",
+    "answer_d": "int x = 2.8;"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e157"
+  },
+  "id": "288",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué propiedad se puede utilizar para encontrar la longitud de una cadena?",
+  "answers": {
+    "answer_a": "getLength()",
+    "answer_b": "Length",
+    "answer_c": "length()",
+    "answer_d": "length"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e158"
+  },
+  "id": "289",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué operador se utiliza para sumar dos valores?",
+  "answers": {
+    "answer_a": "El signo +",
+    "answer_b": "El signo &",
+    "answer_c": "El signo *"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e159"
+  },
+  "id": "290",
+  "category": "csharp",
+  "level": "facil",
+  "question": "El valor de una variable de cadena puede estar encerrado entre comillas simples.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15a"
+  },
+  "id": "291",
+  "category": "csharp",
+  "level": "normal",
+  "question": "El casting de tipos es cuando se asigna un valor de un tipo de datos a otro tipo.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15b"
+  },
+  "id": "292",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué operador se puede utilizar para comparar dos valores?",
+  "answers": {
+    "answer_a": "==",
+    "answer_b": "=",
+    "answer_c": "<>",
+    "answer_d": "><"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15c"
+  },
+  "id": "293",
+  "category": "csharp",
+  "level": "normal",
+  "question": "Para declarar un array en C#, hay que definir el tipo de variable con:",
+  "answers": {
+    "answer_a": "()",
+    "answer_b": "[]",
+    "answer_c": "{}",
+    "answer_d": "\"\""
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15d"
+  },
+  "id": "294",
+  "category": "csharp",
+  "level": "facil",
+  "question": "Los índices de los arrays empiezan por:",
+  "answers": {
+    "answer_a": "0",
+    "answer_b": "1",
+    "answer_c": "2",
+    "answer_d": "3"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15e"
+  },
+  "id": "295",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Cómo se crea un método en C#?",
+  "answers": {
+    "answer_a": "myMethod[]",
+    "answer_b": "MyMethod",
+    "answer_c": "(MyMethod)",
+    "answer_d": "MyMethod()"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e15f"
+  },
+  "id": "296",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Cómo se llama a un método en C#?",
+  "answers": {
+    "answer_a": "MyMethod();",
+    "answer_b": "MyMethod;",
+    "answer_c": "myMethod[];",
+    "answer_d": "(MyMethod);"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e160"
+  },
+  "id": "297",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Qué palabra clave se utiliza para crear una clase en C#?",
+  "answers": {
+    "answer_a": "MyClass",
+    "answer_b": "class",
+    "answer_c": "class()",
+    "answer_d": "className"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e161"
+  },
+  "id": "298",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de crear un objeto llamado myObj de MyClass?",
+  "answers": {
+    "answer_a": "new myObj = MyClass();",
+    "answer_b": "class myObj = new MyClass();",
+    "answer_c": "MyClass myObj = new MyClass();",
+    "answer_d": "class MyClass = new myObj();"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e162"
+  },
+  "id": "299",
+  "category": "csharp",
+  "level": "normal",
+  "question": "En C#, es posible heredar campos y métodos de una clase a otra.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e163"
+  },
+  "id": "300",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Cómo se llama la clase 'especial' que representa un grupo de constantes?",
+  "answers": {
+    "answer_a": "const",
+    "answer_b": "special",
+    "answer_c": "void",
+    "answer_d": "enum"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e164"
+  },
+  "id": "301",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué operador se utiliza para multiplicar números?",
+  "answers": {
+    "answer_a": "x",
+    "answer_b": "*",
+    "answer_c": "#",
+    "answer_d": "%"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e165"
+  },
+  "id": "302",
+  "category": "csharp",
+  "level": "normal",
+  "question": "¿Qué modificador de acceso hace que el código sólo sea accesible dentro de la misma clase?",
+  "answers": {
+    "answer_a": "private",
+    "answer_b": "final",
+    "answer_c": "public",
+    "answer_d": "abstract"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e166"
+  },
+  "id": "303",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cómo se empieza a escribir una sentencia if en C#?",
+  "answers": {
+    "answer_a": "if (x > y)",
+    "answer_b": "if x > y:",
+    "answer_c": "if x > y then:"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e167"
+  },
+  "id": "304",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Cómo se empieza a escribir un ciclo while en C#?",
+  "answers": {
+    "answer_a": "while (x > y)",
+    "answer_b": "while x > y:",
+    "answer_c": "x > y while {",
+    "answer_d": "while x > y {"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e168"
+  },
+  "id": "305",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué palabra clave se utiliza para devolver un valor dentro de un método?",
+  "answers": {
+    "answer_a": "get",
+    "answer_b": "void",
+    "answer_c": "break",
+    "answer_d": "return"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e169"
+  },
+  "id": "306",
+  "category": "csharp",
+  "level": "facil",
+  "question": "¿Qué sentencia se utiliza para detener un ciclo?",
+  "answers": {
+    "answer_a": "exit",
+    "answer_b": "stop",
+    "answer_c": "break",
+    "answer_d": "return"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16a"
+  },
+  "id": "366",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes afirmaciones no es válida para crear un nuevo objeto en C#?",
+  "answers": {
+    "answer_a": "var a = new Int32();",
+    "answer_b": "var a = new String();",
+    "answer_c": "var a = new IComparable();",
+    "answer_d": "var a = new []{0};"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16b"
+  },
+  "id": "367",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "Si ejecuta el archivo ejecutable de C# varias veces, se crean varios procesos. Si desea tener un solo proceso de solicitud, incluso si lo inicia varias veces, ¿qué puede usar?",
+  "answers": {
+    "answer_a": "Semaphore",
+    "answer_b": "Mutex",
+    "answer_c": "Critical Section",
+    "answer_d": "C# lock"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16c"
+  },
+  "id": "368",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "¿Cuál de los siguientes operadores no puede utilizar la sobrecarga de operadores?",
+  "answers": {
+    "answer_a": "++",
+    "answer_b": "&",
+    "answer_c": "||",
+    "answer_d": "true"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16d"
+  },
+  "id": "369",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "En la programación multihilo, ¿cuál de los siguientes no utiliza Thread Pool?",
+  "answers": {
+    "answer_a": "BackgroundWorker class",
+    "answer_b": "Asynchronous delegate",
+    "answer_c": "Thread class",
+    "answer_d": "Task class"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16e"
+  },
+  "id": "370",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "La clase A tiene el atributo [Serializable()]. ¿Cuándo se comprueba [Serializable]?",
+  "answers": {
+    "answer_a": "En tiempo de compilación de C#",
+    "answer_b": "En tiempo de ejecución de CLR",
+    "answer_c": "En tiempo de compilación JIT",
+    "answer_d": "En la vinculación"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e16f"
+  },
+  "id": "371",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "Los siguientes son algunos ejemplos de arrays de enteros. ¿Qué expresión no es válida en C#?",
+  "answers": {
+    "answer_a": "int[] a = new int[10];",
+    "answer_b": "int[][] c = new int[10][];",
+    "answer_c": "int[][][] cc = new int[10][2][];",
+    "answer_d": "int[,] b = new int[10, 2];",
+    "answer_e": "int[, , ,] d = new int[10,2,2,2]"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e170"
+  },
+  "id": "372",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes afirmaciones es verdadera sobre el tipo anónimo de C#?",
+  "answers": {
+    "answer_a": "El tipo anónimo puede agregar una nueva propiedad una vez que se crea",
+    "answer_b": "El tipo anónimo puede agregar un evento",
+    "answer_c": "Puede usar un delegado para un método en tipo anónimo",
+    "answer_d": "El tipo anónimo es un tipo inmutable."
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e171"
+  },
+  "id": "373",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "¿Cuál es el resultado de las variables a y b? var a = 5L == 5.0F; var b = 24L / 5 == 24 / 5d;",
+  "answers": {
+    "answer_a": "a=true, b=true",
+    "answer_b": "a=true, b=false",
+    "answer_c": "a=false, b=true",
+    "answer_d": "a=false, b=false"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e172"
+  },
+  "id": "374",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "Al definir una clase con C# Generics, ¿Cuál de las siguientes no es válida?",
+  "answers": {
+    "answer_a": "class MyClass where T : struct",
+    "answer_b": "class MyClass where T : class",
+    "answer_c": "class MyClass where T : IComparable",
+    "answer_d": "Todas"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9369bff27499da41e173"
+  },
+  "id": "375",
+  "category": "csharp",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes afirmaciones es incorrecta sobre el delegado de C#?",
+  "answers": {
+    "answer_a": "Admite multicast",
+    "answer_b": "Se considera una base técnica del evento de C#",
+    "answer_c": "Se puede usar al pasar unaEl delegado de C # no referencia a un método",
+    "answer_d": "No puede usar operadores + =, - ="
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e174"
+  },
+  "id": "31",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué se puede seleccionar con un asterisco (*)?",
+  "answers": {
+    "answer_a": "Una \"clase\"",
+    "answer_b": "Un \"id\"",
+    "answer_c": "Todos los elementos"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e175"
+  },
+  "id": "32",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Cuál es la secuencia correcta del modelo de caja de adentro hacia afuera?",
+  "answers": {
+    "answer_a": "Content -> padding -> border -> margin",
+    "answer_b": "Content -> border -> padding -> margin",
+    "answer_c": "Content -> margin -> border -> padding"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e176"
+  },
+  "id": "33",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Qué hace box-sizing: border-box?",
+  "answers": {
+    "answer_a": "Crear un \"margin\" adicional igual al tamaño del \"padding\" y el \"border\"",
+    "answer_b": "Incluir el \"padding\" y el \"border\" en el ancho y alto total de un elemento"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e177"
+  },
+  "id": "34",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Qué selector se utiliza para acceder a las clases?",
+  "answers": {
+    "answer_a": "*",
+    "answer_b": "#",
+    "answer_c": "."
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e178"
+  },
+  "id": "35",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Cuál de estos no es un nombre de color predefinido?",
+  "answers": {
+    "answer_a": "DodgerBlue",
+    "answer_b": "MediumSeaGreen",
+    "answer_c": "VioletBlue",
+    "answer_d": "Tomato"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e179"
+  },
+  "id": "36",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Cuál de estos no es un sistema de color válido?",
+  "answers": {
+    "answer_a": "HEX",
+    "answer_b": "DOTA",
+    "answer_c": "RGB",
+    "answer_d": "HSL"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17a"
+  },
+  "id": "37",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Qué selector de combinación no se usa en CSS?",
+  "answers": {
+    "answer_a": ">",
+    "answer_b": "+",
+    "answer_c": "/",
+    "answer_d": "~"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17b"
+  },
+  "id": "38",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis correcta para los comentarios CSS?",
+  "answers": {
+    "answer_a": "<!-- Comentario -->",
+    "answer_b": "/* Comentario */",
+    "answer_c": "// Comentario"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17c"
+  },
+  "id": "39",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Cuál es la propiedad de posición predeterminada para los elementos html?",
+  "answers": {
+    "answer_a": "Fixed",
+    "answer_b": "Relative",
+    "answer_c": "Absolute",
+    "answer_d": "Static"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17d"
+  },
+  "id": "40",
+  "category": "css",
+  "level": "dificil",
+  "question": "Un elemento con \"position: fixed\" se coloca en relación al \"viewport\".",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17e"
+  },
+  "id": "41",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué hace el selector :focus?",
+  "answers": {
+    "answer_a": "Establece el elemento para que se enfoque de forma predeterminada",
+    "answer_b": "Selecciona el elemento cuando tiene foco"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e17f"
+  },
+  "id": "42",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de establecer el color de una fuente?",
+  "answers": {
+    "answer_a": "font-color: red",
+    "answer_b": "text-color: red",
+    "answer_c": "color: red"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e180"
+  },
+  "id": "43",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Qué selector se usa para acceder al ID?",
+  "answers": {
+    "answer_a": "#",
+    "answer_b": ".",
+    "answer_c": "*"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e181"
+  },
+  "id": "44",
+  "category": "css",
+  "level": "normal",
+  "question": "La regla '!important' se usa para dar más importancia a una propiedad/valor.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e182"
+  },
+  "id": "45",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué es cierto sobre display:inline-block?",
+  "answers": {
+    "answer_a": "Agrega un salto de línea después del elemento",
+    "answer_b": "Permite establecer un ancho y alto en el elemento"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e183"
+  },
+  "id": "46",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Cuál de estas propiedades se utiliza para controlar la secuencia de capas CSS?",
+  "answers": {
+    "answer_a": "Z-index",
+    "answer_b": "X-index",
+    "answer_c": "Y-index"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e184"
+  },
+  "id": "47",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Qué propiedad se puede usar para eliminar los marcadores de una lista?",
+  "answers": {
+    "answer_a": "text-decoration: none",
+    "answer_b": "list-style-type: none"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e185"
+  },
+  "id": "48",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué se puede comprobar con las media queries?",
+  "answers": {
+    "answer_a": "Orientación",
+    "answer_b": "Resolución",
+    "answer_c": "Ancho y alto de la ventana del navegador",
+    "answer_d": "Todo lo anterior"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e186"
+  },
+  "id": "49",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Qué significa CSS?",
+  "answers": {
+    "answer_a": "Cascading Style Sheets",
+    "answer_b": "Cascading Style System",
+    "answer_c": "Color Style Sheets"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e187"
+  },
+  "id": "50",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Cuál de estas declaraciones da más transparencia al elemento?",
+  "answers": {
+    "answer_a": "opacity:.1",
+    "answer_b": "opacity:.5",
+    "answer_c": "opacity:0.9"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e188"
+  },
+  "id": "51",
+  "category": "css",
+  "level": "dificil",
+  "question": "El valor por defecto de 'overflow' es 'visible'.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e189"
+  },
+  "id": "52",
+  "category": "css",
+  "level": "normal",
+  "question": "Los elementos con 'position:absolute' se eliminan del flujo normal y pueden superponerse a los elementos.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18a"
+  },
+  "id": "53",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Cuál de estas es una pseudo-clase?",
+  "answers": {
+    "answer_a": ".wrapper > a",
+    "answer_b": "div + p",
+    "answer_c": "p:first-child"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18b"
+  },
+  "id": "54",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Cuál de estos no es un selector de pseudo-elemento válido?",
+  "answers": {
+    "answer_a": "::first-line",
+    "answer_b": "::before",
+    "answer_c": "::paragraph"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18c"
+  },
+  "id": "55",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cuál es el propósito de CSS?",
+  "answers": {
+    "answer_a": "Agregar funcionalidad a elementos html",
+    "answer_b": "Describir cómo se mostrarán los elementos html",
+    "answer_c": "Crear el marcado de un sitio web"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18d"
+  },
+  "id": "56",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué separador se usa para declaraciones múltiples en el mismo bloque de reglas?",
+  "answers": {
+    "answer_a": ";",
+    "answer_b": ",",
+    "answer_c": "/"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18e"
+  },
+  "id": "57",
+  "category": "css",
+  "level": "facil",
+  "question": "'position:sticky' establece que el elemento permanezca siempre en el mismo lugar si se desplaza la página.",
+  "answers": {
+    "answer_a": "True",
+    "answer_b": "False"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e18f"
+  },
+  "id": "58",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿En qué consiste el bloque de reglas CSS?",
+  "answers": {
+    "answer_a": "Etiqueta y valor",
+    "answer_b": "Selector y declaración",
+    "answer_c": "Clase y propiedad"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e190"
+  },
+  "id": "59",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Qué selector se usa para crear una variable CSS con un alcance global?",
+  "answers": {
+    "answer_a": ":global",
+    "answer_b": ":all",
+    "answer_c": ":root"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e191"
+  },
+  "id": "60",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Cuál es la diferencia entre 'display:none' y 'visibility:hidden'?",
+  "answers": {
+    "answer_a": "'visibility:hidden' ocupará el mismo espacio que antes",
+    "answer_b": "display:none ocupará el mismo espacio que antes",
+    "answer_c": "No hay diferencia entre los dos"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e192"
+  },
+  "id": "312",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cuál es la ventaja de utilizar CSS en línea?",
+  "answers": {
+    "answer_a": "Es más fácil de manejar",
+    "answer_b": "Es más fácil añadir múltiples estilos a través de él",
+    "answer_c": "Se puede utilizar para probar rápidamente las anulaciones locales de CSS",
+    "answer_d": "Reduce los conflictos con otros métodos de definición de CSS"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e193"
+  },
+  "id": "313",
+  "category": "css",
+  "level": "facil",
+  "question": "Para insertar un archivo de hoja de estilo externo en otro archivo de hoja de estilo, ¿qué regla debe utilizar?",
+  "answers": {
+    "answer_a": "@import",
+    "answer_b": "@link",
+    "answer_c": "@insert",
+    "answer_d": "@style"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e194"
+  },
+  "id": "314",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Qué opción no es válida para declarar un valor de relleno de 10 píxeles en la parte superior e inferior, y de 0 píxeles en la izquierda y la derecha?",
+  "answers": {
+    "answer_a": "padding: 10px 0px;",
+    "answer_b": "padding: 10px 10px 0px 0px;",
+    "answer_c": "padding: 10px 0;",
+    "answer_d": "padding: 10px 0px 10px 0px;"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e195"
+  },
+  "id": "315",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Qué opción utiliza la sintaxis correcta para añadir una pseudo-clase hover a un elemento?",
+  "answers": {
+    "answer_a": "a:hover {...}",
+    "answer_b": "a :hover {...}",
+    "answer_c": "a.hover {...}",
+    "answer_d": "a hover {...}"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e196"
+  },
+  "id": "316",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cual de los siguientes es un valor NO válido para la propiedad font-size?",
+  "answers": {
+    "answer_a": "font-size: xsmall",
+    "answer_b": "font-size: 50%",
+    "answer_c": "font-size: 1em",
+    "answer_d": "font-size: 20px"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e197"
+  },
+  "id": "353",
+  "category": "css",
+  "level": "facil",
+  "question": "¿Cómo posicionamos un elemento dentro de otro de forma precisa?",
+  "answers": {
+    "answer_a": "Padre - position:relative / Hijo - position:absolute",
+    "answer_b": "Padre - position:absolute / Hijo - position:relative",
+    "answer_c": "Padre - position:fixed / Hijo - position:absolute"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e198"
+  },
+  "id": "354",
+  "category": "css",
+  "level": "normal",
+  "question": "¿Con que pseudo-selector se puede seleccionar el primer hijo, sin tener class name o id?",
+  "answers": {
+    "answer_a": "nth-child(0)",
+    "answer_b": "nth-child(1)",
+    "answer_c": "nth-first-child"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9372bff27499da41e199"
+  },
+  "id": "355",
+  "category": "css",
+  "level": "dificil",
+  "question": "¿Qué selector utilizarías para seleccionar un elemento que en el atributo título contenga la palabra \"container\"?",
+  "answers": {
+    "answer_a": "[title~=container]",
+    "answer_b": "[title^=container]",
+    "answer_c": "[title$=container]"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19a"
+  },
+  "id": "1",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un elemento de bloque?",
+  "answers": {
+    "answer_a": "<span>",
+    "answer_b": "<table>",
+    "answer_c": "<em>",
+    "answer_d": "<img>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19b"
+  },
+  "id": "2",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la sintaxis correcta para añadir un \"checkbox\"?",
+  "answers": {
+    "answer_a": "<checkbox>",
+    "answer_b": "<check>",
+    "answer_c": "<input type='checkbox'>"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los checkbox se consiguen con la etiqueta <input type=\"checkbox\">."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19c"
+  },
+  "id": "3",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Qué define el atributo \"action\" en el elemento <form>?",
+  "answers": {
+    "answer_a": "El método http para enviar los datos del formulario",
+    "answer_b": "Dónde enviar los datos del formulario cuando se envían",
+    "answer_c": "El tipo mime utilizado para codificar el contenido"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El atributo action indica la página a la que se envían los datos del formulario. Si este atributo está vacío, es la página que contiene el formulario la que se recargará con los datos como parámetros."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19d"
+  },
+  "id": "4",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis válida de los comentarios en HTML?",
+  "answers": {
+    "answer_a": "<!-- Comentario -->",
+    "answer_b": "/* Comentario */",
+    "answer_c": "// Comentario"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19e"
+  },
+  "id": "5",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Qué significa HTML?",
+  "answers": {
+    "answer_a": "Hypertext Markdown Language",
+    "answer_b": "Hypertext Machine Language",
+    "answer_c": "Hypertext Markup Language"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e19f"
+  },
+  "id": "6",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál de estos \"meta-tags\" está \"deprecated\"",
+  "answers": {
+    "answer_a": "description",
+    "answer_b": "keywords",
+    "answer_c": "author",
+    "answer_d": "copyright"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a0"
+  },
+  "id": "7",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de declarar un documento HTML5?",
+  "answers": {
+    "answer_a": "<!DOCTYPE html5>",
+    "answer_b": "<!DOCTYPE html>"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "<!DOCTYPE html> La etiqueta doctype declara el tipo de documento, por lo que esta está señalando que este es un documento HTML."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a1"
+  },
+  "id": "8",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de crear un enlace de correo electrónico?",
+  "answers": {
+    "answer_a": "<a href=\"mailto:email@email.com\">Email</a>",
+    "answer_b": "<a href=\"email:email@email.com\">Email</a>",
+    "answer_c": "<a href=\"send:email@email.com\">Email</a>"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a2"
+  },
+  "id": "9",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Tanto '.html' como '.htm' son extensiones HTML válidas?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a3"
+  },
+  "id": "10",
+  "category": "html",
+  "level": "dificil",
+  "question": "Qué fuente de imagen está un nivel por encima de la carpeta actual",
+  "answers": {
+    "answer_a": "<img src=\"picture.jpg\">",
+    "answer_b": "<img src=\"../picture.jpg\">",
+    "answer_c": "<img src=\"/images/picture.jpg\">"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Usando dos puntos y una barra oblicua (../) podemos subir un nivel en la jerarquía de carpetas."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a4"
+  },
+  "id": "11",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de los siguientes elementos no corresponde a la sección <head>?",
+  "answers": {
+    "answer_a": "<title>",
+    "answer_b": "<header>",
+    "answer_c": "<meta>",
+    "answer_d": "<link>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a5"
+  },
+  "id": "12",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuántas etiquetas <heading> hay en HTML?",
+  "answers": {
+    "answer_a": "2",
+    "answer_b": "4",
+    "answer_c": "6"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los elementos de encabezado implementan seis niveles de encabezado del documento, <h1> es el más importante, y <h6>, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a6"
+  },
+  "id": "13",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Para qué se utiliza la etiqueta <iframe>?",
+  "answers": {
+    "answer_a": "Para incrustar contenido",
+    "answer_b": "Para dibujar gráficos",
+    "answer_c": "Para enmarcar un grupo de elementos"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "El elemento HTML <iframe> (de inline frame) representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a7"
+  },
+  "id": "14",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué define el atributo 'alt' dentro de la etiqueta <img/>",
+  "answers": {
+    "answer_a": "La descripción de una imagen para cuando esta no se pueda mostrar",
+    "answer_b": "Una imagen alternativa a la imagen principal"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a8"
+  },
+  "id": "15",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué etiqueta HTML se usa para definir texto importante?",
+  "answers": {
+    "answer_a": "<i>",
+    "answer_b": "<b>",
+    "answer_c": "<strong>",
+    "answer_d": "<important>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1a9"
+  },
+  "id": "16",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un elemento en línea?",
+  "answers": {
+    "answer_a": "<form>",
+    "answer_b": "<hr>",
+    "answer_c": "<a>",
+    "answer_d": "<canvas>"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1aa"
+  },
+  "id": "17",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis correcta para los estilos en línea?",
+  "answers": {
+    "answer_a": "<p color=\"red\">Text</p>",
+    "answer_b": "<p color:\"red\">Text</p>",
+    "answer_c": "<p style=\"color:red\">Text</p>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1ab"
+  },
+  "id": "18",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos elementos no es un 'input type'?",
+  "answers": {
+    "answer_a": "file",
+    "answer_b": "radio",
+    "answer_c": "list",
+    "answer_d": "submit"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1ac"
+  },
+  "id": "19",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de definir un enlace?",
+  "answers": {
+    "answer_a": "<a url=\"path/to/file\">Link</a>",
+    "answer_b": "<a link=\"path/to/file\">Link</a>",
+    "answer_c": "<a href=\"path/to/file\">Link</a>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1ad"
+  },
+  "id": "20",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué atributo se usa para especificar que un 'input' debe completarse?",
+  "answers": {
+    "answer_a": "placeholder",
+    "answer_b": "mandatory",
+    "answer_c": "validate",
+    "answer_d": "required"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1ae"
+  },
+  "id": "21",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué etiqueta se utiliza para producir un salto de línea?",
+  "answers": {
+    "answer_a": "<break>",
+    "answer_b": "<br>",
+    "answer_c": "<b>",
+    "answer_d": "<new>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1af"
+  },
+  "id": "22",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cómo puedes hacer una lista numerada?",
+  "answers": {
+    "answer_a": "<list>",
+    "answer_b": "<ol>",
+    "answer_c": "<ul>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b0"
+  },
+  "id": "23",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un campo de contraseña válido?",
+  "answers": {
+    "answer_a": "<text type=\"password\">",
+    "answer_b": "<password>",
+    "answer_c": "<input type=\"password\">"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b1"
+  },
+  "id": "24",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Qué hace la etiqueta <pre>?",
+  "answers": {
+    "answer_a": "Resalta el texto",
+    "answer_b": "Define texto preformateado",
+    "answer_c": "Muestra el texto como una cita"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El elemento HTML <pre> representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b2"
+  },
+  "id": "25",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Cuál no se considera una etiqueta de cita?",
+  "answers": {
+    "answer_a": "<cite>",
+    "answer_b": "<q>",
+    "answer_c": "<blockquote>",
+    "answer_d": "<em>"
+  },
+  "correct_answer": "answer_d",
+  "feedback": "La etiqueta <em>, se utiliza para resaltar texto en el documento dando “énfasis” al texto sobre el que se aplica la etiqueta. NO representa una cita."
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b3"
+  },
+  "id": "26",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es el elemento raíz de HTML?",
+  "answers": {
+    "answer_a": "<body>",
+    "answer_b": "<html>",
+    "answer_c": "<head>",
+    "answer_d": "<doctype>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b4"
+  },
+  "id": "27",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál de estas es una etiqueta de cierre automático?",
+  "answers": {
+    "answer_a": "<h1>",
+    "answer_b": "<nav>",
+    "answer_c": "<input>",
+    "answer_d": "<code>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b5"
+  },
+  "id": "28",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de abrir un enlace en una nueva pestaña/ventana del navegador?",
+  "answers": {
+    "answer_a": "<a href=\"url\" target=\"_new\">",
+    "answer_b": "<a href=\"url\" target=\"_blank\">",
+    "answer_c": "<a href=\"url\" target=\"_window\">"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b6"
+  },
+  "id": "29",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la sintaxis correcta para 'textarea'?",
+  "answers": {
+    "answer_a": "<textarea>",
+    "answer_b": "<input type=\"textarea\">",
+    "answer_c": "<input type=\"textbox\">"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b7"
+  },
+  "id": "30",
+  "category": "html",
+  "level": "facil",
+  "question": "Qué etiqueta se utiliza para definir el título del documento",
+  "answers": {
+    "answer_a": "<head>",
+    "answer_b": "<meta>",
+    "answer_c": "<title>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b8"
+  },
+  "id": "307",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuáles son los mejores ejemplos de elementos vacíos?",
+  "answers": {
+    "answer_a": "<link><meta><title>",
+    "answer_b": "<br><base><source>",
+    "answer_c": "<input><br><p>",
+    "answer_d": "<area><embed><strong>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1b9"
+  },
+  "id": "308",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Cuál es el propósito principal de la etiqueta <canvas>?",
+  "answers": {
+    "answer_a": "Permite representar imágenes rasterizadas en la página web",
+    "answer_b": "Muestra imágenes con anotaciones",
+    "answer_c": "Permite dibujar sobre un mapa de bits a través de JavaScript",
+    "answer_d": "Permite representar imágenes vectoriales en la página web"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1ba"
+  },
+  "id": "309",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cómo se escribiría una entrada que permita al usuario seleccionar entre un rango de valores enteros entre 0 y 100 (inclusive) en incrementos de 5?",
+  "answers": {
+    "answer_a": "<input type=\"range\" min=\"0\" max=\"100\" by=\"5\" />",
+    "answer_b": "<input type=\"range\" min=\"0\" max=\"100\" step=\"5\" />",
+    "answer_c": "<input type=\"number\" min=\"0\" max=\"100\" step=\"5\" />",
+    "answer_d": "<input type=\"number\" min=\"0\" max=\"100\" by=\"5\" />"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1bb"
+  },
+  "id": "310",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la diferencia entre <svg> y <canvas>?",
+  "answers": {
+    "answer_a": "<svg> produce gráficos vectoriales, mientras que <canvas> produce gráficos rasterizados",
+    "answer_b": "<svg> se integra con JavaScript, mientras que <canvas> no",
+    "answer_c": "<svg> produce gráficos de trama, mientras que <canvas> produce gráficos vectoriales",
+    "answer_d": "<svg> no se puede usar como imagen de fondo, mientras que <canvas> se puede usar como fondo"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f937bbff27499da41e1bc"
+  },
+  "id": "311",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Para qué sirve el atributo class?",
+  "answers": {
+    "answer_a": "Las clases permiten a CSS seleccionar elementos específicos en la página. En el atributo class se pueden incluir tantos nombres de clase como se desee, separados por espacios",
+    "answer_b": "Las clases permiten a CSS y JavaScript seleccionar elementos específicos en la página. Solo puede enumerar un nombre de clase por atributo de clase",
+    "answer_c": "Las clases permiten a CSS seleccionar elementos específicos en la página. Solo puede enumerar un nombre de clase por atributo de clase",
+    "answer_d": "Las clases permiten que CSS y JavaScript seleccionen elementos específicos en la página. Puede enumerar tantos nombres de clase dentro del atributo class como desee, separados por espacios"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1be"
+  },
+  "id": "1",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un elemento de bloque?",
+  "answers": {
+    "answer_a": "<span>",
+    "answer_b": "<table>",
+    "answer_c": "<em>",
+    "answer_d": "<img>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1bf"
+  },
+  "id": "2",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la sintaxis correcta para añadir un \"checkbox\"?",
+  "answers": {
+    "answer_a": "<checkbox>",
+    "answer_b": "<check>",
+    "answer_c": "<input type='checkbox'>"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los checkbox se consiguen con la etiqueta <input type=\"checkbox\">."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c0"
+  },
+  "id": "3",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Qué define el atributo \"action\" en el elemento <form>?",
+  "answers": {
+    "answer_a": "El método http para enviar los datos del formulario",
+    "answer_b": "Dónde enviar los datos del formulario cuando se envían",
+    "answer_c": "El tipo mime utilizado para codificar el contenido"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El atributo action indica la página a la que se envían los datos del formulario. Si este atributo está vacío, es la página que contiene el formulario la que se recargará con los datos como parámetros."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c1"
+  },
+  "id": "4",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis válida de los comentarios en HTML?",
+  "answers": {
+    "answer_a": "<!-- Comentario -->",
+    "answer_b": "/* Comentario */",
+    "answer_c": "// Comentario"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c2"
+  },
+  "id": "5",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Qué significa HTML?",
+  "answers": {
+    "answer_a": "Hypertext Markdown Language",
+    "answer_b": "Hypertext Machine Language",
+    "answer_c": "Hypertext Markup Language"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c3"
+  },
+  "id": "6",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál de estos \"meta-tags\" está \"deprecated\"",
+  "answers": {
+    "answer_a": "description",
+    "answer_b": "keywords",
+    "answer_c": "author",
+    "answer_d": "copyright"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c4"
+  },
+  "id": "7",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de declarar un documento HTML5?",
+  "answers": {
+    "answer_a": "<!DOCTYPE html5>",
+    "answer_b": "<!DOCTYPE html>"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "<!DOCTYPE html> La etiqueta doctype declara el tipo de documento, por lo que esta está señalando que este es un documento HTML."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c5"
+  },
+  "id": "8",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de crear un enlace de correo electrónico?",
+  "answers": {
+    "answer_a": "<a href=\"mailto:email@email.com\">Email</a>",
+    "answer_b": "<a href=\"email:email@email.com\">Email</a>",
+    "answer_c": "<a href=\"send:email@email.com\">Email</a>"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c6"
+  },
+  "id": "9",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Tanto '.html' como '.htm' son extensiones HTML válidas?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c7"
+  },
+  "id": "10",
+  "category": "html",
+  "level": "dificil",
+  "question": "Qué fuente de imagen está un nivel por encima de la carpeta actual",
+  "answers": {
+    "answer_a": "<img src=\"picture.jpg\">",
+    "answer_b": "<img src=\"../picture.jpg\">",
+    "answer_c": "<img src=\"/images/picture.jpg\">"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Usando dos puntos y una barra oblicua (../) podemos subir un nivel en la jerarquía de carpetas."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c8"
+  },
+  "id": "11",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de los siguientes elementos no corresponde a la sección <head>?",
+  "answers": {
+    "answer_a": "<title>",
+    "answer_b": "<header>",
+    "answer_c": "<meta>",
+    "answer_d": "<link>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1c9"
+  },
+  "id": "12",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuántas etiquetas <heading> hay en HTML?",
+  "answers": {
+    "answer_a": "2",
+    "answer_b": "4",
+    "answer_c": "6"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los elementos de encabezado implementan seis niveles de encabezado del documento, <h1> es el más importante, y <h6>, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1ca"
+  },
+  "id": "13",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Para qué se utiliza la etiqueta <iframe>?",
+  "answers": {
+    "answer_a": "Para incrustar contenido",
+    "answer_b": "Para dibujar gráficos",
+    "answer_c": "Para enmarcar un grupo de elementos"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "El elemento HTML <iframe> (de inline frame) representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1cb"
+  },
+  "id": "14",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué define el atributo 'alt' dentro de la etiqueta <img/>",
+  "answers": {
+    "answer_a": "La descripción de una imagen para cuando esta no se pueda mostrar",
+    "answer_b": "Una imagen alternativa a la imagen principal"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1cc"
+  },
+  "id": "15",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué etiqueta HTML se usa para definir texto importante?",
+  "answers": {
+    "answer_a": "<i>",
+    "answer_b": "<b>",
+    "answer_c": "<strong>",
+    "answer_d": "<important>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1cd"
+  },
+  "id": "16",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un elemento en línea?",
+  "answers": {
+    "answer_a": "<form>",
+    "answer_b": "<hr>",
+    "answer_c": "<a>",
+    "answer_d": "<canvas>"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1ce"
+  },
+  "id": "17",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis correcta para los estilos en línea?",
+  "answers": {
+    "answer_a": "<p color=\"red\">Text</p>",
+    "answer_b": "<p color:\"red\">Text</p>",
+    "answer_c": "<p style=\"color:red\">Text</p>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1cf"
+  },
+  "id": "18",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos elementos no es un 'input type'?",
+  "answers": {
+    "answer_a": "file",
+    "answer_b": "radio",
+    "answer_c": "list",
+    "answer_d": "submit"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d0"
+  },
+  "id": "19",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de definir un enlace?",
+  "answers": {
+    "answer_a": "<a url=\"path/to/file\">Link</a>",
+    "answer_b": "<a link=\"path/to/file\">Link</a>",
+    "answer_c": "<a href=\"path/to/file\">Link</a>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d1"
+  },
+  "id": "20",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué atributo se usa para especificar que un 'input' debe completarse?",
+  "answers": {
+    "answer_a": "placeholder",
+    "answer_b": "mandatory",
+    "answer_c": "validate",
+    "answer_d": "required"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d2"
+  },
+  "id": "21",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Qué etiqueta se utiliza para producir un salto de línea?",
+  "answers": {
+    "answer_a": "<break>",
+    "answer_b": "<br>",
+    "answer_c": "<b>",
+    "answer_d": "<new>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d3"
+  },
+  "id": "22",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cómo puedes hacer una lista numerada?",
+  "answers": {
+    "answer_a": "<list>",
+    "answer_b": "<ol>",
+    "answer_c": "<ul>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d4"
+  },
+  "id": "23",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál de estos es un campo de contraseña válido?",
+  "answers": {
+    "answer_a": "<text type=\"password\">",
+    "answer_b": "<password>",
+    "answer_c": "<input type=\"password\">"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d5"
+  },
+  "id": "24",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Qué hace la etiqueta <pre>?",
+  "answers": {
+    "answer_a": "Resalta el texto",
+    "answer_b": "Define texto preformateado",
+    "answer_c": "Muestra el texto como una cita"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El elemento HTML <pre> representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d6"
+  },
+  "id": "25",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Cuál no se considera una etiqueta de cita?",
+  "answers": {
+    "answer_a": "<cite>",
+    "answer_b": "<q>",
+    "answer_c": "<blockquote>",
+    "answer_d": "<em>"
+  },
+  "correct_answer": "answer_d",
+  "feedback": "La etiqueta <em>, se utiliza para resaltar texto en el documento dando “énfasis” al texto sobre el que se aplica la etiqueta. NO representa una cita."
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d7"
+  },
+  "id": "26",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál es el elemento raíz de HTML?",
+  "answers": {
+    "answer_a": "<body>",
+    "answer_b": "<html>",
+    "answer_c": "<head>",
+    "answer_d": "<doctype>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d8"
+  },
+  "id": "27",
+  "category": "html",
+  "level": "facil",
+  "question": "¿Cuál de estas es una etiqueta de cierre automático?",
+  "answers": {
+    "answer_a": "<h1>",
+    "answer_b": "<nav>",
+    "answer_c": "<input>",
+    "answer_d": "<code>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1d9"
+  },
+  "id": "28",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de abrir un enlace en una nueva pestaña/ventana del navegador?",
+  "answers": {
+    "answer_a": "<a href=\"url\" target=\"_new\">",
+    "answer_b": "<a href=\"url\" target=\"_blank\">",
+    "answer_c": "<a href=\"url\" target=\"_window\">"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1da"
+  },
+  "id": "29",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la sintaxis correcta para 'textarea'?",
+  "answers": {
+    "answer_a": "<textarea>",
+    "answer_b": "<input type=\"textarea\">",
+    "answer_c": "<input type=\"textbox\">"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1db"
+  },
+  "id": "30",
+  "category": "html",
+  "level": "facil",
+  "question": "Qué etiqueta se utiliza para definir el título del documento",
+  "answers": {
+    "answer_a": "<head>",
+    "answer_b": "<meta>",
+    "answer_c": "<title>"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1dc"
+  },
+  "id": "307",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuáles son los mejores ejemplos de elementos vacíos?",
+  "answers": {
+    "answer_a": "<link><meta><title>",
+    "answer_b": "<br><base><source>",
+    "answer_c": "<input><br><p>",
+    "answer_d": "<area><embed><strong>"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1dd"
+  },
+  "id": "308",
+  "category": "html",
+  "level": "dificil",
+  "question": "¿Cuál es el propósito principal de la etiqueta <canvas>?",
+  "answers": {
+    "answer_a": "Permite representar imágenes rasterizadas en la página web",
+    "answer_b": "Muestra imágenes con anotaciones",
+    "answer_c": "Permite dibujar sobre un mapa de bits a través de JavaScript",
+    "answer_d": "Permite representar imágenes vectoriales en la página web"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1de"
+  },
+  "id": "309",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cómo se escribiría una entrada que permita al usuario seleccionar entre un rango de valores enteros entre 0 y 100 (inclusive) en incrementos de 5?",
+  "answers": {
+    "answer_a": "<input type=\"range\" min=\"0\" max=\"100\" by=\"5\" />",
+    "answer_b": "<input type=\"range\" min=\"0\" max=\"100\" step=\"5\" />",
+    "answer_c": "<input type=\"number\" min=\"0\" max=\"100\" step=\"5\" />",
+    "answer_d": "<input type=\"number\" min=\"0\" max=\"100\" by=\"5\" />"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1df"
+  },
+  "id": "310",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Cuál es la diferencia entre <svg> y <canvas>?",
+  "answers": {
+    "answer_a": "<svg> produce gráficos vectoriales, mientras que <canvas> produce gráficos rasterizados",
+    "answer_b": "<svg> se integra con JavaScript, mientras que <canvas> no",
+    "answer_c": "<svg> produce gráficos de trama, mientras que <canvas> produce gráficos vectoriales",
+    "answer_d": "<svg> no se puede usar como imagen de fondo, mientras que <canvas> se puede usar como fondo"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f938cbff27499da41e1e0"
+  },
+  "id": "311",
+  "category": "html",
+  "level": "normal",
+  "question": "¿Para qué sirve el atributo class?",
+  "answers": {
+    "answer_a": "Las clases permiten a CSS seleccionar elementos específicos en la página. En el atributo class se pueden incluir tantos nombres de clase como se desee, separados por espacios",
+    "answer_b": "Las clases permiten a CSS y JavaScript seleccionar elementos específicos en la página. Solo puede enumerar un nombre de clase por atributo de clase",
+    "answer_c": "Las clases permiten a CSS seleccionar elementos específicos en la página. Solo puede enumerar un nombre de clase por atributo de clase",
+    "answer_d": "Las clases permiten que CSS y JavaScript seleccionen elementos específicos en la página. Puede enumerar tantos nombres de clase dentro del atributo class como desee, separados por espacios"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e1"
+  },
+  "id": "91",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Cuál es la sintaxis correcta para imprimir por consola \"Hola mundo\" en Java?",
+  "answers": {
+    "answer_a": "Console.WriteLine(\"Hola mundo\")",
+    "answer_b": "print(\"Hola mundo\")",
+    "answer_c": "echo(\"Hola mundo\")",
+    "answer_d": "System.out.println(\"Hola mundo\")"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e2"
+  },
+  "id": "92",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Cómo puedes insertar comentarios en Java?",
+  "answers": {
+    "answer_a": "# Esto es un comentario",
+    "answer_b": "/* Esto es un comentario",
+    "answer_d": "// Esto es un comentario"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e3"
+  },
+  "id": "93",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Qué tipo de datos se utiliza para crear una variable que debe almacenar texto?",
+  "answers": {
+    "answer_a": "String",
+    "answer_b": "string",
+    "answer_c": "myString",
+    "answer_d": "txt"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e4"
+  },
+  "id": "94",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Cómo se crea una variable con el valor numérico 5?",
+  "answers": {
+    "answer_a": "num x = 5",
+    "answer_b": "float x = 5",
+    "answer_c": "int x = 5",
+    "answer_d": "x = 5"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e5"
+  },
+  "id": "95",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál de estos métodos se puede usar para convertir todos los caracteres de una cadena en una matriz de caracteres?",
+  "answers": {
+    "answer_a": "charAt()",
+    "answer_b": "toCharArray()",
+    "answer_c": "Todos los mencionados",
+    "answer_d": "getChars()"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e6"
+  },
+  "id": "96",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuáles de estas constantes están definidas en la clase WindowEvent?",
+  "answers": {
+    "answer_a": "Todas las mencionadas",
+    "answer_b": "WINDOW_CLOSED",
+    "answer_c": "WINDOW_DEICONIFIED",
+    "answer_d": "WINDOW_ACTIVATED"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e7"
+  },
+  "id": "97",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Qué pasará si escribimos static public void en lugar de public static void?",
+  "answers": {
+    "answer_a": "El programa no compilará",
+    "answer_b": "El programa compila pero no se ejecuta",
+    "answer_c": "El programa lanzará una excepción en tiempo de ejecución",
+    "answer_d": "El programa compila y se ejecuta correctamente"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e8"
+  },
+  "id": "98",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál de los siguientes componentes se puede usar para crear una aplicación que admita tareas múltiples?",
+  "answers": {
+    "answer_a": "Ambos",
+    "answer_b": "Thread",
+    "answer_c": "Process",
+    "answer_d": "Ninguno de los dos"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1e9"
+  },
+  "id": "99",
+  "category": "java",
+  "level": "normal",
+  "question": "El constructor se utiliza para:",
+  "answers": {
+    "answer_a": "Inicializar el estado de una clase",
+    "answer_b": "Inicializar el estado de todas las variables miembro",
+    "answer_c": "Inicializar el estado de un objeto",
+    "answer_d": "Ninguna es correcta"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ea"
+  },
+  "id": "100",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes es una palabra clave?",
+  "answers": {
+    "answer_a": "next",
+    "answer_b": "exit",
+    "answer_c": "native",
+    "answer_d": "delete"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1eb"
+  },
+  "id": "101",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Podemos anular un método sobrecargado?",
+  "answers": {
+    "answer_a": "Sí, solo en la clase heredada",
+    "answer_b": "Sí",
+    "answer_c": "No",
+    "answer_d": "Sí, solo en la clase \"super\""
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ec"
+  },
+  "id": "102",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál de estas clases es padre de todas las otras clases?",
+  "answers": {
+    "answer_a": "java.Lang.Object",
+    "answer_b": "java.util.Object",
+    "answer_c": "java.util.Class",
+    "answer_d": "java.lang.Class"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ed"
+  },
+  "id": "103",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Qué es la clonación de objetos?",
+  "answers": {
+    "answer_a": "La clonación de objetos se utiliza para crear una nueva copia de un objeto con diferentes valores",
+    "answer_b": "La clonación de objetos se utiliza para crear una copia exacta de una clase",
+    "answer_c": "Todas las anteriores",
+    "answer_d": "La clonación de objetos se utiliza para crear la copia exacta de un objeto"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ee"
+  },
+  "id": "104",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Podemos tener funciones virtuales en Java?",
+  "answers": {
+    "answer_a": "No",
+    "answer_b": "Sí, solo en la función Main()",
+    "answer_c": "Sí, todas las funciones no estáticas en Java son virtuales por defecto",
+    "answer_d": "Sí, solo en la clase super"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ef"
+  },
+  "id": "105",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál es el valor predeterminado para una variable de instancia?",
+  "answers": {
+    "answer_a": "Las referencias a objetos no se inicializan con ningún valor predeterminado",
+    "answer_b": "Ninguna es correcta",
+    "answer_c": "Depende del tipo de variable",
+    "answer_d": "null"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f0"
+  },
+  "id": "106",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál de estas interfaces define cuatro métodos?",
+  "answers": {
+    "answer_a": "ActionListener",
+    "answer_b": "ContainerListener",
+    "answer_c": "ComponentListener",
+    "answer_d": "InputListener"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f1"
+  },
+  "id": "107",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Qué es cierto sobre el bloque estático?",
+  "answers": {
+    "answer_a": "Se puede ejecutar en cualquier momento",
+    "answer_b": "Tiene que ser ejecutado manualmente",
+    "answer_c": "Se ejecuta antes del método principal en el momento de la carga de la clase",
+    "answer_d": "Se ejecuta después del método principal en el momento de la carga de la clase"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f2"
+  },
+  "id": "108",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál de estos métodos de la clase String se usa para obtener la longitud del objeto String?",
+  "answers": {
+    "answer_a": "SifeOf()",
+    "answer_b": "get()",
+    "answer_c": "lengthof()",
+    "answer_d": "length()"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f3"
+  },
+  "id": "109",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Puedes hacer un constructor \"final\"?",
+  "answers": {
+    "answer_a": "Sí",
+    "answer_b": "Lo podemos hacer \"final\" para la clase heredada solamente",
+    "answer_c": "No, el constructor no puede ser \"final\"",
+    "answer_d": "Siempre es \"final\""
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f4"
+  },
+  "id": "110",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Qué sucederá si se elimina el modificador estático de la firma del método principal?",
+  "answers": {
+    "answer_a": "La JVM la agregará de nuevo automáticamente",
+    "answer_b": "El programa no compilará compilaciones y arrojará un error \"NoSuchMethodError\"",
+    "answer_c": "El programa compilará y se ejecutará sin errores",
+    "answer_d": "El programa compilará. Pero en tiempo de ejecución arroja un error \"NoSuchMethodError\""
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f5"
+  },
+  "id": "111",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Se hereda un constructor?",
+  "answers": {
+    "answer_a": "Se hereda de un método",
+    "answer_b": "Se hereda de un objeto",
+    "answer_c": "Sí, el constructor se hereda de otra clase",
+    "answer_d": "No, el constructor no se hereda"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f6"
+  },
+  "id": "112",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál de estos métodos utilizará para obtener los caracteres ASCII a medida que los escribe un usuario en un campo de texto?",
+  "answers": {
+    "answer_a": "keyTyped()",
+    "answer_b": "keyReleased()",
+    "answer_c": "keyPressed()",
+    "answer_d": "keyEntered()"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f7"
+  },
+  "id": "113",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Cuál es el valor predeterminado para una variable local?",
+  "answers": {
+    "answer_a": "Depende del tipo de variable",
+    "answer_b": "null",
+    "answer_c": "Las variables locales no se inicializan a ningún valor predeterminado",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f8"
+  },
+  "id": "114",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Qué método se puede usar para devolver una cadena en letras mayúsculas?",
+  "answers": {
+    "answer_a": "toUpperCase()",
+    "answer_b": "touppercase()",
+    "answer_c": "upperCase()",
+    "answer_d": "tuc()"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1f9"
+  },
+  "id": "115",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál es la forma correcta de crear un objeto llamado myObj de MyClass?",
+  "answers": {
+    "answer_a": "class myObj = new MyClass()",
+    "answer_b": "MyClass myObj = new MyClass()",
+    "answer_c": "class MyClass = new myObj()",
+    "answer_d": "new myObj = MyClass()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1fa"
+  },
+  "id": "116",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál causará un error del compilador?",
+  "answers": {
+    "answer_a": "int[ ] scores = {3, 5, 7}",
+    "answer_b": "int [ ][ ] scores = {2,7,6}, {9,3,45}",
+    "answer_c": "String cats[ ] = {\"Fluffy\", \"Spot\", \"Zeus\"}",
+    "answer_d": "boolean results[ ] = new boolean [] {true, false, true}",
+    "answer_e": "Integer results[ ] = {new Integer(3), new Integer(5), new Integer(8)"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1fb"
+  },
+  "id": "117",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Qué clase de colección le permite acceder a sus elementos asociando una clave con el valor de un elemento y proporciona sincronización?",
+  "answers": {
+    "answer_a": "java.util.SortedMap",
+    "answer_b": "java.util.TreeMap",
+    "answer_c": "java.util.TreeSet",
+    "answer_d": "java.util.Hashtable"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1fc"
+  },
+  "id": "118",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes producirá una respuesta con el valor más cercano a un double, d, sin ser mayor que d?",
+  "answers": {
+    "answer_a": "(int)Math.min(d)",
+    "answer_b": "(int)Math.max(d)",
+    "answer_c": "(int)Math.abs(d)",
+    "answer_d": "(int)Math.floor(d)"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1fd"
+  },
+  "id": "119",
+  "category": "java",
+  "level": "normal",
+  "question": "Para que las subclases de cualquier paquete tengan acceso a los miembros de una superclase, ¿cuál es el acceso más restrictivo que cumple este objetivo?",
+  "answers": {
+    "answer_a": "public",
+    "answer_b": "private",
+    "answer_c": "protected",
+    "answer_d": "transient"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1fe"
+  },
+  "id": "120",
+  "category": "java",
+  "level": "dificil",
+  "question": "¿Cuál contendrá el cuerpo del \"thread\"",
+  "answers": {
+    "answer_a": "run()",
+    "answer_b": "start()",
+    "answer_c": "stop()",
+    "answer_d": "main()"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e1ff"
+  },
+  "id": "317",
+  "category": "java",
+  "level": "facil",
+  "question": "Al implementar la encapsulación, no se puede acceder directamente a las propiedades ___ de la clase a menos que esté escribiendo código dentro de la propia clase.",
+  "answers": {
+    "answer_a": "private",
+    "answer_b": "protected",
+    "answer_c": "public",
+    "answer_d": "sin modificador de acceso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e200"
+  },
+  "id": "318",
+  "category": "java",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes expresiones es la mas fiable para comprobar si dos variables de tipo String son iguales?",
+  "answers": {
+    "answer_a": "string1 == string2",
+    "answer_b": "string1 = string2",
+    "answer_c": "string1.matches(string2)",
+    "answer_d": "string1.equals(string2)"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e201"
+  },
+  "id": "319",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Qué tipo de variable mantiene un valor constante una vez asignado?",
+  "answers": {
+    "answer_a": "static",
+    "answer_b": "final",
+    "answer_c": "private",
+    "answer_d": "non-static"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e202"
+  },
+  "id": "320",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Qué palabra clave permite llamar al constructor de una clase padre?",
+  "answers": {
+    "answer_a": "parent",
+    "answer_b": "this",
+    "answer_c": "super",
+    "answer_d": "new"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f9397bff27499da41e203"
+  },
+  "id": "321",
+  "category": "java",
+  "level": "facil",
+  "question": "¿Qué palabra clave permite utilizar una interfaz?",
+  "answers": {
+    "answer_a": "implements",
+    "answer_b": "extends",
+    "answer_c": "inherits",
+    "answer_d": "import"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e204"
+  },
+  "id": "61",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿JavasScript distingue entre mayúsculas y minúsculas?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "JavaScript distingue entre mayúsculas y minúsculas (es case-sensitive) y utiliza el conjunto de caracteres Unicode. Por ejemplo, la palabra «Früh» (que significa 'temprano' en Alemán) se podría usar como el nombre de una variable."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e205"
+  },
+  "id": "62",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Qué palabra está relacionada con la herencia de clase?",
+  "answers": {
+    "answer_a": "expands",
+    "answer_b": "exports",
+    "answer_c": "extends"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Para heredar de otra clase se utiliza 'extends' como palabra clave. La herencia de clase es el modo para que una clase extienda a otra. De esta manera podemos añadir nueva funcionalidad a la clase ya existente."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e206"
+  },
+  "id": "63",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Qué controlador de eventos se utiliza para procesar el evento de clic?",
+  "answers": {
+    "answer_a": "onmouseclick",
+    "answer_b": "onclick",
+    "answer_c": "onkeydown"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El evento onclick en JavaScript te permite ejecutar una función cuando se hace clic en un elemento."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e207"
+  },
+  "id": "64",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Cuál de estos métodos combina dos cadenas?",
+  "answers": {
+    "answer_a": "attach()",
+    "answer_b": "append()",
+    "answer_c": "concat()"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "El método concat() combina dos o más cadenas de texto y devuelve una cadena de texto nueva."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e208"
+  },
+  "id": "65",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Cuál es el método para agregar elementos al comienzo de un array?",
+  "answers": {
+    "answer_a": "push()",
+    "answer_b": "unshift()",
+    "answer_c": "pop()"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El método unshift() agrega uno o más elementos al inicio del array, y devuelve la nueva longitud del array."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e209"
+  },
+  "id": "66",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cómo insertar un comentario que tiene más de una línea?",
+  "answers": {
+    "answer_a": "/*Este comentario tiene más de una línea.*/",
+    "answer_b": "<!--Este comentario tiene más de una línea.-->",
+    "answer_c": "//Este comentario tiene más de una línea.//"
+  },
+  "correct_answer": "answer_a",
+  "feedback": " Los comentarios comienzan con /* y terminan con */ . Cualquier texto entre /* y */ serán ignorados por JavaScript."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20a"
+  },
+  "id": "67",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Quién creó el lenguaje de programación JavaScript?",
+  "answers": {
+    "answer_a": "Tim Berners-Lee",
+    "answer_b": "Brendan Eich",
+    "answer_c": "James Gosling"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "JavaScript fue desarrollado originalmente por Brendan Eich de Netscape con el nombre de Mocha, el cual fue renombrado posteriormente a LiveScript, para finalmente quedar como JavaScript."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20b"
+  },
+  "id": "68",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "Si proporciona solo un parámetro como un valor entero para el objeto Date, ¿se tratará como milisegundos?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Los objetos Date representan en JavaScript un momento fijo en el tiempo en un formato independiente. El objeto Date contiene un Number que representa los milisegundos transcurridos desde el 1 de Enero de 1970 UTC."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20c"
+  },
+  "id": "69",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Cuál es el equivalente para el operador **?",
+  "answers": {
+    "answer_a": "Math.sqrt",
+    "answer_b": "Math.pow",
+    "answer_c": "Math.trunc"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "La función Math.pow() devuelve la base elevada al exponente."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20d"
+  },
+  "id": "70",
+  "category": "javascript",
+  "level": "normal",
+  "question": "console.log(3 > 2 > 1 === false) ... ¿Cuál es la salida de la consola?",
+  "answers": {
+    "answer_a": "true",
+    "answer_b": "false"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Arroja true porque 3 > 2 es igual a true, entonces true > 1 es igual a false porque true no es mayor que 1. Por consiguiente false es igual a false, esta condición es true."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20e"
+  },
+  "id": "71",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuáles de estos pares de declaraciones se usan comúnmente para el manejo de errores?",
+  "answers": {
+    "answer_a": "err/res",
+    "answer_b": "try/catch",
+    "answer_c": "check/return"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "La declaración try...catch señala un bloque de instrucciones a intentar (try), y especifica una respuesta si se produce una excepción (catch)."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e20f"
+  },
+  "id": "72",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Cuál de estos métodos modificadores de eventos se proporciona de forma predeterminada?",
+  "answers": {
+    "answer_a": "event.preventDefault()",
+    "answer_b": "event.stopPropagation()",
+    "answer_c": "Los dos"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Ambos métodos son accesibles sin instalar paquetes adicionales."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e210"
+  },
+  "id": "73",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Qué método se usa para devolver la posición de la primera aparición de un texto específico en un 'string'?",
+  "answers": {
+    "answer_a": "pos()",
+    "answer_b": "position()",
+    "answer_c": "indexOf()"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los otros métodos no existen en JavaScript. pos() pertenece al lenguaje PHP."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e211"
+  },
+  "id": "74",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "console.log(0.2 + 0.1); ... ¿Cuál es la salida de la consola?",
+  "answers": {
+    "answer_a": "0.3",
+    "answer_b": "0.31",
+    "answer_c": "0.30000000000000004"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los ordenadores almacenan los números en binario, por lo que al volver a pasar a decimal se producen inexactitudes como esta."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e212"
+  },
+  "id": "75",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cómo llamas a una función ya creada llamada 'ejemplo'?",
+  "answers": {
+    "answer_a": "ejemplo()",
+    "answer_b": "function ejemplo()",
+    "answer_c": "execute function ejemplo()"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "La palabra 'function' es exclusiva de la definición de la función, no se usa en la llamada. Execute no existe en JavaScript."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e213"
+  },
+  "id": "76",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "El método getMonth() en el objeto Date devuelve el mes como...?",
+  "answers": {
+    "answer_a": "Un string",
+    "answer_b": "Un integer",
+    "answer_c": "Un objeto"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Devuelve un entero entre 0 y 11 correspondiente con la hora local."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e214"
+  },
+  "id": "77",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Que es el 'hoisting'?",
+  "answers": {
+    "answer_a": "Comportamiento predeterminado de mover declaraciones a la parte superior",
+    "answer_b": "Eliminación automática de variables no utilizadas en todo el código"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Esto permite a JavaScript acceder a variables aunque estén creadas líneas más abajo."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e215"
+  },
+  "id": "78",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuál es la forma correcta de incluir un archivo JavaScript externo en HTML?",
+  "answers": {
+    "answer_a": "<script src=\"main.js\">",
+    "answer_b": "<script href=\"main.js\">",
+    "answer_c": "<script name=\"main.js\">"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "La etiqueta HTML <script></script> solo puede utilizar el atributo 'src', 'href' es usado en enlaces con etiqueta <a></a>."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e216"
+  },
+  "id": "79",
+  "category": "javascript",
+  "level": "facil",
+  "question": "<p id=\"demo\">My awesome text</p> ... ¿Cuál es la sintaxis JavaScript correcta para cambiar el contenido?",
+  "answers": {
+    "answer_a": "#demo.innerHTML = \"Edited!\"",
+    "answer_b": "document.getElementById(\"demo\").innerHTML = \"Edited!\"",
+    "answer_c": "document.getElementByName(\"p\").innerHTML = \"Edited!\""
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Al definir un id en el elemento podemos seleccionarlo fácilmente con 'getElementById'. # es un selector por id de CSS y 'getElementByName' no existe."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e217"
+  },
+  "id": "80",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes opciones no es un tipo de bucle?",
+  "answers": {
+    "answer_a": "do/while",
+    "answer_b": "for/in",
+    "answer_c": "if/then"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "La expresión if/then solo se lee una vez, sin embargo do/while se ejecutará mientras la condición del while se cumpla. Por su parte for/in se ejecuta por tantas propiedades tenga el objeto o por tantos elementos tenga el array, dependiendo de lo que le pasemos."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e218"
+  },
+  "id": "81",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuál es el método correcto para transformar un texto a minúsculas?",
+  "answers": {
+    "answer_a": "lowerCase()",
+    "answer_b": "toLowerCase()",
+    "answer_c": "toLocaleLowerCase()"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Los demás métodos nombrados no existen en JavaScript."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e219"
+  },
+  "id": "82",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Cuál es el método correcto para obtener el valor mínimo de los valores?",
+  "answers": {
+    "answer_a": "Math.min(xy)",
+    "answer_b": "Math.min(x, y)",
+    "answer_c": "Math(min(xy))",
+    "answer_d": "Math(min(x, y))"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Ya que min() es un método estático de Math, siempre debe usarse como Math.min(), en lugar de como un método de un objeto Math instanciado (Math no es un constructor)."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21a"
+  },
+  "id": "83",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuál es un carácter no válido para iniciar un nombre de variable?",
+  "answers": {
+    "answer_a": "$",
+    "answer_b": "_",
+    "answer_c": "Cualquier número"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "El nombre de la variable no puede empezar por un número o carácter especial, debe empezar por una letra (Aa-Zz), un subrayado (_) o el signo de dólar ($)."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21b"
+  },
+  "id": "84",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuál es una forma válida de crear un 'array'?",
+  "answers": {
+    "answer_a": "let arr = {a,b,c}",
+    "answer_b": "let arr = a,b,c",
+    "answer_c": "let arr = [a,b,c]"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Los arrays deben ir entre corchetes [ ]."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21c"
+  },
+  "id": "85",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cuál es una forma válida de crear un objeto?",
+  "answers": {
+    "answer_a": "let obj = {a:1, b:2, c:3}",
+    "answer_b": "let obj = a:1, b:2, c:3",
+    "answer_c": "let obj = [a:1, b:2, c:3]"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Los objetos deben ir entre llaves { }."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21d"
+  },
+  "id": "86",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Cuál es el valor de una variable declarada sin valor?",
+  "answers": {
+    "answer_a": "null",
+    "answer_b": "undefined",
+    "answer_c": "NaN"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "Una variable declarada sin asignarle un valor inicial tiene el valor 'undefined'."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21e"
+  },
+  "id": "87",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Cuál es la sintaxis correcta para 'no es igual'?",
+  "answers": {
+    "answer_a": "!==",
+    "answer_b": "==!"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Una exclamación seguida por dos iguales es la forma correcta de expresar 'no es igual'."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e21f"
+  },
+  "id": "88",
+  "category": "javascript",
+  "level": "normal",
+  "question": "console.log(10 + \"5\") ... ¿Cuál es la salida de la consola?",
+  "answers": {
+    "answer_a": "105",
+    "answer_b": "'15'",
+    "answer_c": "SyntaxError"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Al ser de tipo String uno de los operandos se produce una concatenación."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e220"
+  },
+  "id": "89",
+  "category": "javascript",
+  "level": "facil",
+  "question": "const person = {name:\"John\", age:31, city:\"New York\"};... ¿cuál es la forma correcta de acceder a los valores?",
+  "answers": {
+    "answer_a": "person.name",
+    "answer_b": "person[\"name\"]",
+    "answer_c": "Ambas son correctas"
+  },
+  "correct_answer": "answer_c",
+  "feedback": "Se puede utilizar cualquiera de las dos maneras."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e221"
+  },
+  "id": "90",
+  "category": "javascript",
+  "level": "normal",
+  "question": "Los scripts se pueden colocar en la sección <body>, o en la <head> de una página HTML, o en ambas.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a",
+  "feedback": "Aunque lo recomendable es ponerlo al final del body para que JavaScript sea lo último que cargue, haciendo más eficiente la web."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e222"
+  },
+  "id": "322",
+  "category": "javascript",
+  "level": "normal",
+  "question": "Cuál es el resultado de ejecutar: console.log(typeof 42);",
+  "answers": {
+    "answer_a": "float",
+    "answer_b": "object",
+    "answer_c": "number",
+    "answer_d": "integer"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e223"
+  },
+  "id": "323",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Qué método convierte los datos JSON en un objeto JavaScript?",
+  "answers": {
+    "answer_a": "JSON.fromString();",
+    "answer_b": "JSON.parse()",
+    "answer_c": "JSON.toObject()",
+    "answer_d": "JSON.stringify()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e224"
+  },
+  "id": "324",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Cómo se añade un comentario en JavaScript?",
+  "answers": {
+    "answer_a": "! Esto es un comentario",
+    "answer_b": "# Esto es un comentario",
+    "answer_c": "< Esto es un comentario >",
+    "answer_d": "// Esto es un comentario"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e225"
+  },
+  "id": "325",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Qué sentencia puede tomar una sola expresión como entrada y luego buscar a través de un número de opciones hasta que se encuentre una que coincida con ese valor?",
+  "answers": {
+    "answer_a": "else",
+    "answer_b": "when",
+    "answer_c": "switch",
+    "answer_d": "if"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e226"
+  },
+  "id": "326",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Qué opción no es un método de arrays?",
+  "answers": {
+    "answer_a": ".slice()",
+    "answer_b": ".shift()",
+    "answer_c": ".push()",
+    "answer_d": ".replace()"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e227"
+  },
+  "id": "356",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Qué función tiene el event loop?",
+  "answers": {
+    "answer_a": "Es responsable de compilar el código, recopilar y procesar eventos y ejecutar subtareas en cola",
+    "answer_b": "Es responsable de revisar el código, recopilar y procesar eventos y ejecutar tareas en cola",
+    "answer_c": "Es responsable de ejecutar el código, recopilar y procesar eventos y ejecutar subtareas en cola"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e228"
+  },
+  "id": "357",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Cuál es la definición de Clousure?",
+  "answers": {
+    "answer_a": "Es la combinación de una función agrupada (encerrada) con referencias a su estado circundante (el entorno disléxico)",
+    "answer_b": "Es la combinación de una función desagrupada (encerrada) con referencias a su estado circundante (el entorno léxico)",
+    "answer_c": "Es la combinación de una función agrupada (encerrada) con referencias a su estado circundante (el entorno léxico)"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e229"
+  },
+  "id": "358",
+  "category": "javascript",
+  "level": "facil",
+  "question": "¿Qué método de la API del navegador se utiliza para hacer una petición HTTP de forma nativa?",
+  "answers": {
+    "answer_a": "fetch(\"https://some-url-here.com\")",
+    "answer_b": "axios.get(\"https://some-url-here.com\")",
+    "answer_c": "makeRequest(\"https://some-url-here.com\")"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e22a"
+  },
+  "id": "360",
+  "category": "javascript",
+  "level": "normal",
+  "question": "¿Qué método de array devuelve un nuevo objeto iterable iterador?",
+  "answers": {
+    "answer_a": "sort()",
+    "answer_b": "values()",
+    "answer_c": "entries()",
+    "answer_d": "concat()"
+  },
+  "correct_answer": "answer_b",
+  "feedback": "El método values() devuelve un nuevo objeto Array Iterator que contiene los valores para cada índice del array."
+},
+{
+  "_id": {
+    "$oid": "664f93a0bff27499da41e22b"
+  },
+  "id": "361",
+  "category": "javascript",
+  "level": "dificil",
+  "question": "¿Qué métodos aceptan un iterable de promesas y devuelven un único array de resultados?",
+  "answers": {
+    "answer_a": "Promise.reject() y Promise.resolve()",
+    "answer_b": "Promise.reject() and Promise.all()",
+    "answer_c": "Promise.all() and Promise.allSettled()",
+    "answer_d": "Promise.any() and Promise.all()"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e22c"
+  },
+  "id": "171",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Qué palabra clave se usa para definir una función?",
+  "answers": {
+    "answer_a": "main",
+    "answer_b": "fun",
+    "answer_c": "function",
+    "answer_d": "new"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e22d"
+  },
+  "id": "172",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "En Kotlin, se debe definir al menos una función main().",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e22e"
+  },
+  "id": "173",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "En Kotlin, println y la función print hacen lo mismo.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e22f"
+  },
+  "id": "174",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "No se puede restablecer el valor de una variable \"val\".",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e230"
+  },
+  "id": "175",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "Kotlin es desarrollado por:",
+  "answers": {
+    "answer_a": "Google",
+    "answer_b": "IBM",
+    "answer_c": "Sun Systems",
+    "answer_d": "JetBrains"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e231"
+  },
+  "id": "176",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Cuál de las siguientes extensiones se usa para crear un archivo Kotlin?",
+  "answers": {
+    "answer_a": ".ko",
+    "answer_b": ".kt",
+    "answer_c": ".jv",
+    "answer_d": ".app"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e232"
+  },
+  "id": "177",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Cómo se hacen los comentarios en Kotlin?",
+  "answers": {
+    "answer_a": "// Esto es un comentario",
+    "answer_b": "*/ Esto es un comentario",
+    "answer_c": "# Esto es un comentario",
+    "answer_d": "<!-- Esto es un comentario -->"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e233"
+  },
+  "id": "178",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Podemos usar Kotlin en el lenguaje de programación Java?",
+  "answers": {
+    "answer_a": "Sí",
+    "answer_b": "No"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e234"
+  },
+  "id": "179",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Cuántos tipos de constructores hay disponibles en Kotlin?",
+  "answers": {
+    "answer_a": "1",
+    "answer_b": "2",
+    "answer_c": "3",
+    "answer_d": "4"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e235"
+  },
+  "id": "180",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Cómo se crea una instancia de clase?",
+  "answers": {
+    "answer_a": "val person = new Person()",
+    "answer_b": "val person = obj Person()",
+    "answer_c": "val person = Person()",
+    "answer_d": "val person = instace of Person()"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e236"
+  },
+  "id": "181",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "La visibilidad predeterminada de una clase en Kotlin es:",
+  "answers": {
+    "answer_a": "public",
+    "answer_b": "private",
+    "answer_c": "protected",
+    "answer_d": "internal"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e237"
+  },
+  "id": "182",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Puedes ejecutar código Kotlin sin JVM?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e238"
+  },
+  "id": "183",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes se usa para manejar excepciones nulas?",
+  "answers": {
+    "answer_a": "Lambda Function",
+    "answer_b": "Range",
+    "answer_c": "Sealed Class",
+    "answer_d": "Elvis operator"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e239"
+  },
+  "id": "184",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "¿Cuál de los siguientes no es un tipo de datos básico en Kotlin?",
+  "answers": {
+    "answer_a": "Array",
+    "answer_b": "List",
+    "answer_c": "String",
+    "answer_d": "Character"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23a"
+  },
+  "id": "185",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "El lenguaje Kotlin es:",
+  "answers": {
+    "answer_a": "OOP",
+    "answer_b": "Procedural Programming",
+    "answer_c": "Las dos anteriores",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23b"
+  },
+  "id": "186",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "Kotlin se puede utilizar en desarrollo web.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23c"
+  },
+  "id": "187",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes no es una palabra clave reservada en Kotlin?",
+  "answers": {
+    "answer_a": "super",
+    "answer_b": "package",
+    "answer_c": "static",
+    "answer_d": "dynamic"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23d"
+  },
+  "id": "188",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "En Kotlin, la especificación del paquete debe realizarse:",
+  "answers": {
+    "answer_a": "Al inicio del archivo",
+    "answer_b": "Al final del archivo",
+    "answer_c": "En cualquier sitio del archivo"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23e"
+  },
+  "id": "189",
+  "category": "kotlin",
+  "level": "facil",
+  "question": "En Kotlin un programa comienza a ejecutarse desde:",
+  "answers": {
+    "answer_a": "Parte superior del archivo",
+    "answer_b": "Primera clase  del archivo",
+    "answer_c": "Desde el método main",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e23f"
+  },
+  "id": "190",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "En Kotlin, la herencia entre clases se declara mediante un símbolo:",
+  "answers": {
+    "answer_a": "?",
+    "answer_b": ":",
+    "answer_c": "\"\"",
+    "answer_d": "()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e240"
+  },
+  "id": "362",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "Puede mostrar u ocultar una vista en su aplicación configurando su visibilidad. ¿Cuáles de los siguientes son valores de visibilidad válidos?",
+  "answers": {
+    "answer_a": "Visible",
+    "answer_b": "Clear",
+    "answer_c": "None"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e241"
+  },
+  "id": "363",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "¿Qué parámetro especifica el nivel de la API de Android que debe usar Gradle para compilar su aplicación?",
+  "answers": {
+    "answer_a": "minSdkVersion",
+    "answer_b": "compileSdkVersion",
+    "answer_c": "targetSdkVersion",
+    "answer_d": "testSdkVersion"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e242"
+  },
+  "id": "364",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "_______ es una forma de restringir el acceso directo a algunos de los campos de un objeto.",
+  "answers": {
+    "answer_a": "LiveData",
+    "answer_b": "Encapsulation",
+    "answer_c": "Target"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e243"
+  },
+  "id": "365",
+  "category": "kotlin",
+  "level": "normal",
+  "question": "¿Cuáles de los siguientes es un método de los ciclos de vida de activity y fragment?",
+  "answers": {
+    "answer_a": "onDraw()",
+    "answer_b": "onCreate()",
+    "answer_c": "onClick()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93aabff27499da41e244"
+  },
+  "id": "242",
+  "category": "kotlin",
+  "level": "dificil",
+  "question": "¿Cuál es la forma correcta de crear un arraylist en Kotlin?",
+  "answers": {
+    "answer_a": "val map = hashMapOf(1 to 'one', 2 to 'two', 3 to 'three')",
+    "answer_b": "enum class Color {RED, GREEN, BLUE}",
+    "answer_c": "val list = arrayListOf(1, 2, 3)",
+    "answer_d": "val set = hashSetOf(1, 2, 3)"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e245"
+  },
+  "id": "327",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo NO se insertan comentarios de una línea en el código en PHP?",
+  "answers": {
+    "answer_a": "// Esto es un comentario",
+    "answer_b": "# Esto es un comentario",
+    "answer_c": "<!-- Esto es un comentario -->"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e246"
+  },
+  "id": "328",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se insertan comentarios multilínea en el código en PHP?",
+  "answers": {
+    "answer_a": "// Esto es un comentario",
+    "answer_b": "/* Esto es un comentario */",
+    "answer_c": "# Esto es un comentario"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e247"
+  },
+  "id": "329",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo llamar a la función `listarProductos` en PHP?",
+  "answers": {
+    "answer_a": "listarProductos()",
+    "answer_b": "function listarProductos()",
+    "answer_c": "$this->listarProductos()"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e248"
+  },
+  "id": "330",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se declara un `for` de productos en PHP?",
+  "answers": {
+    "answer_a": "for(producto in productos)",
+    "answer_b": "for($i = 1; $i <= 0; $i++)",
+    "answer_c": "for producto in productos:"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e249"
+  },
+  "id": "331",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se declara una variable en PHP?",
+  "answers": {
+    "answer_a": "let variable = 1",
+    "answer_b": "variable = 1",
+    "answer_c": "$variable = 1"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24a"
+  },
+  "id": "332",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se concatenan strings en PHP?",
+  "answers": {
+    "answer_a": "$string1 . $string2",
+    "answer_b": "$string1 + $string2",
+    "answer_c": "concat($string1, $string2)"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24b"
+  },
+  "id": "333",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se declara un if en PHP?",
+  "answers": {
+    "answer_a": "if x > y then:",
+    "answer_b": "if (x > y)",
+    "answer_c": "if x > y:"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24c"
+  },
+  "id": "334",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo se declara un while en PHP?",
+  "answers": {
+    "answer_a": "x > y while {",
+    "answer_b": "while x > y:",
+    "answer_c": "while (x > y)"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24d"
+  },
+  "id": "335",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Qué método se puede usar para transformar todo un string en mayúsculas en PHP?",
+  "answers": {
+    "answer_a": "strtoupper($string)",
+    "answer_b": "strtolower($string)",
+    "answer_c": "ucwords($string)"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24e"
+  },
+  "id": "336",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Cómo declarar una función en PHP?",
+  "answers": {
+    "answer_a": "function myFunction = () => {}",
+    "answer_b": "function myFunction(){}",
+    "answer_c": "const myFunction(){}"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e24f"
+  },
+  "id": "337",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cómo reemplazar los espacios en blanco en PHP?",
+  "answers": {
+    "answer_a": "split(\"texto a sacar espacios\")",
+    "answer_b": "trim(\"texto a sacar espacios\")",
+    "answer_c": "str_replace(\" \", \"\", \"texto a sacar espacios\")"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e250"
+  },
+  "id": "338",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Con qué framework se puede trabaja en PHP?",
+  "answers": {
+    "answer_a": "Spring",
+    "answer_b": "Codeigniter",
+    "answer_c": "Express"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e251"
+  },
+  "id": "339",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cómo obtener la cantidad de elementos en un array en PHP?",
+  "answers": {
+    "answer_a": "count($array)",
+    "answer_b": "$array.length()",
+    "answer_c": "$array.count()"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e252"
+  },
+  "id": "340",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cuál de estas variables está declarada de forma incorrecta en PHP?",
+  "answers": {
+    "answer_a": "$_4variable",
+    "answer_b": "$4variable",
+    "answer_c": "$ABC"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e253"
+  },
+  "id": "341",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Qué valor tiene una variable declarada sin valor en PHP?",
+  "answers": {
+    "answer_a": "undefined",
+    "answer_b": "NaN",
+    "answer_c": "NULL"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e254"
+  },
+  "id": "342",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cómo se agregan elementos en un array en PHP?",
+  "answers": {
+    "answer_a": "$array[] = $element",
+    "answer_b": "$array.push($element)",
+    "answer_c": "$array[$element]"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e255"
+  },
+  "id": "343",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cómo obtener la longitud de un string en PHP?",
+  "answers": {
+    "answer_a": "$string.length()",
+    "answer_b": "strlen($string)",
+    "answer_c": "length($string)"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e256"
+  },
+  "id": "344",
+  "category": "php",
+  "level": "dificil",
+  "question": "¿Cuál es el método correcto para obtener el valor mínimo de un array de números en PHP?",
+  "answers": {
+    "answer_a": "Math.min(1, 2, 3, 4)",
+    "answer_b": "min([1,2,3,4])",
+    "answer_c": "minimum([1,2,3,4])"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e257"
+  },
+  "id": "345",
+  "category": "php",
+  "level": "dificil",
+  "question": "¿Cuál de estos Métodos NO existen en PHP?",
+  "answers": {
+    "answer_a": "strchr",
+    "answer_b": "strcspn",
+    "answer_c": "strlength"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e258"
+  },
+  "id": "346",
+  "category": "php",
+  "level": "dificil",
+  "question": "¿Qué método se utiliza para dividir un string en un array de strings en PHP?",
+  "answers": {
+    "answer_a": "implode(\",\", $array)",
+    "answer_b": "explode(\",\", $array)",
+    "answer_c": "split(\",\", $array)"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e259"
+  },
+  "id": "347",
+  "category": "php",
+  "level": "dificil",
+  "question": "¿Qué método se utiliza para dividir un array en un strings en PHP?",
+  "answers": {
+    "answer_a": "implode(\",\", $array)",
+    "answer_b": "explode(\",\", $array)",
+    "answer_c": "split(\",\", $array)"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e25a"
+  },
+  "id": "359",
+  "category": "php",
+  "level": "facil",
+  "question": "¿Qué función utilizarías para imprimir por consola?",
+  "answers": {
+    "answer_a": "echo('Hello World')",
+    "answer_b": "console.log('Hello World')",
+    "answer_c": "System.out.println('Hello World')"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e25b"
+  },
+  "id": "348",
+  "category": "php",
+  "level": "normal",
+  "question": "¿Cómo obtener el tipo de objecto en PHP?",
+  "answers": {
+    "answer_a": "typeof $object",
+    "answer_b": "get_class($object)",
+    "answer_c": "$object instanceof"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93b9bff27499da41e25c"
+  },
+  "id": "349",
+  "category": "php",
+  "level": "dificil",
+  "question": "¿Qué función utilizarías de PHP para trabajar con expresiones regulares?",
+  "answers": {
+    "answer_a": "reg_match()",
+    "answer_b": "regexp()",
+    "answer_c": "preg_match()"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e25d"
+  },
+  "id": "261",
+  "category": "python",
+  "level": "facil",
+  "question": "¿Cuál de estos no es un tipo de datos básico?",
+  "answers": {
+    "answer_a": "Lists",
+    "answer_b": "Dictionary",
+    "answer_c": "Tuples",
+    "answer_d": "Class"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e25e"
+  },
+  "id": "262",
+  "category": "python",
+  "level": "facil",
+  "question": "¿Qué tipo de dato es el siguiente? L = [1, 23, ‘hello’, 1]",
+  "answers": {
+    "answer_a": "List",
+    "answer_b": "Dictionary",
+    "answer_c": "Tuple",
+    "answer_d": "Array"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e25f"
+  },
+  "id": "263",
+  "category": "python",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes funciones convierte una cadena en un flotante en python?",
+  "answers": {
+    "answer_a": "int(x [,base])",
+    "answer_b": "long(x [,base] )",
+    "answer_c": "float(x)",
+    "answer_d": "str(x)"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e260"
+  },
+  "id": "264",
+  "category": "python",
+  "level": "normal",
+  "question": "Cuál es la salida del siguiente programa: print \"Hello World\"[::-1]",
+  "answers": {
+    "answer_a": "dlroW olleH",
+    "answer_b": "Hello World",
+    "answer_c": "-1",
+    "answer_d": "Error"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e261"
+  },
+  "id": "265",
+  "category": "python",
+  "level": "facil",
+  "question": "Dada una función que no devuelve ningún valor, ¿qué valor se muestra cuando se ejecuta en consola?",
+  "answers": {
+    "answer_a": "int",
+    "answer_b": "bool",
+    "answer_c": "void",
+    "answer_d": "None"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e262"
+  },
+  "id": "266",
+  "category": "python",
+  "level": "normal",
+  "question": "¿Qué módulo de Python soporta expresiones regulares?",
+  "answers": {
+    "answer_a": "re",
+    "answer_b": "regex",
+    "answer_c": "pyregex",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e263"
+  },
+  "id": "267",
+  "category": "python",
+  "level": "facil",
+  "question": "Cuál es la salida del siguiente programa: print 0.1 + 0.2 == 0.3",
+  "answers": {
+    "answer_a": "True",
+    "answer_b": "False",
+    "answer_c": "Depende de la máquina",
+    "answer_d": "Error"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e264"
+  },
+  "id": "268",
+  "category": "python",
+  "level": "dificil",
+  "question": "¿Cuál de los siguientes no es un número complejo?",
+  "answers": {
+    "answer_a": "k = 2 + 3j",
+    "answer_b": "k = complex(2, 3)",
+    "answer_c": "k = 2 + 3l",
+    "answer_d": "k = 2 + 3J"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e265"
+  },
+  "id": "269",
+  "category": "python",
+  "level": "normal",
+  "question": "Para iniciar Python desde el símbolo del sistema, se utiliza el comando:",
+  "answers": {
+    "answer_a": "execute python",
+    "answer_b": "go python",
+    "answer_c": "python",
+    "answer_d": "run python"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e266"
+  },
+  "id": "270",
+  "category": "python",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes afirmaciones es correcta sobre Python?",
+  "answers": {
+    "answer_a": "Soporta la recolección automática de basura",
+    "answer_b": "Se puede integrar fácilmente con C, C++, COM, ActiveX, CORBA y Java",
+    "answer_c": "Todas las anteriores son correctas",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e267"
+  },
+  "id": "271",
+  "category": "python",
+  "level": "facil",
+  "question": "Cuál es la salida de la expresión: 3*1**3",
+  "answers": {
+    "answer_a": "27",
+    "answer_b": "9",
+    "answer_c": "3",
+    "answer_d": "1"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e268"
+  },
+  "id": "272",
+  "category": "python",
+  "level": "dificil",
+  "question": "Cuál es la salida del siguiente programa: print '{0:.2}'.format(1.0 / 3)",
+  "answers": {
+    "answer_a": "0.333333",
+    "answer_b": "0.33",
+    "answer_c": "0.333333:-2",
+    "answer_d": "Error"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e269"
+  },
+  "id": "273",
+  "category": "python",
+  "level": "normal",
+  "question": "Cuál es la salida del siguiente programa: print '{0:-2%}'.format(1.0 / 3)",
+  "answers": {
+    "answer_a": "0.33",
+    "answer_b": "0.33%",
+    "answer_c": "33%",
+    "answer_d": "33.33%"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26a"
+  },
+  "id": "274",
+  "category": "python",
+  "level": "normal",
+  "question": "Cuál es la salida del siguiente programa: print 'cd'.partition('cd')",
+  "answers": {
+    "answer_a": "(‘cd’)",
+    "answer_b": "(”)",
+    "answer_c": "(‘cd’, ”, ”)",
+    "answer_d": "(”, ‘cd’, ”)"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26b"
+  },
+  "id": "275",
+  "category": "python",
+  "level": "normal",
+  "question": "Cuál es la salida del siguiente código: print 9//2",
+  "answers": {
+    "answer_a": "4.5",
+    "answer_b": "4.0",
+    "answer_c": "4",
+    "answer_d": "Error"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26c"
+  },
+  "id": "276",
+  "category": "python",
+  "level": "normal",
+  "question": "¿Qué función sobrecarga el operador >>?",
+  "answers": {
+    "answer_a": "more()",
+    "answer_b": "gt()",
+    "answer_c": "ge()",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26d"
+  },
+  "id": "277",
+  "category": "python",
+  "level": "facil",
+  "question": "¿Qué operador está sobrecargado por la función or()?",
+  "answers": {
+    "answer_a": "||",
+    "answer_b": "|",
+    "answer_c": "//",
+    "answer_d": "/"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26e"
+  },
+  "id": "278",
+  "category": "python",
+  "level": "dificil",
+  "question": "time.time() devuelve:",
+  "answers": {
+    "answer_a": "La hora actual",
+    "answer_b": "La hora actual en milisegundos",
+    "answer_c": "La hora actual en milisegundos desde la medianoche",
+    "answer_d": "La hora actual en milisegundos desde la medianoche del 1 de enero de 1970 GMT (la hora de Unix)"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e26f"
+  },
+  "id": "279",
+  "category": "python",
+  "level": "normal",
+  "question": "Supongamos que list1 es [3, 4, 5, 20, 5, 25, 1, 3], ¿cómo será list1 después de ejecutar list1.pop(1)?",
+  "answers": {
+    "answer_a": "[3, 4, 5, 20, 5, 25, 1, 3]",
+    "answer_b": "[1, 3, 3, 4, 5, 5, 20, 25]",
+    "answer_c": "[3, 5, 20, 5, 25, 1, 3]",
+    "answer_d": "[1, 3, 4, 5, 20, 5, 25]"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e270"
+  },
+  "id": "280",
+  "category": "python",
+  "level": "facil",
+  "question": "¿Cómo se llama una función definida dentro de una clase?",
+  "answers": {
+    "answer_a": "Módulo",
+    "answer_b": "Clase",
+    "answer_c": "Otra función",
+    "answer_d": "Método"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93c3bff27499da41e271"
+  },
+  "id": "281",
+  "category": "python",
+  "level": "normal",
+  "question": "Cuál será la salida del siguiente código: print type(type(int))",
+  "answers": {
+    "answer_a": "type 'int'",
+    "answer_b": "type 'type'",
+    "answer_c": "Error",
+    "answer_d": "0"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e272"
+  },
+  "id": "121",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué son las restricciones (constraints)?",
+  "answers": {
+    "answer_a": "Valores predefinidos que no se pueden cambiar",
+    "answer_b": "Reglas aplicadas en las columnas de datos de una tabla"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e273"
+  },
+  "id": "122",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Para qué sirve el comando \"FROM\"?",
+  "answers": {
+    "answer_a": "Especificar el rango de condición de búsqueda",
+    "answer_b": "Especifique de qué tabla seleccionar o eliminar los datos"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e274"
+  },
+  "id": "123",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Para que sirve la operador \"IN\"?",
+  "answers": {
+    "answer_a": "Permite seleccionar tablas específicas en la base de datos",
+    "answer_b": "Permite especificar múltiples valores en una cláusula WHERE"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e275"
+  },
+  "id": "124",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuál de estos es un tipo de \"JOIN\" válido?",
+  "answers": {
+    "answer_a": "INSIDE JOIN",
+    "answer_b": "JOIN IN",
+    "answer_c": "INNER JOIN"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e276"
+  },
+  "id": "125",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuál de estos no es un operador lógico en SQL?",
+  "answers": {
+    "answer_a": "WITH",
+    "answer_b": "BETWEEN",
+    "answer_c": "LIKE"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e277"
+  },
+  "id": "126",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué significa SQL?",
+  "answers": {
+    "answer_a": "Standard Query Language",
+    "answer_b": "Specified Query Language",
+    "answer_c": "Structured Query Language"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e278"
+  },
+  "id": "127",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué declaración se utiliza para modificar datos en la base de datos?",
+  "answers": {
+    "answer_a": "MODIFY",
+    "answer_b": "EDIT",
+    "answer_c": "UPDATE"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e279"
+  },
+  "id": "128",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué declaración se usa para insertar un nuevo registro en la tabla?",
+  "answers": {
+    "answer_a": "INSERT VALUE",
+    "answer_b": "INSERT INTO",
+    "answer_c": "INSERT"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27a"
+  },
+  "id": "129",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué declaración se usa para crear una tabla de base de datos?",
+  "answers": {
+    "answer_a": "CREATE TABLE",
+    "answer_b": "ADD TABLE",
+    "answer_c": "NEW TABLE"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27b"
+  },
+  "id": "130",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuándo apareció SQL por primera vez?",
+  "answers": {
+    "answer_a": "Principios de la década de 1970",
+    "answer_b": "Principios de la década de 1980",
+    "answer_c": "Principios de la década de 1990"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27c"
+  },
+  "id": "131",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué operador se utiliza para verificar la presencia de cualquier registro en una subconsulta?",
+  "answers": {
+    "answer_a": "IS PRESENT",
+    "answer_b": "EXISTS",
+    "answer_c": "INCLUDE"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27d"
+  },
+  "id": "132",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué operador se usa para seleccionar valores dentro de un rango?",
+  "answers": {
+    "answer_a": "RANGE",
+    "answer_b": "BETWEEN",
+    "answer_c": "WITHIN"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27e"
+  },
+  "id": "133",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué es cierto acerca de eliminar filas de una tabla?",
+  "answers": {
+    "answer_a": "No se eliminan filas si se omite la cláusula where",
+    "answer_b": "Eliminas filas existentes de una tabla usando la declaración DELETE",
+    "answer_c": "No puede eliminar filas en función de los valores de otra tabla"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e27f"
+  },
+  "id": "134",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué operador se usa para buscar un patrón específico en una columna?",
+  "answers": {
+    "answer_a": "SEARCH",
+    "answer_b": "LIKE",
+    "answer_c": "FROM"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e280"
+  },
+  "id": "135",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuál es un problema de seguridad común relacionado con SQL?",
+  "answers": {
+    "answer_a": "SQL encryption",
+    "answer_b": "SQL blocking",
+    "answer_c": "SQL injection"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e281"
+  },
+  "id": "136",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Cómo seleccionar todos los registros de la \"Productos\"?",
+  "answers": {
+    "answer_a": "SELECT ALL FROM Products",
+    "answer_b": "SELECT * FROM Products",
+    "answer_c": "SELECT Products"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e282"
+  },
+  "id": "137",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Cómo seleccionar varias columnas de la tabla Products?",
+  "answers": {
+    "answer_a": "SELECT Name, Surname FROM Products",
+    "answer_b": "SELECT Name Surname FROM Products"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e283"
+  },
+  "id": "138",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Qué palabra clave de SQL se utiliza para ordenar un conjunto de resultados?",
+  "answers": {
+    "answer_a": "SORT",
+    "answer_b": "ORDER",
+    "answer_c": "ORDER BY"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e284"
+  },
+  "id": "139",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuál de estas no es una base de datos SQL?",
+  "answers": {
+    "answer_a": "Oracle",
+    "answer_b": "PostgreSQL",
+    "answer_c": "Cassandra"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e285"
+  },
+  "id": "140",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cómo seleccionar todos los registros de la tabla \"Products\" donde el valor de \"Nombre\" comienza con \"z\"?",
+  "answers": {
+    "answer_a": "SELECT * FROM Products WHERE Name is 'z%'",
+    "answer_b": "SELECT * FROM Products WHERE Name Like 'z%'"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e286"
+  },
+  "id": "141",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué función SQL se usa para contar el número de filas en una consulta SQL?",
+  "answers": {
+    "answer_a": "SELECT()",
+    "answer_b": "COUNT()",
+    "answer_c": "TOTAL()"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e287"
+  },
+  "id": "142",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué declaración SQL se usa para devolver solo valores diferentes?",
+  "answers": {
+    "answer_a": "SELECT DIFFERENT",
+    "answer_b": "SELECT DISTINCT",
+    "answer_c": "SELECT UNIQUE"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e288"
+  },
+  "id": "143",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿La cláusula WHERE solo se usa en declaraciones de selección?",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e289"
+  },
+  "id": "144",
+  "category": "sql",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes combinaciones extrae datos de filas coincidentes de ambas tablas?",
+  "answers": {
+    "answer_a": "Full Outer Join",
+    "answer_b": "Left Join",
+    "answer_c": "Right Join",
+    "answer_d": "Ninguna de estas"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28a"
+  },
+  "id": "145",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Cuál de las siguientes es la forma correcta de comentar en SQL?",
+  "answers": {
+    "answer_a": "/* Esto es un comentario*/",
+    "answer_b": "# Esto es un comentario",
+    "answer_c": "% Esto es un comentario %",
+    "answer_d": "& Esto es un comentario"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28b"
+  },
+  "id": "146",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Cuántas claves primarias se pueden crear en una tabla?",
+  "answers": {
+    "answer_a": "Infinitas",
+    "answer_b": "2",
+    "answer_c": "1",
+    "answer_d": "24"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28c"
+  },
+  "id": "147",
+  "category": "sql",
+  "level": "facil",
+  "question": "¿Cuál de los siguientes no es parte de las operaciones CRUD en SQL?",
+  "answers": {
+    "answer_a": "Crear una tabla",
+    "answer_b": "Eliminar registros de una tabla",
+    "answer_c": "Crear una copia de una tabla",
+    "answer_d": "Actualizar los datos almacenados en la tabla"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28d"
+  },
+  "id": "148",
+  "category": "sql",
+  "level": "dificil",
+  "question": "¿Cuál de las siguientes respuestas es cierta acerca de una vista?",
+  "answers": {
+    "answer_a": "La vista se elimina automáticamente después de que se completa la sesión",
+    "answer_b": "Las vistas no se pueden actualizar una vez creadas",
+    "answer_c": "Las vistas se crean agrupando un solo atributo deseado de una base de datos",
+    "answer_d": "Ninguna de estas"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28e"
+  },
+  "id": "149",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes consultas limitaría la salida a 5 filas?",
+  "answers": {
+    "answer_a": "SELECT * FROM DataFlair 5",
+    "answer_b": "SELECT * FROM DataFlair LIMIT 5",
+    "answer_c": "SELECT * FROM DataFlair 5 LIMIT",
+    "answer_d": "SELECT LIMIT(5) * FROM DataFlair"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e28f"
+  },
+  "id": "150",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿La base de datos SQL sigue cuál de los siguientes principios?",
+  "answers": {
+    "answer_a": "ACID",
+    "answer_b": "AGILE",
+    "answer_c": "SQL",
+    "answer_d": "DBMS"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e290"
+  },
+  "id": "350",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué palabra clave de SQL se utiliza para agrupar un conjunto de resultados?",
+  "answers": {
+    "answer_a": "GROUP WITH",
+    "answer_b": "GROUP BY",
+    "answer_c": "GROUPING BY"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e291"
+  },
+  "id": "351",
+  "category": "sql",
+  "level": "dificil",
+  "question": "¿Cuáles de los siguientes tipos de PROCEDURES es correcto?",
+  "answers": {
+    "answer_a": "Procedure with CALL parameter",
+    "answer_b": "Procedure with IN-OUT parameter",
+    "answer_c": "Procedure with ERASE parameter"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93cfbff27499da41e292"
+  },
+  "id": "352",
+  "category": "sql",
+  "level": "normal",
+  "question": "¿Qué es cierto sobre las TRANSACTIONS?",
+  "answers": {
+    "answer_a": "Si falla, tira una excepción de tipo SQLTransactionException",
+    "answer_b": "Cuando finaliza correctamente registra un log en la tabla mysql_logs",
+    "answer_c": "Si falla, hace un ROLLBACK de los cambios"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e293"
+  },
+  "id": "151",
+  "category": "swift",
+  "level": "facil",
+  "question": "¿Qué palabra clave usas para anunciar constantes en Swift?",
+  "answers": {
+    "answer_a": "Var",
+    "answer_b": "Let",
+    "answer_c": "Con",
+    "answer_d": "Value"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e294"
+  },
+  "id": "152",
+  "category": "swift",
+  "level": "facil",
+  "question": "¿Cuántos tipos de enteros hay en Swift?",
+  "answers": {
+    "answer_a": "1",
+    "answer_b": "2",
+    "answer_c": "3",
+    "answer_d": "4"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e295"
+  },
+  "id": "153",
+  "category": "swift",
+  "level": "facil",
+  "question": "¿Cuáles son los tipos de colección en Swift?",
+  "answers": {
+    "answer_a": "Dictionary y array",
+    "answer_b": "Array y library",
+    "answer_c": "Dictionary y library",
+    "answer_d": "Library, dictionary, library"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e296"
+  },
+  "id": "154",
+  "category": "swift",
+  "level": "facil",
+  "question": "¿Qué debe usar para proporcionar un valor predeterminado para una variable en Swift?",
+  "answers": {
+    "answer_a": "?",
+    "answer_b": "??",
+    "answer_c": "&",
+    "answer_d": "&&"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e297"
+  },
+  "id": "155",
+  "category": "swift",
+  "level": "facil",
+  "question": "¿Cuál de las siguientes definiciones de funciones es incorrecta considerando el lenguaje Swift?",
+  "answers": {
+    "answer_a": "func mean(numbers: Double...) -> Double",
+    "answer_b": "func minMax(array: [Int]) -> (min: Int, max: Int)?",
+    "answer_c": "func minMax(array: [Int]) -> (min: Int?, max: Int?)",
+    "answer_d": "func haveChar(#string: String, character: Character) -> (Bool)"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e298"
+  },
+  "id": "156",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál crea un diccionario con un tipo de clave de Entero y valor de Cadena?",
+  "answers": {
+    "answer_a": "var dict = [\"one\":1]",
+    "answer_b": "var dict: [String: Int] = [1:\"one\"]",
+    "answer_c": "var dict: [Int: String] = [1:\"one\"]",
+    "answer_d": "var dict:[Int: String] = [\"one\":1]"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e299"
+  },
+  "id": "157",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál de estas no es una declaración de propiedad válida en Swift?",
+  "answers": {
+    "answer_a": "final var x = 0",
+    "answer_b": "final lazy var x = 0",
+    "answer_c": "final lazy let x = 0",
+    "answer_d": "final let x = 0"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29a"
+  },
+  "id": "158",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál es la definición incorrecta de un protocolo en Swift?",
+  "answers": {
+    "answer_a": "protocol SomeProtocol { var first: Int{ set } }",
+    "answer_b": "protocol SomeProtocol { var first: Int{ get } }",
+    "answer_c": "protocol SomeProtocol { var first: Int { get set } }",
+    "answer_d": "protocol SomeProtocol { var first: Int { get set } var second: Int { get } }"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29b"
+  },
+  "id": "159",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿De qué clase raíz deben heredar todas las clases de Swift?",
+  "answers": {
+    "answer_a": "Root",
+    "answer_b": "@ObjC",
+    "answer_c": "NSObject",
+    "answer_d": "Las clases Swift no requieren una clase raíz"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29c"
+  },
+  "id": "160",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál es correcta sobre las enumeraciones?",
+  "answers": {
+    "answer_a": "Las enumeraciones no pueden ajustarse a los protocolos",
+    "answer_b": "Las enumeraciones pueden definir inicializadores"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29d"
+  },
+  "id": "161",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes declaraciones podría usarse para determinar si una variable dada es de tipo String?",
+  "answers": {
+    "answer_a": "if unkownVariable: String { }",
+    "answer_b": "if (String)unknownVariable { }",
+    "answer_c": "if unknownVariable is String { }",
+    "answer_d": "if String.hierarchy(unknownVariable) { }"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29e"
+  },
+  "id": "162",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál de estas podría ser una declaración de protocolo adecuada en Swift?",
+  "answers": {
+    "answer_a": "protocol someProtocal { var first: Int { set } }",
+    "answer_b": "protocol someProtocal { optional var first: Int { get } }",
+    "answer_c": "@objc protocol someProtocal { optional var first: Int { set } }",
+    "answer_d": "@objc protocol someProtocal { optional var first: Int { get } }"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e29f"
+  },
+  "id": "163",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Qué se usa para importar archivos Objective-C a Swift?",
+  "answers": {
+    "answer_a": "Las clases de Objective-C se importan automáticamente",
+    "answer_b": "Las clases de Objective-C se importan mediante un \"Bridging Header\"",
+    "answer_c": "Las clases de Objective-C se importan declarando @SwiftImportable",
+    "answer_d": "Las clases de Objective-C se importan en el archivo Swift usando la clase"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a0"
+  },
+  "id": "164",
+  "category": "swift",
+  "level": "dificil",
+  "question": "¿Qué tipo de objeto son las \"Swift Structures\"?",
+  "answers": {
+    "answer_a": "Value Type",
+    "answer_b": "Abstract Type",
+    "answer_c": "Memory Type",
+    "answer_d": "Reference Type"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a1"
+  },
+  "id": "165",
+  "category": "swift",
+  "level": "dificil",
+  "question": "¿Qué palabra clave en el contexto de una instrucción Switch se requiere para forzar la ejecución de un caso posterior?",
+  "answers": {
+    "answer_a": "Break",
+    "answer_b": "Return",
+    "answer_c": "Continue",
+    "answer_d": "Fallthrough"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a2"
+  },
+  "id": "166",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Cuál es el tipo de de las enumeraciones?",
+  "answers": {
+    "answer_a": "Value type",
+    "answer_b": "Class type",
+    "answer_c": "Collection type",
+    "answer_d": "Reference type"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a3"
+  },
+  "id": "167",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Qué tipos de colección están disponibles en Swift?",
+  "answers": {
+    "answer_a": "Array",
+    "answer_b": "Dictionary",
+    "answer_c": "Las dos estan disponibles",
+    "answer_d": "Ninguna de las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a4"
+  },
+  "id": "168",
+  "category": "swift",
+  "level": "dificil",
+  "question": "_____________ es un proceso de consulta y llamada de propiedades.",
+  "answers": {
+    "answer_a": "Lazy Chaining",
+    "answer_b": "Swift Chaining",
+    "answer_c": "Optional Chaining",
+    "answer_d": "Todas las anteriores"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a5"
+  },
+  "id": "169",
+  "category": "swift",
+  "level": "dificil",
+  "question": "Dado lo siguiente... var stringValue:String = \"Jane Doe\", ¿cuál es el resultado de realizar... stringValue = nil?",
+  "answers": {
+    "answer_a": "stringValue == nil",
+    "answer_b": "stringValue == \"Jane Doe\"",
+    "answer_c": "El compilador no lo permitirá"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93d8bff27499da41e2a6"
+  },
+  "id": "170",
+  "category": "swift",
+  "level": "normal",
+  "question": "¿Qué tipo de lenguaje es Swift?",
+  "answers": {
+    "answer_a": "Scripting language",
+    "answer_b": "Programación orientada a objetos",
+    "answer_c": "Type-safe language",
+    "answer_d": "Todo lo anterior"
+  },
+  "correct_answer": "answer_d"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2a7"
+  },
+  "id": "191",
+  "category": "typescript",
+  "level": "normal",
+  "question": "Las declaraciones ambientales permiten usar de forma segura las bibliotecas JavaScript populares existentes.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2a8"
+  },
+  "id": "192",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Cuál de estas no es un tipo incorporado en TypeScript?",
+  "answers": {
+    "answer_a": "Integer",
+    "answer_b": "String",
+    "answer_c": "Boolean"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2a9"
+  },
+  "id": "193",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Qué categoría describe mejor TypeScript?",
+  "answers": {
+    "answer_a": "Framework",
+    "answer_b": "Library",
+    "answer_c": "Superset"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2aa"
+  },
+  "id": "194",
+  "category": "typescript",
+  "level": "facil",
+  "question": "Los programas JavaScript existentes también son programas TypeScript válidos.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2ab"
+  },
+  "id": "195",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Qué comando se usa para compilar un archivo TypeScript a JavaScript?",
+  "answers": {
+    "answer_a": "tsc file.js",
+    "answer_b": "typescript file.ts",
+    "answer_c": "typescript run file.js"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2ac"
+  },
+  "id": "196",
+  "category": "typescript",
+  "level": "facil",
+  "question": "¿Qué archivo de configuración se requiere para compilar todo el proyecto TypeScript?",
+  "answers": {
+    "answer_a": "app.js",
+    "answer_b": "tsconfig.js",
+    "answer_c": "tsconfig.json"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2ad"
+  },
+  "id": "197",
+  "category": "typescript",
+  "level": "facil",
+  "question": "¿Cuál es la extensión del archivo de declaración?",
+  "answers": {
+    "answer_a": ".tsx",
+    "answer_b": ".d.ts",
+    "answer_c": ".config.ts"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2ae"
+  },
+  "id": "198",
+  "category": "typescript",
+  "level": "facil",
+  "question": "¿Qué empresa desarrolla y mantiene TypeScript?",
+  "answers": {
+    "answer_a": "Google",
+    "answer_b": "Microsoft",
+    "answer_c": "Facebook"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2af"
+  },
+  "id": "199",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Cuál de las siguientes respuestas no es cierta sobre TypeScript?",
+  "answers": {
+    "answer_a": "Fuertemente tipado",
+    "answer_b": "Débilmente tipado"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b0"
+  },
+  "id": "200",
+  "category": "typescript",
+  "level": "facil",
+  "question": "¿Qué comando se usa para instalar TypeScript?",
+  "answers": {
+    "answer_a": "npm install -g typescript",
+    "answer_b": "npm install -g ts"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b1"
+  },
+  "id": "201",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Qué palabra clave se utiliza para definir una interfaz?",
+  "answers": {
+    "answer_a": "set",
+    "answer_b": "define",
+    "answer_c": "interface"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b2"
+  },
+  "id": "202",
+  "category": "typescript",
+  "level": "facil",
+  "question": "Un \"namespace\" es una forma de agrupar lógicamente el código relacionado.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b3"
+  },
+  "id": "203",
+  "category": "typescript",
+  "level": "facil",
+  "question": "TypeScript se originó a partir de las deficiencias de JavaScript para el desarrollo de aplicaciones a gran escala.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b4"
+  },
+  "id": "204",
+  "category": "typescript",
+  "level": "dificil",
+  "question": "¿Qué \"flag\" se utiliza para observar los cambios en los archivos y volver a compilarlos sobre la marcha?",
+  "answers": {
+    "answer_a": "--compile",
+    "answer_b": "-re-comp",
+    "answer_c": "--watch"
+  },
+  "correct_answer": "answer_c"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b5"
+  },
+  "id": "205",
+  "category": "typescript",
+  "level": "facil",
+  "question": "Los puntos y comas son obligatorios en TypeScript.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b6"
+  },
+  "id": "206",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Cuál de estas opciones es una forma válida de establecer un tipo para la variable?",
+  "answers": {
+    "answer_a": "let name:string = 'Jhon'",
+    "answer_b": "let name type:string = 'Jhon'",
+    "answer_c": "let name setType:string = 'Jhon'"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b7"
+  },
+  "id": "207",
+  "category": "typescript",
+  "level": "facil",
+  "question": "TypeScript admite conceptos como clases, interfaces y herencia.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b8"
+  },
+  "id": "208",
+  "category": "typescript",
+  "level": "normal",
+  "question": "¿Cuál de estos es un ejemplo válido de tupla?",
+  "answers": {
+    "answer_a": "let tuple:string|number = 123",
+    "answer_b": "let tuple:[string,number] = ['Jhon', 123]",
+    "answer_c": "let tuple:number = [144, 754, 123]"
+  },
+  "correct_answer": "answer_b"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2b9"
+  },
+  "id": "209",
+  "category": "typescript",
+  "level": "facil",
+  "question": "¿Cuál de las siguientes es una variable de tipo unión válida?",
+  "answers": {
+    "answer_a": "var val:string|number = 567",
+    "answer_b": "var val:{string|number} = 567",
+    "answer_c": "var val:[string|number] = 567"
+  },
+  "correct_answer": "answer_a"
+},
+{
+  "_id": {
+    "$oid": "664f93e4bff27499da41e2ba"
+  },
+  "id": "210",
+  "category": "typescript",
+  "level": "facil",
+  "question": "TypeScript no ignora los espacios, tabulaciones y saltos de línea que aparecen en los programas.",
+  "answers": {
+    "answer_a": "Verdadero",
+    "answer_b": "Falso"
+  },
+  "correct_answer": "answer_b"
+}]

@@ -32,7 +32,7 @@ const getByProperty = async (property, value) => {
 
 const create = async (data) => {
     try {
-        console.log("llego aqui")
+        console.log("llego aqui desde el navegador")
         const question = await questionModel.create(data);
         await userController.addQuestion(data.owner,question._id);
         return question
@@ -51,6 +51,16 @@ const update = async (id, data) => {
     }
 };
 
+
+const globalUpdate = async (data) => {
+    try {
+        console.log("Llego aqui")
+        return await questionModel.updateMany({}, data, { new: true });
+    } catch (error) {
+        console.error(error);
+        throw new Error('Error al actualizar la pregunta de manera global2');
+    }
+};
 const remove = async (id) => {
     try {
         return await questionModel.findByIdAndDelete(id);
@@ -96,6 +106,7 @@ const questionController = {
     update,
     remove,
     getByCategory,
+    globalUpdate,
     getAllCategories
 };
 

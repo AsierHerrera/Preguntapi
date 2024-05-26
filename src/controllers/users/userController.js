@@ -45,9 +45,9 @@ const login = async(data) =>{
             const users = await getByProperty("username",username);
             user = users[0];
         }
-        console.log("usurio",user);
+        console.log("usuario",user);
         if(!user){
-            return {error:"No existe el usurio",status:400};
+            return {error:"No existe el usuario",status:400};
         }
         console.log("contraseña",password,user.password);
         const isPasswordCorrect = await bcrypt.compare(password,user.password);
@@ -56,7 +56,7 @@ const login = async(data) =>{
         }
         console.log("login user",user)
         const token = jwt.sign({_id:user._id,username:user.username,role:user.role},process.env.JWT_SECRET,{expiresIn: 60 * 60})
-        return {token};
+        return {token, user};
 
         
     } catch (error) {
@@ -64,35 +64,52 @@ const login = async(data) =>{
         return {error:"Ha habido un error",status:500};
     }
 }
-const register = async(data) => {
-    const {email,username,password,passwordRepeat} = data;
-    if(!email || !username || !password || !passwordRepeat){
-        return {error:"Falta alguno de los campos"};
-    }
-    if(password !== passwordRepeat){
-        return {error:"Las contraseñas no coinciden"};
-    }
-    const userData = {
-        email,
-        username,
-        password,
-        role:"user"
-    }
-    const user = await create(userData);
-    return user;
-}
-
-const create = async(data) =>{
+const register = async (data) => {
     try {
-        const hash = await bcrypt.hash(data.password,10);
+        const {username, password, passwordRepeat} = data;
+
+        if (!username || !password || !passwordRepeat) {
+            return {error: "Falta alguno de los campos"};
+        }
+
+        if (password !== passwordRepeat) {
+            return {error: "Las contraseñas no coinciden"};
+        }
+
+        const userData = {
+            username,
+            password,
+            role: "user"
+        };
+        const user = await create(userData);
+        return user;
+    } catch (error) {
+        console.error('Error:', error);
+        return {error: "Error al registrar el usuario"};
+    }
+};
+
+
+const create = async (data) => {
+    try {
+        // Verificar si ya existe un usuario con el mismo nombre de usuario
+        const existingUser = await userModel.findOne({ username: data.username });
+
+        if (existingUser) {
+            // Si ya existe un usuario con el mismo nombre de usuario, devolver un error
+            return { error: 'El nombre de usuario ya está en uso' };
+        }
+
+        // Si no existe un usuario con el mismo nombre de usuario, proceder con la creación
+        const hash = await bcrypt.hash(data.password, 10);
         data.password = hash;
         const user = await userModel.create(data);
         return user;
     } catch (error) {
-        console.error(error); 
-        return null;  
+        console.error(error);
+        return null;
     }
-}
+};
 
 const update = async(id,data) =>{
     try {

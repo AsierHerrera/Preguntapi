@@ -1,11 +1,17 @@
 class Info {
   constructor() {
     this.url = "http://localhost:3015/api/categories";
+    this.userId = localStorage.getItem('userId');
   }
+
 
   async obtenerInfoAPI(url) {
     console.log("HOLAA MUNDO")
     try {
+      if (this.userId == undefined) {
+        alert("Por favor, inicia sesión para jugar");
+        window.location.href = 'login.html';
+      }
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Error al obtener los datos de la API: Respuesta no válida');
@@ -44,19 +50,38 @@ class Info {
       try {
           const url = `${link}`;
           const data = await this.obtenerInfoAPI(url);
-          console.log("LA DATA DE OBTENER PREGUNTAS ES:", data)
+          
           const preguntasDetalladas = data.map(pregunta => ({
             categoria: pregunta.category,
             nivel: pregunta.level,
             pregunta: pregunta.question,
             respuestas: pregunta.answers,
-            respuestaCorrecta: pregunta.correct_answer
+            respuestaCorrecta: pregunta.correct_answer,
+            aceptada: pregunta.status
         }));
+          console.log("LA DATA DE OBTENER PREGUNTAS ES:", preguntasDetalladas)
           return preguntasDetalladas;
       } catch (error) {
           console.error('Error al obtener las preguntas de la categoría:', error.message);
           throw error;
       }
+  }
+
+  async obtenerMejoresPuntuaciones(category, difficulty) {
+    try {
+      const response = await fetch(`http://localhost:3015/api/score/category/${category}`);
+      console.log("RESPUESTA DE SCORE", response)
+      if (!response.ok) {
+        throw new Error('Error al obtener las mejores puntuaciones');
+      }
+      const data = await response.json();
+      const mejoresPuntuaciones = data.data.filter(puntuacion => puntuacion.difficulty === difficulty);
+      mejoresPuntuaciones.sort((a, b) => b.score - a.score);
+      return mejoresPuntuaciones.slice(0, 3);
+    } catch (error) {
+      console.error('Error al obtener las mejores puntuaciones:', error.message);
+      throw error;
+    }
   }
 }
 

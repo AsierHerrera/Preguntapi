@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Pregunta - PREGUNTAPI</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="index.html">Inicio</a></li>
+            <li class="navbar-item"><a href="add-question.html">Añadir Pregunta</a></li>
+        </ul>
+        <button id="logoutBtn" class="btn">Logout</button> <!-- Aquí está tu botón de logout -->
+    </nav>
+    <div class=" flex flex-row h-screen items-center justify-center">
+        <div class="w-1/2 flex items-center justify-center">
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Añadir Nueva Pregunta</h2>
+                <form id="addQuestionForm" class="space-y-4">
+                    <div class="flex flex-col">
+                        <label for="category" class="text-gray-800">Categoría:</label>
+                        <input type="text" id="category" name="category" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="question" class="text-gray-800">Pregunta:</label>
+                        <textarea id="question" name="question" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required></textarea>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_a" class="text-gray-800">Respuesta A:</label>
+                        <input type="text" id="answer_a" name="answer_a" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_b" class="text-gray-800">Respuesta B:</label>
+                        <input type="text" id="answer_b" name="answer_b" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_c" class="text-gray-800">Respuesta C:</label>
+                        <input type="text" id="answer_c" name="answer_c" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_d" class="text-gray-800">Respuesta D:</label>
+                        <input type="text" id="answer_d" name="answer_d" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="correct_answer" class="text-gray-800">Respuesta Correcta:</label>
+                        <select id="correct_answer" name="correct_answer" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                            <option value="answer_a">Respuesta A</option>
+                            <option value="answer_b">Respuesta B</option>
+                            <option value="answer_c">Respuesta C</option>
+                            <option value="answer_d">Respuesta D</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition ease-in-out duration-150">Añadir Pregunta</button>
+                </form>
+            </div>
+            <div class="w-1/2 flex items-center justify-center">
+            <div class="mt-8 max-w-md bg-white text-center text-2xl">
+                <p style="color: rgb(33, 194, 235);">Bienvenido! <br> En este cuestionario puedes lanzarnos preguntas para incluir en el test! <br> Como maximo hay 4 posibles respuestas pero no hay por que poner las 4. <br> Una vez nos llegue la pregunta nuestro equipo de expertos decidira a que dificultad aplica.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="../js/addQuestion.js" type="module"></script>
+    <script src="../js/logout.js"></script>
+    <script>
+        // Redirigir al login si no hay un token en localStorage
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

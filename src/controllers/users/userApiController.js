@@ -22,6 +22,7 @@ const register = async(req,res)=>{
     if(user.error){
         return res.json({error:user.error});
     }
+    console.log("USER ENCAPI CONTROLLER", user)
     res.json({data:user})
 }
 const login = async(req,res) => {
@@ -29,7 +30,7 @@ const login = async(req,res) => {
     if(data.error){
         return res.status(data.status).json({error:data.error});
     }
-    res.json({token:data.token})
+    res.json({token:data.token, user:data.user._id, username:data.user.username})
 }
 
 const create = async(req,res)=>{
@@ -49,6 +50,12 @@ const remove = async(req,res)=>{
     res.json({data:user})
 }
 
+async function logout(req,res){
+    req.user = null;
+    console.log("req.user", req.user)
+    res.json (req.user)
+}
+
 export default{
     getAll,
     getById,
@@ -57,6 +64,7 @@ export default{
     register,
     create,
     update,
+    logout,
     remove
 }
 

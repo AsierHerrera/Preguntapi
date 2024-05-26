@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 @font-face {
   font-family: 'fredoka';
   src: url('../fonts/Fredoka-VariableFont_wdth,wght.ttf');
@@ -5,11 +9,9 @@
 
 body {
   font-family: fredoka, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-image: url('../images/Fondo2.jpg');
   background-size: cover;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container {
@@ -29,7 +31,6 @@ body {
   text-align: center;
   color: black;
   background-color: white; /* Fondo blanco con 90% de opacidad */
-  margin-top: 2em;
   border-radius: 5px;
   justify-content: center;
   font-size: 1.5em;
@@ -43,17 +44,15 @@ label[for="select-dificultad"] {
   text-align: center;
   color: black;
   background-color: white; /* Fondo blanco con 90% de opacidad */
-  margin-top: 2em;
   border-radius: 5px;
   justify-content: center;
   font-size: 1.5em;
 }
 
 .Categorias {
-  margin-top: 1.5em;
-  margin-bottom: 20px;
   justify-content: center;
   display: grid;
+  height: 10%;
 }
 
 
@@ -401,4 +400,50 @@ button {
   #resultado-container {
     margin-bottom: 3em;
   }
+}
+/* Estilos para la barra de navegación */
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0;
+  width: 100%;
+  display: flex; /* Hace que los elementos se comporten como flexbox */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar-item a {
+  color: rgb(33, 194, 235);
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el botón de logout */
+#logoutBtn {
+  background-color: transparent;
+  color: rgb(33, 194, 235);
+  border: 1px solid rgb(33, 194, 235);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+#logoutBtn:hover {
+  background-color: rgb(33, 194, 235);
+  color: white;
+  cursor: pointer;
 }

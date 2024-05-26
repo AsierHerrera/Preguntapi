@@ -10,10 +10,18 @@ class Preguntas {
         this.respuestasCorrectas = 0;
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
+        this.userid = localStorage.getItem('userId');
+        this.username = localStorage.getItem('username');
+        
+
         }
     
     async obtenerInfo() {
         try {
+            if (this.userid == undefined) {
+                alert("Por favor, inicia sesión para jugar");
+                window.location.href = 'login.html';
+            }
             this.categorias = await this.info.extraerCategoria();
             this.mostrarCategorias();
             this.iniciarJuego();
@@ -96,7 +104,7 @@ class Preguntas {
         try {
             const preguntas = await this.info.obtenerPreguntasPorCategoria(this.categoriaSeleccionada.link);
             //Unicamente nos quedamos con las preguntas que en base a la dificultad seleccionada nos interesen
-            this.preguntasFiltradas = preguntas.filter(pregunta => pregunta.nivel === this.dificultadSeleccionada);
+            this.preguntasFiltradas = preguntas.filter(pregunta => pregunta.nivel === this.dificultadSeleccionada && pregunta.aceptada === "Acepted");
             //Una vez tenemos las preguntas filtradas por categoria y dificultad, llamamos a la funcion mostrarPregunta
             console.log(this.preguntasFiltradas)
             this.mostrarPregunta();
@@ -175,15 +183,62 @@ class Preguntas {
     }
     
    
-    mostrarResultado() {// Aqui se muestra en pantalla la cantidad de respuestas correctas y la cantidad de preguntas contestadas
+    async mostrarResultado() {
         const resultadoContainer = document.getElementById('resultado-container');
         resultadoContainer.style.display = 'block';
         const preguntaContainer = document.getElementById('pregunta-container');
         preguntaContainer.style.display = 'none';
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
+    
+        const scoreData = { 
+          username: this.username,
+          category: this.categoriaSeleccionada.nombre,
+          difficulty: this.dificultadSeleccionada,
+          score: this.respuestasCorrectas,
+          totalQuestions: this.preguntasFiltradas.length
+        };
+        console.log("EL SCORE DATA ES:", scoreData);
+    
+        try {
+          const response = await fetch('http://localhost:3015/api/score', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(scoreData)
+          });
+    
+          if (!response.ok) {
+            throw new Error('Error al guardar la puntuación');
+          }
+    
+          console.log('Puntuación guardada correctamente');
+    
+          // Obtener las mejores puntuaciones
+          const mejoresPuntuaciones = await this.info.obtenerMejoresPuntuaciones(this.categoriaSeleccionada.nombre, this.dificultadSeleccionada);
+          console.log("Las mejores puntuaciones son:",mejoresPuntuaciones )
+          this.mostrarMejoresPuntuaciones(mejoresPuntuaciones);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+    
+      mostrarMejoresPuntuaciones(puntuaciones) {
+        const resultadoContainer = document.getElementById('resultado-container');
+        const mejoresPuntuacionesElement = document.createElement('div');
+        mejoresPuntuacionesElement.innerHTML = '<h3>Mejores Puntuaciones</h3>';
+        puntuaciones.forEach((puntuacion, index) => {
+          const puntuacionElement = document.createElement('div');
+          puntuacionElement.textContent = `${index + 1}. ${puntuacion.username}, Puntuación: ${puntuacion.score}`;
+          mejoresPuntuacionesElement.appendChild(puntuacionElement);
+        });
+        resultadoContainer.appendChild(mejoresPuntuacionesElement);
+      }
     }
 
 
-}
+
+
+
 
 export default Preguntas;
