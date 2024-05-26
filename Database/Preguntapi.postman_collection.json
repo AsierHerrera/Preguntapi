@@ -1,0 +1,979 @@
+{
+	"info": {
+		"_postman_id": "8fee531a-6b00-490b-bc10-95b67bd596d3",
+		"name": "Preguntapi",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35082095"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"landermail@mail.com\",\n    \"username\":\"out-lander\",\n    \"password\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"es un poco tontería\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/664ca724c2d1ae50fa040721",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"664ca724c2d1ae50fa040721"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/664ca724c2d1ae50fa040721",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"664ca724c2d1ae50fa040721"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "register Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"usario@normal.com\",\n    \"username\":\"usario\",\n    \"password\":\"1234\",\n    \"passwordRepeat\":\"1234\",\n    \"role\":\"admin\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"usario@normal.com\",\n    \"username\":\"usario\",\n    \"password\":\"1234\",\n    \"passwordRepeat\":\"1234\",\n    \"role\":\"admin\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "login Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtaW1haWxAbWFpbC5jb20iLCJpYXQiOjE3MTUyNTE3NzIsImV4cCI6MTcxNTI1NTM3Mn0.L7bxyY_9PnyjX4ZxDCZRbi6fDS5V8D64Cv_5e4cxX1A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"username\":\"qwe\",\n    \"password\":\"qwe\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "GetAllQuestions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/questions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "CreateQuestion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRmOGJjODE5NDU0YmI0N2E5ZjlmYjYiLCJ1c2VybmFtZSI6InF3ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2NDg5ODk5LCJleHAiOjE3MTY0OTM0OTl9._oejaGFhc_vg7MPX6RzJIwA_aHlt6nfF0ko42u7hwIw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": \"282\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cuál es la sintaxis correcta para mostrar por consola \\\"Hello World\\\" en C#?\",\n    \"answers\": {\n      \"answer_a\": \"Console.WriteLine(\\\"Hello World\\\");\",\n      \"answer_b\": \"print (\\\"Hello World\\\");\",\n      \"answer_c\": \"System.out.println(\\\"Hello World\\\");\",\n      \"answer_d\": \"cout << \\\"Hello World\\\";\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"283\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"C# es un alias de C++.\",\n    \"answers\": {\n      \"answer_a\": \"Falso\",\n      \"answer_b\": \"Verdadero\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"284\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cómo se insertan COMENTARIOS en el código en C#?\",\n    \"answers\": {\n      \"answer_a\": \"// Esto es un comentario\",\n      \"answer_b\": \"# Esto es un comentario\",\n      \"answer_c\": \"/* Esto es un comentario\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"285\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué tipo de datos se utiliza para crear una variable que debe almacenar texto?\",\n    \"answers\": {\n      \"answer_a\": \"myString\",\n      \"answer_b\": \"Txt\",\n      \"answer_c\": \"str\",\n      \"answer_d\": \"string\"\n    },\n    \"correct_answer\": \"answer_d\"\n  },\n  {\n    \"id\": \"286\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cómo se crea una variable con el valor numérico 5?\",\n    \"answers\": {\n      \"answer_a\": \"int x = 5;\",\n      \"answer_b\": \"x = 5;\",\n      \"answer_c\": \"double x = 5;\",\n      \"answer_d\": \"num x = 5\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"287\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cómo se crea una variable con el número flotante 2,8?\",\n    \"answers\": {\n      \"answer_a\": \"double x = 2.8D;\",\n      \"answer_b\": \"byte x = 2.8\",\n      \"answer_c\": \"int x = 2.8D;\",\n      \"answer_d\": \"int x = 2.8;\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"288\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué propiedad se puede utilizar para encontrar la longitud de una cadena?\",\n    \"answers\": {\n      \"answer_a\": \"getLength()\",\n      \"answer_b\": \"Length\",\n      \"answer_c\": \"length()\",\n      \"answer_d\": \"length\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"289\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué operador se utiliza para sumar dos valores?\",\n    \"answers\": {\n      \"answer_a\": \"El signo +\",\n      \"answer_b\": \"El signo &\",\n      \"answer_c\": \"El signo *\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"290\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"El valor de una variable de cadena puede estar encerrado entre comillas simples.\",\n    \"answers\": {\n      \"answer_a\": \"Verdadero\",\n      \"answer_b\": \"Falso\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"291\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"El casting de tipos es cuando se asigna un valor de un tipo de datos a otro tipo.\",\n    \"answers\": {\n      \"answer_a\": \"Verdadero\",\n      \"answer_b\": \"Falso\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"292\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué operador se puede utilizar para comparar dos valores?\",\n    \"answers\": {\n      \"answer_a\": \"==\",\n      \"answer_b\": \"=\",\n      \"answer_c\": \"<>\",\n      \"answer_d\": \"><\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"293\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"Para declarar un array en C#, hay que definir el tipo de variable con:\",\n    \"answers\": {\n      \"answer_a\": \"()\",\n      \"answer_b\": \"[]\",\n      \"answer_c\": \"{}\",\n      \"answer_d\": \"\\\"\\\"\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"294\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"Los índices de los arrays empiezan por:\",\n    \"answers\": {\n      \"answer_a\": \"0\",\n      \"answer_b\": \"1\",\n      \"answer_c\": \"2\",\n      \"answer_d\": \"3\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"295\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Cómo se crea un método en C#?\",\n    \"answers\": {\n      \"answer_a\": \"myMethod[]\",\n      \"answer_b\": \"MyMethod\",\n      \"answer_c\": \"(MyMethod)\",\n      \"answer_d\": \"MyMethod()\"\n    },\n    \"correct_answer\": \"answer_d\"\n  },\n  {\n    \"id\": \"296\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Cómo se llama a un método en C#?\",\n    \"answers\": {\n      \"answer_a\": \"MyMethod();\",\n      \"answer_b\": \"MyMethod;\",\n      \"answer_c\": \"myMethod[];\",\n      \"answer_d\": \"(MyMethod);\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"297\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Qué palabra clave se utiliza para crear una clase en C#?\",\n    \"answers\": {\n      \"answer_a\": \"MyClass\",\n      \"answer_b\": \"class\",\n      \"answer_c\": \"class()\",\n      \"answer_d\": \"className\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"298\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Cuál es la forma correcta de crear un objeto llamado myObj de MyClass?\",\n    \"answers\": {\n      \"answer_a\": \"new myObj = MyClass();\",\n      \"answer_b\": \"class myObj = new MyClass();\",\n      \"answer_c\": \"MyClass myObj = new MyClass();\",\n      \"answer_d\": \"class MyClass = new myObj();\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"299\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"En C#, es posible heredar campos y métodos de una clase a otra.\",\n    \"answers\": {\n      \"answer_a\": \"Verdadero\",\n      \"answer_b\": \"Falso\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"300\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Cómo se llama la clase 'especial' que representa un grupo de constantes?\",\n    \"answers\": {\n      \"answer_a\": \"const\",\n      \"answer_b\": \"special\",\n      \"answer_c\": \"void\",\n      \"answer_d\": \"enum\"\n    },\n    \"correct_answer\": \"answer_d\"\n  },\n  {\n    \"id\": \"301\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué operador se utiliza para multiplicar números?\",\n    \"answers\": {\n      \"answer_a\": \"x\",\n      \"answer_b\": \"*\",\n      \"answer_c\": \"#\",\n      \"answer_d\": \"%\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"302\",\n    \"category\": \"csharp\",\n    \"level\": \"normal\",\n    \"question\": \"¿Qué modificador de acceso hace que el código sólo sea accesible dentro de la misma clase?\",\n    \"answers\": {\n      \"answer_a\": \"private\",\n      \"answer_b\": \"final\",\n      \"answer_c\": \"public\",\n      \"answer_d\": \"abstract\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"303\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cómo se empieza a escribir una sentencia if en C#?\",\n    \"answers\": {\n      \"answer_a\": \"if (x > y)\",\n      \"answer_b\": \"if x > y:\",\n      \"answer_c\": \"if x > y then:\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"304\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Cómo se empieza a escribir un ciclo while en C#?\",\n    \"answers\": {\n      \"answer_a\": \"while (x > y)\",\n      \"answer_b\": \"while x > y:\",\n      \"answer_c\": \"x > y while {\",\n      \"answer_d\": \"while x > y {\"\n    },\n    \"correct_answer\": \"answer_a\"\n  },\n  {\n    \"id\": \"305\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué palabra clave se utiliza para devolver un valor dentro de un método?\",\n    \"answers\": {\n      \"answer_a\": \"get\",\n      \"answer_b\": \"void\",\n      \"answer_c\": \"break\",\n      \"answer_d\": \"return\"\n    },\n    \"correct_answer\": \"answer_d\"\n  },\n  {\n    \"id\": \"306\",\n    \"category\": \"csharp\",\n    \"level\": \"facil\",\n    \"question\": \"¿Qué sentencia se utiliza para detener un ciclo?\",\n    \"answers\": {\n      \"answer_a\": \"exit\",\n      \"answer_b\": \"stop\",\n      \"answer_c\": \"break\",\n      \"answer_d\": \"return\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"366\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál de las siguientes afirmaciones no es válida para crear un nuevo objeto en C#?\",\n    \"answers\": {\n      \"answer_a\": \"var a = new Int32();\",\n      \"answer_b\": \"var a = new String();\",\n      \"answer_c\": \"var a = new IComparable();\",\n      \"answer_d\": \"var a = new []{0};\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"367\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"Si ejecuta el archivo ejecutable de C# varias veces, se crean varios procesos. Si desea tener un solo proceso de solicitud, incluso si lo inicia varias veces, ¿qué puede usar?\",\n    \"answers\": {\n      \"answer_a\": \"Semaphore\",\n      \"answer_b\": \"Mutex\",\n      \"answer_c\": \"Critical Section\",\n      \"answer_d\": \"C# lock\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"368\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál de los siguientes operadores no puede utilizar la sobrecarga de operadores?\",\n    \"answers\": {\n      \"answer_a\": \"++\",\n      \"answer_b\": \"&\",\n      \"answer_c\": \"||\",\n      \"answer_d\": \"true\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"369\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"En la programación multihilo, ¿cuál de los siguientes no utiliza Thread Pool?\",\n    \"answers\": {\n      \"answer_a\": \"BackgroundWorker class\",\n      \"answer_b\": \"Asynchronous delegate\",\n      \"answer_c\": \"Thread class\",\n      \"answer_d\": \"Task class\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"370\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"La clase A tiene el atributo [Serializable()]. ¿Cuándo se comprueba [Serializable]?\",\n    \"answers\": {\n      \"answer_a\": \"En tiempo de compilación de C#\",\n      \"answer_b\": \"En tiempo de ejecución de CLR\",\n      \"answer_c\": \"En tiempo de compilación JIT\",\n      \"answer_d\": \"En la vinculación\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"371\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"Los siguientes son algunos ejemplos de arrays de enteros. ¿Qué expresión no es válida en C#?\",\n    \"answers\": {\n      \"answer_a\": \"int[] a = new int[10];\",\n      \"answer_b\": \"int[][] c = new int[10][];\",\n      \"answer_c\": \"int[][][] cc = new int[10][2][];\",\n      \"answer_d\": \"int[,] b = new int[10, 2];\",\n      \"answer_e\": \"int[, , ,] d = new int[10,2,2,2]\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"372\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál de las siguientes afirmaciones es verdadera sobre el tipo anónimo de C#?\",\n    \"answers\": {\n      \"answer_a\": \"El tipo anónimo puede agregar una nueva propiedad una vez que se crea\",\n      \"answer_b\": \"El tipo anónimo puede agregar un evento\",\n      \"answer_c\": \"Puede usar un delegado para un método en tipo anónimo\",\n      \"answer_d\": \"El tipo anónimo es un tipo inmutable.\"\n    },\n    \"correct_answer\": \"answer_c\"\n  },\n  {\n    \"id\": \"373\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál es el resultado de las variables a y b? var a = 5L == 5.0F; var b = 24L / 5 == 24 / 5d;\",\n    \"answers\": {\n      \"answer_a\": \"a=true, b=true\",\n      \"answer_b\": \"a=true, b=false\",\n      \"answer_c\": \"a=false, b=true\",\n      \"answer_d\": \"a=false, b=false\"\n    },\n    \"correct_answer\": \"answer_b\"\n  },\n  {\n    \"id\": \"374\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"Al definir una clase con C# Generics, ¿Cuál de las siguientes no es válida?\",\n    \"answers\": {\n      \"answer_a\": \"class MyClass where T : struct\",\n      \"answer_b\": \"class MyClass where T : class\",\n      \"answer_c\": \"class MyClass where T : IComparable\",\n      \"answer_d\": \"Todas\"\n    },\n    \"correct_answer\": \"answer_d\"\n  },\n  {\n    \"id\": \"375\",\n    \"category\": \"csharp\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál de las siguientes afirmaciones es incorrecta sobre el delegado de C#?\",\n    \"answers\": {\n      \"answer_a\": \"Admite multicast\",\n      \"answer_b\": \"Se considera una base técnica del evento de C#\",\n      \"answer_c\": \"Se puede usar al pasar unaEl delegado de C # no referencia a un método\",\n      \"answer_d\": \"No puede usar operadores + =, - =\"\n    },\n    \"correct_answer\": \"answer_d\"\n  }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/questions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateQuestion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"91\",\n    \"category\": \"java\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál es la sintaxis correcta para imprimir por consola \\\"Hola mundo\\\" en Java?\",\n    \"answers\": {\n        \"answer_a\": \"Console.WriteLine(\\\"Hola mundo\\\")\",\n        \"answer_b\": \"print(\\\"Hola mundo\\\")\",\n        \"answer_c\": \"echo(\\\"Hola mundo\\\")\",\n        \"answer_d\": \"System.out.println(\\\"Hola mundo\\\")\"\n    },\n    \"correct_answer\": \"answer_d\",\n    \"status\": \"UnAcepted\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/questions/664cb176ed708a654a2ba945",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions",
+								"664cb176ed708a654a2ba945"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateGlobalQuestion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"91\",\n    \"category\": \"java\",\n    \"level\": \"dificil\",\n    \"question\": \"¿Cuál es la sintaxis correcta para imprimir por consola \\\"Hola mundo\\\" en Java?\",\n    \"answers\": {\n        \"answer_a\": \"Console.WriteLine(\\\"Hola mundo\\\")\",\n        \"answer_b\": \"print(\\\"Hola mundo\\\")\",\n        \"answer_c\": \"echo(\\\"Hola mundo\\\")\",\n        \"answer_d\": \"System.out.println(\\\"Hola mundo\\\")\"\n    },\n    \"correct_answer\": \"answer_d\",\n    \"status\": \"UnAcepted\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/questions/664cb176ed708a654a2ba945",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions",
+								"664cb176ed708a654a2ba945"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuesiton",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/questions/664ca938c2d1ae50fa04072a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions",
+								"664ca938c2d1ae50fa04072a"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "FindQuestionByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/questions/categories/css",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions",
+								"categories",
+								"css"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GetAllCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRmOGJjODE5NDU0YmI0N2E5ZjlmYjYiLCJ1c2VybmFtZSI6InF3ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2NDg5ODk5LCJleHAiOjE3MTY0OTM0OTl9._oejaGFhc_vg7MPX6RzJIwA_aHlt6nfF0ko42u7hwIw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"cpp\",\n        \"count_questions\": 29,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/cpp\"\n    },\n    {\n        \"name\": \"csharp\",\n        \"count_questions\": 35,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/csharp\"\n    },\n    {\n        \"name\": \"css\",\n        \"count_questions\": 38,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/css\"\n    },\n    {\n        \"name\": \"html\",\n        \"count_questions\": 35,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/html\"\n    },\n    {\n        \"name\": \"java\",\n        \"count_questions\": 35,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/java\"\n    },\n    {\n        \"name\": \"javascript\",\n        \"count_questions\": 40,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/javascript\"\n    },\n    {\n        \"name\": \"kotlin\",\n        \"count_questions\": 25,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/kotlin\"\n    },\n    {\n        \"name\": \"php\",\n        \"count_questions\": 24,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/php\"\n    },\n    {\n        \"name\": \"python\",\n        \"count_questions\": 21,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/python\"\n    },\n    {\n        \"name\": \"sql\",\n        \"count_questions\": 33,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/sql\"\n    },\n    {\n        \"name\": \"swift\",\n        \"count_questions\": 20,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/swift\"\n    },\n    {\n        \"name\": \"typescript\",\n        \"count_questions\": 20,\n        \"link\": \"http://www.localhost:3015/api/questions/categories/typescript\"\n    }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Java\",\n    \"link\":\"http://localhost:3015/api/questions/categories/java\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/664cc0964c90f3cee66b035e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"664cc0964c90f3cee66b035e"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/664cc1d44c90f3cee66b0371",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"664cc1d44c90f3cee66b0371"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scores",
+			"item": [
+				{
+					"name": "GetAllScores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "CreateScore",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRmOGJjODE5NDU0YmI0N2E5ZjlmYjYiLCJ1c2VybmFtZSI6InF3ZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2NDg5ODk5LCJleHAiOjE3MTY0OTM0OTl9._oejaGFhc_vg7MPX6RzJIwA_aHlt6nfF0ko42u7hwIw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"664f8bc819454bb47a9f9fb6\",  // Reemplaza este valor con un ID válido de un usuario en tu base de datos\n    \"category\": \"javascript\",\n    \"difficulty\": \"dificil\",\n    \"score\": 12,\n    \"totalQuestions\": 13\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "FindScoreByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/score/664f8bc819454bb47a9f9fb6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"664f8bc819454bb47a9f9fb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindScoreByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/score/category/javascript",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"category",
+								"javascript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateScore",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"_id\": \"66520bc980f37fe9028de473\",\n            \"user\": \"66504345c3300dd5ff151a28\",\n            \"category\": \"javascript\",\n            \"difficulty\": \"dificil\",\n            \"score\": 7,\n            \"totalQuestions\": 13\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/score/66520bc980f37fe9028de473",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"66520bc980f37fe9028de473"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteScore",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/questions/664ca938c2d1ae50fa04072a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"questions",
+								"664ca938c2d1ae50fa04072a"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:3015/api"
+		}
+	]
+}
