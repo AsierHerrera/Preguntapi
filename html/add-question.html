@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Pregunta - PREGUNTAPI</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="index.html">Inicio</a></li>
+            <li class="navbar-item"><a href="add-question.html">Añadir Pregunta</a></li>
+        </ul>
+    </nav>
+    <div class="flex flex-row h-screen items-center justify-center">
+        <div class="flex items-center justify-center">
+            <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Añadir Nueva Pregunta</h2>
+                <form id="addQuestionForm" class="space-y-4">
+                    <div class="flex flex-col">
+                        <label for="category" class="text-gray-800">Categoría:</label>
+                        <input type="text" id="category" name="category" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="question" class="text-gray-800">Pregunta:</label>
+                        <textarea id="question" name="question" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required></textarea>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_a" class="text-gray-800">Respuesta A:</label>
+                        <input type="text" id="answer_a" name="answer_a" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_b" class="text-gray-800">Respuesta B:</label>
+                        <input type="text" id="answer_b" name="answer_b" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_c" class="text-gray-800">Respuesta C:</label>
+                        <input type="text" id="answer_c" name="answer_c" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="answer_d" class="text-gray-800">Respuesta D:</label>
+                        <input type="text" id="answer_d" name="answer_d" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="correct_answer" class="text-gray-800">Respuesta Correcta:</label>
+                        <select id="correct_answer" name="correct_answer" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                            <option value="answer_a">Respuesta A</option>
+                            <option value="answer_b">Respuesta B</option>
+                            <option value="answer_c">Respuesta C</option>
+                            <option value="answer_d">Respuesta D</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition ease-in-out duration-150">Añadir Pregunta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/addQuestion.js" type="module"></script>
+    <script>
+        // Redirigir al login si no hay un token en localStorage
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

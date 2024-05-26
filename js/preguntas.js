@@ -182,42 +182,62 @@ class Preguntas {
     }
     
    
-    async mostrarResultado() {// Aqui se muestra en pantalla la cantidad de respuestas correctas y la cantidad de preguntas contestadas
+    async mostrarResultado() {
         const resultadoContainer = document.getElementById('resultado-container');
         resultadoContainer.style.display = 'block';
         const preguntaContainer = document.getElementById('pregunta-container');
         preguntaContainer.style.display = 'none';
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
-
+    
         const scoreData = {
-            user: this.userid, // Asegúrate de tener el ID del usuario disponible
-            category: this.categoriaSeleccionada.nombre,
-            difficulty: this.dificultadSeleccionada,
-            score: this.respuestasCorrectas,
-            totalQuestions: this.preguntasFiltradas.length
+          user: this.userid,
+          category: this.categoriaSeleccionada.nombre,
+          difficulty: this.dificultadSeleccionada,
+          score: this.respuestasCorrectas,
+          totalQuestions: this.preguntasFiltradas.length
         };
-        console.log("EL SCORE DATA ES:", scoreData)
-
+        console.log("EL SCORE DATA ES:", scoreData);
+    
         try {
-            const response = await fetch('http://localhost:3015/api/score', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(scoreData)
-            });
-
-            if (!response.ok) {
-                throw new Error('Error al guardar la puntuación');
-            }
-
-            console.log('Puntuación guardada correctamente');
+          const response = await fetch('http://localhost:3015/api/score', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(scoreData)
+          });
+    
+          if (!response.ok) {
+            throw new Error('Error al guardar la puntuación');
+          }
+    
+          console.log('Puntuación guardada correctamente');
+    
+          // Obtener las mejores puntuaciones
+          const mejoresPuntuaciones = await this.info.obtenerMejoresPuntuaciones(this.categoriaSeleccionada.nombre, this.dificultadSeleccionada);
+          console.log("Las mejores puntuaciones son:",mejoresPuntuaciones )
+          this.mostrarMejoresPuntuaciones(mejoresPuntuaciones);
         } catch (error) {
-            console.error('Error:', error);
+          console.error('Error:', error);
         }
-}
+      }
+    
+      mostrarMejoresPuntuaciones(puntuaciones) {
+        const resultadoContainer = document.getElementById('resultado-container');
+        const mejoresPuntuacionesElement = document.createElement('div');
+        mejoresPuntuacionesElement.innerHTML = '<h3>Mejores Puntuaciones</h3>';
+        puntuaciones.forEach((puntuacion, index) => {
+          const puntuacionElement = document.createElement('div');
+          puntuacionElement.textContent = `${index + 1}. Usuario: ${puntuacion.user}, Puntuación: ${puntuacion.score}`;
+          mejoresPuntuacionesElement.appendChild(puntuacionElement);
+        });
+        resultadoContainer.appendChild(mejoresPuntuacionesElement);
+      }
+    }
 
 
-}
+
+
+
 
 export default Preguntas;

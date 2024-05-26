@@ -9,11 +9,9 @@
 
 body {
   font-family: fredoka, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-image: url('../images/Fondo2.jpg');
   background-size: cover;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container {
@@ -33,7 +31,6 @@ body {
   text-align: center;
   color: black;
   background-color: white; /* Fondo blanco con 90% de opacidad */
-  margin-top: 2em;
   border-radius: 5px;
   justify-content: center;
   font-size: 1.5em;
@@ -54,10 +51,9 @@ label[for="select-dificultad"] {
 }
 
 .Categorias {
-  margin-top: 1.5em;
-  margin-bottom: 20px;
   justify-content: center;
   display: grid;
+  height: 10%;
 }
 
 
@@ -405,4 +401,29 @@ button {
   #resultado-container {
     margin-bottom: 3em;
   }
+}
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: white; /* Color de fondo de la barra de navegación */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.navbar-list {
+  list-style-type: none; /* Eliminar viñetas de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: inline-block; /* Mostrar elementos en línea */
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+.navbar-item a {
+  color:  rgb(33, 194, 235); /* Color de texto de los enlaces */
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+.navbar-item a:hover {
+  text-decoration: underline; /* Subrayado en hover */
 }

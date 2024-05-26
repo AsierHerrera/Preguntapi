@@ -32,7 +32,7 @@ const getByProperty = async (property, value) => {
 
 const create = async (data) => {
     try {
-        console.log("llego aqui")
+        console.log("llego aqui desde el navegador")
         const question = await questionModel.create(data);
         await userController.addQuestion(data.owner,question._id);
         return question

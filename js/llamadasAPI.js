@@ -66,6 +66,23 @@ class Info {
           throw error;
       }
   }
+
+  async obtenerMejoresPuntuaciones(category, difficulty) {
+    try {
+      const response = await fetch(`http://localhost:3015/api/score/category/${category}`);
+      console.log("RESPUESTA DE SCORE", response)
+      if (!response.ok) {
+        throw new Error('Error al obtener las mejores puntuaciones');
+      }
+      const data = await response.json();
+      const mejoresPuntuaciones = data.data.filter(puntuacion => puntuacion.difficulty === difficulty);
+      mejoresPuntuaciones.sort((a, b) => b.score - a.score);
+      return mejoresPuntuaciones.slice(0, 3);
+    } catch (error) {
+      console.error('Error al obtener las mejores puntuaciones:', error.message);
+      throw error;
+    }
+  }
 }
 
 

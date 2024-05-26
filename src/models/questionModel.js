@@ -19,7 +19,6 @@ const questionSchema = new mongoose.Schema({
     },
     level: {
         type: String,
-        required: true
     },
     question: {
         type: String,
