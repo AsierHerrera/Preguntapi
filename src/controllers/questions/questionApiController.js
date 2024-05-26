@@ -35,10 +35,10 @@ const getByProperty = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        console.log("Llego a api controller")
-        const owner = req.user._id
-        console.log("El owner es:", owner)
-        const data = {...req.body,owner};
+        console.log("Llego a api controller desde navegador")
+        //const owner = req.user._id
+        //console.log("El owner es:", owner)
+        const data = {...req.body};
         console.log("La data es:", data)
         const question = await questionController.create(data);
         res.status(201).json({ data: question });

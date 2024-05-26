@@ -5,7 +5,7 @@ import { isAuthenticated,isAdmin } from "../middlewares/authMiddleware.js";
 
 const router  = Router();
 
-router.get("/",isAdmin,userApiController.getAll);
+router.get("/",userApiController.getAll);
 router.get("/byproperty",isAdmin,userApiController.getByProperty);
 router.get("/:id",isAdmin,userApiController.getById);
 router.post("/",userApiController.create);
