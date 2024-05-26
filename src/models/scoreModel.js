@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const scoreSchema = new mongoose.Schema({
-    user: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'user',
+    username: {
+        type: String, 
         required: true
     },
     category: {

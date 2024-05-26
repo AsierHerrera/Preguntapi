@@ -21,11 +21,12 @@ document.getElementById('login-form').addEventListener('submit', async function(
         });
 
         const data = await response.json();
-        console.log("La data es:",)
+        console.log("La data es:",data)
 
         if (response.ok) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.user);
+            localStorage.setItem('username', data.username);
 
             window.location.href = 'index.html';
         } else {
@@ -35,5 +36,9 @@ document.getElementById('login-form').addEventListener('submit', async function(
         console.error('Error:', error);
     }
 });
+
+// Lógica para el logout
+// login.js
+
 
 

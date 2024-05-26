@@ -11,6 +11,7 @@ class Preguntas {
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
         this.userid = localStorage.getItem('userId');
+        this.username = localStorage.getItem('username');
         
 
         }
@@ -189,8 +190,8 @@ class Preguntas {
         preguntaContainer.style.display = 'none';
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
     
-        const scoreData = {
-          user: this.userid,
+        const scoreData = { 
+          username: this.username,
           category: this.categoriaSeleccionada.nombre,
           difficulty: this.dificultadSeleccionada,
           score: this.respuestasCorrectas,
@@ -228,7 +229,7 @@ class Preguntas {
         mejoresPuntuacionesElement.innerHTML = '<h3>Mejores Puntuaciones</h3>';
         puntuaciones.forEach((puntuacion, index) => {
           const puntuacionElement = document.createElement('div');
-          puntuacionElement.textContent = `${index + 1}. Usuario: ${puntuacion.user}, Puntuación: ${puntuacion.score}`;
+          puntuacionElement.textContent = `${index + 1}. ${puntuacion.username}, Puntuación: ${puntuacion.score}`;
           mejoresPuntuacionesElement.appendChild(puntuacionElement);
         });
         resultadoContainer.appendChild(mejoresPuntuacionesElement);

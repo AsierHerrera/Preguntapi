@@ -13,10 +13,11 @@
             <li class="navbar-item"><a href="index.html">Inicio</a></li>
             <li class="navbar-item"><a href="add-question.html">Añadir Pregunta</a></li>
         </ul>
+        <button id="logoutBtn" class="btn">Logout</button> <!-- Aquí está tu botón de logout -->
     </nav>
     <div class="flex flex-row h-screen items-center justify-center">
         <div class="flex items-center justify-center">
-            <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+            <div class="max-w-lg w-full bg-white p-8 rounded-lg shadow-md">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4">Añadir Nueva Pregunta</h2>
                 <form id="addQuestionForm" class="space-y-4">
                     <div class="flex flex-col">
@@ -58,6 +59,7 @@
         </div>
     </div>
     <script src="../js/addQuestion.js" type="module"></script>
+    <script src="../js/logout.js"></script>
     <script>
         // Redirigir al login si no hay un token en localStorage
         if (!localStorage.getItem('token')) {
