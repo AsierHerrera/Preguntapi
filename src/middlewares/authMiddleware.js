@@ -11,7 +11,7 @@ const isAuthenticated = async(req,res,next)=>{
         const decoded =jwt.verify(token,process.env.JWT_SECRET);
         const user = await userController.getById(decoded._id);
         if(!user){
-            return res.status(400).json({error:"No existe el usurio"});
+            return res.status(400).json({error:"No existe el usuario"});
         }
         
         req.user = user;
@@ -35,7 +35,7 @@ const isAdmin = async(req,res,next)=>{
         const decoded =jwt.verify(token,process.env.JWT_SECRET);
         const user = await userController.getById(decoded._id);
         if(!user){
-            return res.status(400).json({error:"No existe el usurio"});
+            return res.status(400).json({error:"No existe el usuario"});
         }
         if(user.role !== "admin"){
             return res.status(401).json({error:"No estás autorizado"});

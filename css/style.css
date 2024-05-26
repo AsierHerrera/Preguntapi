@@ -44,7 +44,6 @@ label[for="select-dificultad"] {
   text-align: center;
   color: black;
   background-color: white; /* Fondo blanco con 90% de opacidad */
-  margin-top: 2em;
   border-radius: 5px;
   justify-content: center;
   font-size: 1.5em;
@@ -403,27 +402,48 @@ button {
   }
 }
 /* Estilos para la barra de navegación */
+/* Estilos para la barra de navegación */
 .navbar {
-  background-color: white; /* Color de fondo de la barra de navegación */
-  padding: 10px 20px; /* Espaciado interno */
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0;
+  width: 100%;
+  display: flex; /* Hace que los elementos se comporten como flexbox */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
 .navbar-list {
-  list-style-type: none; /* Eliminar viñetas de la lista */
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar-item {
-  display: inline-block; /* Mostrar elementos en línea */
-  margin-right: 20px; /* Espacio entre elementos */
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .navbar-item a {
-  color:  rgb(33, 194, 235); /* Color de texto de los enlaces */
-  text-decoration: none; /* Eliminar subrayado de los enlaces */
+  color: rgb(33, 194, 235);
+  text-decoration: none;
 }
 
 .navbar-item a:hover {
-  text-decoration: underline; /* Subrayado en hover */
+  text-decoration: underline;
+}
+
+/* Estilos para el botón de logout */
+#logoutBtn {
+  background-color: transparent;
+  color: rgb(33, 194, 235);
+  border: 1px solid rgb(33, 194, 235);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+#logoutBtn:hover {
+  background-color: rgb(33, 194, 235);
+  color: white;
+  cursor: pointer;
 }

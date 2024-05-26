@@ -4,49 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PREGUNTAPI</title>
+
     <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
-<body>
-    <nav class="navbar">
-        <ul class="navbar-list">
+<body class="bg-gray-100 font-fredoka">
+    <nav class="navbar mb-4">
+        <ul class="navbar-list flex justify-end">
             <li class="navbar-item"><a href="index.html">Inicio</a></li>
-            <li class="navbar-item"><a href="add-question.html">Añadir Pregunta</a></li>
+            <li class="navbar-item ml-4"><a href="add-question.html">Añadir Pregunta</a></li>
         </ul>
+        <button id="logoutBtn" class="btn">Logout</button> <!-- Aquí está tu botón de logout -->
     </nav>
-    <div>
-        <section class="container">
-            <h1>PREGUNTAPI</h1>
 
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <section class="container text-center mb-8">
+            <h1 class="text-7xl text-rgb(33, 194, 235) font-bold">PREGUNTAPI</h1>
         </section>
-        <section class="texto">
-            <p>Selecciona un lenguaje de programación y una dificultad para poner a prueba tus conocimientos.</p>    
+        <section class="texto text-rgb(33, 194, 235) text-center p-8 rounded-md mb-8">
+            <p class="text-lg">Selecciona un lenguaje de programación y una dificultad para poner a prueba tus conocimientos.</p>    
         </section>
-        <section class="Categorias" >
-
-            <label for="select-categoria">Lenguajes disponibles</label>
-            <select id="select-categoria">
+        <section class="Categorias max-w-lg mx-auto mb-8">
+            <label for="select-categoria" class="block text-lg text-center mb-2">Lenguajes disponibles</label>
+            <select id="select-categoria" class="block w-full px-4 py-2 mb-4 text-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none">
                 <option value="">Selecciona un lenguaje</option>
             </select>
-            <br>
-
-            <label for="select-dificultad">Dificultades disponibles</label>
-            <select id="select-dificultad">
+            <label for="select-dificultad" class="block text-lg text-center mb-2">Dificultades disponibles</label>
+            <select id="select-dificultad" class="block w-full px-4 py-2 mb-4 bg-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none">
                 <option value="">Selecciona una dificultad</option>
                 <option value="facil">Fácil</option>
                 <option value="normal">Normal</option>
                 <option value="dificil">Difícil</option>
             </select>
-
-            <button id="btn-empezar"><p data-start="good luck!" data-text="start!" data-title="new game"></p></button>
+            <button id="btn-empezar" class="btn bg-white text-rgb(33, 194, 235) px-4 py-2 rounded-md shadow-md transition duration-300 hover:text-white mx-auto">
+                <p class="text-lg" data-start="good luck!" data-text="start!" data-title="new game"></p>
+            </button>
         </section>
 
-        <section id="pregunta-container"></section> <!-- Contenedor para mostrar la pregunta -->
-        <section id="resultado-container"></section> <!-- Contenedor para mostrar el resultado -->
+        <section id="pregunta-container" class="text-center"></section>
+        <section id="resultado-container" class="text-center"></section>
     </div>
 
     <script src="../js/llamadasAPI.js" type="module"></script>
     <script src="../js/preguntas.js" type="module"></script>
     <script src="../index.js" type="module"></script>
+    <script src="../js/logout.js"></script>
     <script>
         // Redirigir al login si no hay un token en localStorage
         if (!localStorage.getItem('token')) {
