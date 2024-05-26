@@ -11,10 +11,16 @@ class Preguntas {
         this.info = new Info();
         this.preguntaContainer = document.getElementById('pregunta-container');
         this.userid = localStorage.getItem('userId');
+        
+
         }
     
     async obtenerInfo() {
         try {
+            if (this.userid == undefined) {
+                alert("Por favor, inicia sesión para jugar");
+                window.location.href = 'login.html';
+            }
             this.categorias = await this.info.extraerCategoria();
             this.mostrarCategorias();
             this.iniciarJuego();
@@ -184,7 +190,7 @@ class Preguntas {
         resultadoContainer.innerHTML = `Respuestas correctas: ${this.respuestasCorrectas} / ${this.preguntasFiltradas.length}`;
 
         const scoreData = {
-            userId: this.userid, // Asegúrate de tener el ID del usuario disponible
+            user: this.userid, // Asegúrate de tener el ID del usuario disponible
             category: this.categoriaSeleccionada.nombre,
             difficulty: this.dificultadSeleccionada,
             score: this.respuestasCorrectas,

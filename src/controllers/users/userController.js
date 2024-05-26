@@ -56,7 +56,7 @@ const login = async(data) =>{
         }
         console.log("login user",user)
         const token = jwt.sign({_id:user._id,username:user.username,role:user.role},process.env.JWT_SECRET,{expiresIn: 60 * 60})
-        return {token};
+        return {token, user};
 
         
     } catch (error) {
