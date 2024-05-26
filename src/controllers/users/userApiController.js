@@ -27,7 +27,7 @@ const register = async(req,res)=>{
 }
 const login = async(req,res) => {
     const data = await userController.login(req.body);
-    if(error){
+    if(data.error){
         return res.status(data.status).json({error:data.error});
     }
     res.json({token:data.token, user:data.user._id, username:data.user.username})

@@ -90,17 +90,26 @@ const register = async (data) => {
 };
 
 
-const create = async(data) =>{
+const create = async (data) => {
     try {
-        const hash = await bcrypt.hash(data.password,10);
+        // Verificar si ya existe un usuario con el mismo nombre de usuario
+        const existingUser = await userModel.findOne({ username: data.username });
+
+        if (existingUser) {
+            // Si ya existe un usuario con el mismo nombre de usuario, devolver un error
+            return { error: 'El nombre de usuario ya está en uso' };
+        }
+
+        // Si no existe un usuario con el mismo nombre de usuario, proceder con la creación
+        const hash = await bcrypt.hash(data.password, 10);
         data.password = hash;
         const user = await userModel.create(data);
         return user;
     } catch (error) {
-        console.error(error); 
-        return null;  
+        console.error(error);
+        return null;
     }
-}
+};
 
 const update = async(id,data) =>{
     try {
