@@ -29,7 +29,7 @@ const login = async(req,res) => {
     if(data.error){
         return res.status(data.status).json({error:data.error});
     }
-    res.json({token:data.token})
+    res.json({token:data.token, user:data.user._id})
 }
 
 const create = async(req,res)=>{

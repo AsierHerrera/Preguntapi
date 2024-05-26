@@ -21,10 +21,12 @@ document.getElementById('login-form').addEventListener('submit', async function(
         });
 
         const data = await response.json();
+        console.log("La data es:",)
 
         if (response.ok) {
             localStorage.setItem('token', data.token);
-            localStorage.setItem('userId', data.userId);
+            localStorage.setItem('userId', data.user);
+
             window.location.href = 'index.html';
         } else {
             alert('Login failed: ' + data.error);

@@ -1,11 +1,17 @@
 class Info {
   constructor() {
     this.url = "http://localhost:3015/api/categories";
+    this.userId = localStorage.getItem('userId');
   }
+
 
   async obtenerInfoAPI(url) {
     console.log("HOLAA MUNDO")
     try {
+      if (this.userId == undefined) {
+        alert("Por favor, inicia sesión para jugar");
+        window.location.href = 'login.html';
+      }
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Error al obtener los datos de la API: Respuesta no válida');

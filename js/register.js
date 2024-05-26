@@ -24,7 +24,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
         console.log("la data es:", data)
         if (response.ok) {
             alert('Registro realizado, inicia sesion para jugar');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         } else {
             alert('El registro ha fallado: ' + data.error);
         }
