@@ -64,23 +64,31 @@ const login = async(data) =>{
         return {error:"Ha habido un error",status:500};
     }
 }
-const register = async(data) => {
-    const {email,username,password,passwordRepeat} = data;
-    if(!username || !password || !passwordRepeat){
-        return {error:"Falta alguno de los campos"};
+const register = async (data) => {
+    try {
+        const {username, password, passwordRepeat} = data;
+
+        if (!username || !password || !passwordRepeat) {
+            return {error: "Falta alguno de los campos"};
+        }
+
+        if (password !== passwordRepeat) {
+            return {error: "Las contraseñas no coinciden"};
+        }
+
+        const userData = {
+            username,
+            password,
+            role: "user"
+        };
+        const user = await create(userData);
+        return user;
+    } catch (error) {
+        console.error('Error:', error);
+        return {error: "Error al registrar el usuario"};
     }
-    if(password !== passwordRepeat){
-        return {error:"Las contraseñas no coinciden"};
-    }
-    const userData = {
-        email,
-        username,
-        password,
-        role:"user"
-    }
-    const user = await create(userData);
-    return user;
-}
+};
+
 
 const create = async(data) =>{
     try {

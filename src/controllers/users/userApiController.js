@@ -22,11 +22,12 @@ const register = async(req,res)=>{
     if(user.error){
         return res.json({error:user.error});
     }
+    console.log("USER ENCAPI CONTROLLER", user)
     res.json({data:user})
 }
 const login = async(req,res) => {
     const data = await userController.login(req.body);
-    if(data.error){
+    if(error){
         return res.status(data.status).json({error:data.error});
     }
     res.json({token:data.token, user:data.user._id, username:data.user.username})
