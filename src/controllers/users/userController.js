@@ -45,16 +45,16 @@ const login = async(data) =>{
             const users = await getByProperty("username",username);
             user = users[0];
         }
-        console.log("usuario",user);
+
         if(!user){
             return {error:"No existe el usuario",status:400};
         }
-        console.log("contraseña",password,user.password);
+
         const isPasswordCorrect = await bcrypt.compare(password,user.password);
         if(!isPasswordCorrect){
             return {error:"Combinación de usuario y contraseña erroneos",status:400};
         }
-        console.log("login user",user)
+
         const token = jwt.sign({_id:user._id,username:user.username,role:user.role},process.env.JWT_SECRET,{expiresIn: 60 * 60})
         return {token, user};
 
@@ -133,9 +133,9 @@ const remove = async(id) =>{
 
 const addQuestion = async(userId,questionId)=>{
     try {
-        console.log("add question",userId)
+
         const user = await getById(userId);
-        console.log("users",user);
+
         if(!user.questions.includes(questionId)){
             user.questions.push(questionId);
             await user.save();

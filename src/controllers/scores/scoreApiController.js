@@ -12,7 +12,7 @@ const getAll = async (req, res) => {
 const getById = async (req, res) => {
     try {
         const id = req.params.id;
-        console.log("El id es:", id)
+
         const score = await scoreController.getById(id);
         if (score) {
             res.json({ data: score });
@@ -27,9 +27,9 @@ const getById = async (req, res) => {
 const getByProperty = async (req, res) => {
     try {
         const { property, value } = req.query;
-        console.log("LA REQ QUERY ES:", req.query)
+
         const scores = await scoreController.getByProperty(property, value);
-        //console.log("SCORES ES:", scores)
+
         res.json({ data: scores });
     } catch (error) {
         res.status(500).json({ message: "Error al obtener las preguntas" });
@@ -77,7 +77,7 @@ const remove = async (req, res) => {
 const getBycategory = async (req, res) => {
     try {
         const category = req.params.category; // Obtener la categoría desde los parámetros de la URL
-        console.log("req.params.category", req.params.category)
+
         const categories = await scoreController.getBycategory(category); // Obtener las preguntas de la categoría
         if (categories.length > 0) {
             res.json({ data: categories });

@@ -28,7 +28,7 @@ describe("Test de userController",()=>{
         const users= await userController.getByProperty("email","mimail@mail.com");
         expect(users.length).toBeGreaterThanOrEqual(1);
         const user = users[0];
-        console.log("user",user);
+
         expect(user.email).toEqual(userData.email);
         expect(user.username).toEqual(userData.username);
         expect(user.role).toEqual(userData.role);

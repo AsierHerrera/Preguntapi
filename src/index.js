@@ -29,5 +29,5 @@ app.get("/",(req,res)=>{
 app.use("/api",router);
 
 app.listen(CONTAINER_PORT ,()=>{
-    console.log("Aplicacion en marcha en el puerto "+process.env.APP_PORT);
+
 })
