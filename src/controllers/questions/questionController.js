@@ -4,7 +4,7 @@ import userController from "../users/userController.js";
 
 const getAll = async () => {
     try {
-        console.log("SE printa todo")
+
         return await questionModel.find();
     } catch (error) {
         console.error(error);
@@ -32,7 +32,15 @@ const getByProperty = async (property, value) => {
 
 const create = async (data) => {
     try {
-        console.log("llego aqui desde el navegador")
+
+        //if data is an array, create multiple questions
+        if (Array.isArray(data)) {
+            const questions = await Promise.all(data.map(async (question) => {
+
+                return await questionModel.create(question);
+            }));
+            return questions;
+        }
         const question = await questionModel.create(data);
         await userController.addQuestion(data.owner,question._id);
         return question
@@ -54,7 +62,7 @@ const update = async (id, data) => {
 
 const globalUpdate = async (data) => {
     try {
-        console.log("Llego aqui")
+
         return await questionModel.updateMany({}, data, { new: true });
     } catch (error) {
         console.error(error);

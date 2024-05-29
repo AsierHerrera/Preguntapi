@@ -258,7 +258,7 @@
         "question": "¿Qué función utilizarías para imprimir por consola?",
         "answers": {
             "answer_a": "echo('Hello World')",
-            "answer_b": "console.log('Hello World')",
+
             "answer_c": "System.out.println('Hello World')"
         },
         "correct_answer": "answer_a"

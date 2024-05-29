@@ -21,7 +21,7 @@ describe("Test de answerController",()=>{
 
     test("Crear proyecto",async()=>{
         const users = await userController.getAll();
-        console.log("usuario",users[0])
+
         const answerData = {
             name: "pruebas",
             owner: users[0],
