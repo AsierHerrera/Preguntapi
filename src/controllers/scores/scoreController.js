@@ -69,7 +69,7 @@ const getAllscores = async () => {
     try {
         const scores = await scoreModel.find();
         const scoreData = await Promise.all(scores.map(async (score) => {
-            console.log("CATEWGORIA", score)
+
             const count = await questionModel.countDocuments({ score: score.name });
             return {
                 name: score.name,
@@ -77,7 +77,7 @@ const getAllscores = async () => {
                 link: score.link
             };
         }));
-        console.log("score", scoreData)
+
         return scoreData;
     } catch (error) {
         console.error(error);

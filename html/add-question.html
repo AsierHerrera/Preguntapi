@@ -6,23 +6,98 @@
     <title>Añadir Pregunta - PREGUNTAPI</title>
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .navbar-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .navbar-list.show {
+                display: flex;
+            }
+            .navbar-item {
+                margin: 10px 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none;
+            }
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .navbar-item {
+            display: flex;
+            height: 100%; /* Asegura que ocupe toda la altura de la navbar */
+        }
+        .hamburger {
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+        }
+        .content {
+            margin-top: 80px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <nav class="navbar">
-        <ul class="navbar-list">
-            <li class="navbar-item"><a href="index.html">Inicio</a></li>
-            <li class="navbar-item"><a href="add-question.html">Añadir Pregunta</a></li>
+<body class="bg-gray-100 font-fredoka">
+    <nav class="navbar mb-4 flex justify-between items-center">
+        <div class="hamburger md:hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="navbar-list flex justify-end">
+            <li class="navbar-item mt-4"><a href="index.html">Inicio</a></li>
+            <li class="navbar-item mt-4 ml-4"><a href="add-question.html">Añadir Pregunta</a></li>
+            <li><button id="logoutBtn" class="btn">Logout</button></li>
         </ul>
-        <button id="logoutBtn" class="btn">Logout</button> <!-- Aquí está tu botón de logout -->
     </nav>
-    <div class=" flex flex-row h-screen items-center justify-center">
-        <div class="w-1/2 flex items-center justify-center">
-            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Añadir Nueva Pregunta</h2>
+    <div class="flex flex-col md:flex-row min-h-screen items-center justify-center p-4">
+        <div class="w-full md:w-1/2 lg:w-2/5 mb-8 md:mb-0 mt-16">
+            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Añadir Nueva Pregunta</h2>
                 <form id="addQuestionForm" class="space-y-4">
                     <div class="flex flex-col">
                         <label for="category" class="text-gray-800">Categoría:</label>
-                        <input type="text" id="category" name="category" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                        <select id="category" name="category" class="bg-gray-100 text-gray-800 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 p-2" required>
+                            <option value="html">html</option>
+                            <option value="css">css</option>
+                            <option value="csharp">csharp</option>
+                            <option value="cpp">cpp</option>
+                            <option value="kotlin">kotlin</option>
+                            <option value="php">php</option>
+                            <option value="python">python</option>
+                            <option value="sql">sql</option>
+                            <option value="swift">swift</option>
+                            <option value="typescript">typescript</option>
+                            <option value="javascript">javascript</option>
+                            <option value="java">java</option>
+                        </select>
                     </div>
                     <div class="flex flex-col">
                         <label for="question" class="text-gray-800">Pregunta:</label>
@@ -53,16 +128,22 @@
                             <option value="answer_d">Respuesta D</option>
                         </select>
                     </div>
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition ease-in-out duration-150">Añadir Pregunta</button>
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition ease-in-out duration-150">Añadir Pregunta</button>
                 </form>
             </div>
-            <div class="w-1/2 flex items-center justify-center">
-            <div class="mt-8 max-w-md bg-white text-center text-2xl">
-                <p style="color: rgb(33, 194, 235);">Bienvenido! <br> En este cuestionario puedes lanzarnos preguntas para incluir en el test! <br> Como maximo hay 4 posibles respuestas pero no hay por que poner las 4. <br> Una vez nos llegue la pregunta nuestro equipo de expertos decidira a que dificultad aplica.</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/5 flex items-center justify-center">
+            <div class="mt-8 max-w-md bg-white text-center p-6 rounded-lg shadow-md">
+                <p class="text-lg md:text-xl lg:text-2xl" style="color: rgb(33, 194, 235);">
+                    Bienvenido! <br>
+                    En este cuestionario puedes lanzarnos preguntas para incluir en el test! <br>
+                    Como máximo hay 4 posibles respuestas pero no hay por qué poner las 4. <br>
+                    Una vez nos llegue la pregunta nuestro equipo de expertos decidirá a qué dificultad aplica.
+                </p>
             </div>
         </div>
-        </div>
     </div>
+    <script src="config.js"></script>
     <script src="../js/addQuestion.js" type="module"></script>
     <script src="../js/logout.js"></script>
     <script>
@@ -70,6 +151,16 @@
         if (!localStorage.getItem('token')) {
             window.location.href = 'login.html';
         }
+
+        // Funcionalidad del menú hamburguesa
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarList = document.querySelector('.navbar-list');
+
+            hamburger.addEventListener('click', () => {
+                navbarList.classList.toggle('show');
+            });
+        });
     </script>
 </body>
 </html>

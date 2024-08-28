@@ -1,3 +1,4 @@
+import { API_URL } from "../config.js";
 // login.js
 document.getElementById('login-form').addEventListener('submit', async function(event) {
     event.preventDefault();
@@ -9,10 +10,10 @@ document.getElementById('login-form').addEventListener('submit', async function(
         username,
         password
     };
-    console.log("LOGIN DATA ES:", loginData)
+
 
     try {
-        const response = await fetch('http://localhost:3015/api/login', {
+        const response = await fetch(API_URL + '/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -21,7 +22,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
         });
 
         const data = await response.json();
-        console.log("La data es:",data)
+
 
         if (response.ok) {
             localStorage.setItem('token', data.token);

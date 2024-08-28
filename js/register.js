@@ -1,3 +1,5 @@
+import { API_URL } from "../config.js";
+
 document.getElementById('register-form').addEventListener('submit', async function(event){
     event.preventDefault(); // Evitar el comportamiento de envío predeterminado del formulario
 
@@ -12,7 +14,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
     };
 
     try {
-        const response = await fetch('http://localhost:3015/api/register', {
+        const response = await fetch(API_URL + '/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -21,7 +23,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
         });
 
         const data = await response.json();
-        console.log("la data es:", data)
+
         if (data.error) {
             alert('El registro ha fallado: ' + data.error);            
         } else {

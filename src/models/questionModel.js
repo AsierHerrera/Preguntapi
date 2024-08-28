@@ -35,7 +35,7 @@ const questionSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ["UnAcepted", "Acepted"],
-        default: "UnAcepted"
+        default: "Acepted"
     },
     owner: {
         type: mongoose.Schema.ObjectId,

@@ -1,0 +1,771 @@
+info:
+  title: Preguntapi API
+  description: API para gestionar usuarios, categorías, preguntas y puntuaciones.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3015/api
+    description: Servidor de desarrollo
+
+paths:
+  /users:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        '200':
+          description: Lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+    post:
+      summary: Crear un nuevo usuario
+      requestBody:
+        description: Datos del nuevo usuario
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        '201':
+          description: Usuario creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /users/{id}:
+    get:
+      summary: Obtener usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuario encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Actualizar usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario
+          schema:
+            type: string
+      requestBody:
+        description: Datos actualizados del usuario
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        '200':
+          description: Usuario actualizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Eliminar usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuario eliminado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /categories:
+    get:
+      summary: Obtener todas las categorías
+      responses:
+        '200':
+          description: Lista de categorías
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+    post:
+      summary: Crear una nueva categoría
+      requestBody:
+        description: Datos de la nueva categoría
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryInput'
+      responses:
+        '201':
+          description: Categoría creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /categories/{id}:
+    get:
+      summary: Obtener categoría por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la categoría
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Categoría encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '404':
+          description: Categoría no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Actualizar categoría por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la categoría
+          schema:
+            type: string
+      requestBody:
+        description: Datos actualizados de la categoría
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryInput'
+      responses:
+        '200':
+          description: Categoría actualizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '404':
+          description: Categoría no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Eliminar categoría por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la categoría
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Categoría eliminada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Categoría no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /questions:
+    get:
+      summary: Obtener todas las preguntas
+      responses:
+        '200':
+          description: Lista de preguntas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Question'
+    post:
+      summary: Crear una nueva pregunta
+      requestBody:
+        description: Datos de la nueva pregunta
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionInput'
+      responses:
+        '201':
+          description: Pregunta creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Question'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /questions/{id}:
+    get:
+      summary: Obtener pregunta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la pregunta
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pregunta encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Question'
+        '404':
+          description: Pregunta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Actualizar pregunta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la pregunta
+          schema:
+            type: string
+      requestBody:
+        description: Datos actualizados de la pregunta
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionInput'
+      responses:
+        '200':
+          description: Pregunta actualizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Question'
+        '404':
+          description: Pregunta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Eliminar pregunta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la pregunta
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pregunta eliminada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Pregunta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /questions/search:
+    get:
+      summary: Buscar preguntas por propiedad
+      parameters:
+        - name: property
+          in: query
+          required: true
+          description: Propiedad para buscar
+          schema:
+            type: string
+        - name: value
+          in: query
+          required: true
+          description: Valor de la propiedad para buscar
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de preguntas encontradas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Question'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /questions/categories:
+    get:
+      summary: Obtener todas las categorías de preguntas
+      responses:
+        '200':
+          description: Lista de categorías de preguntas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+
+  /questions/categories/{category}:
+    get:
+      summary: Obtener preguntas por categoría
+      parameters:
+        - name: category
+          in: path
+          required: true
+          description: Categoría de las preguntas
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de preguntas en la categoría
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Question'
+        '404':
+          description: No se encontraron preguntas en la categoría
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /scores:
+    get:
+      summary: Obtener todas las puntuaciones
+      responses:
+        '200':
+          description: Lista de puntuaciones
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Score'
+    post:
+      summary: Crear una nueva puntuación
+      requestBody:
+        description: Datos de la nueva puntuación
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScoreInput'
+      responses:
+        '201':
+          description: Puntuación creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Score'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /scores/{id}:
+    get:
+      summary: Obtener puntuación por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la puntuación
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Puntuación encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Score'
+        '404':
+          description: Puntuación no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Actualizar puntuación por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la puntuación
+          schema:
+            type: string
+      requestBody:
+        description: Datos actualizados de la puntuación
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScoreInput'
+      responses:
+        '200':
+          description: Puntuación actualizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Score'
+        '404':
+          description: Puntuación no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Eliminar puntuación por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la puntuación
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Puntuación eliminada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Puntuación no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /scores/category/{category}:
+    get:
+      summary: Obtener puntuaciones por categoría
+      parameters:
+        - name: category
+          in: path
+          required: true
+          description: Categoría de las puntuaciones
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de puntuaciones en la categoría
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Score'
+        '404':
+          description: No se encontraron puntuaciones en la categoría
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/register:
+    post:
+      summary: Registrar un nuevo usuario
+      requestBody:
+        description: Datos del nuevo usuario
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        '201':
+          description: Usuario registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/login:
+    post:
+      summary: Iniciar sesión
+      requestBody:
+        description: Datos de inicio de sesión
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginInput'
+      responses:
+        '200':
+          description: Inicio de sesión exitoso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        '401':
+          description: Credenciales inválidas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/logout:
+    post:
+      summary: Cerrar sesión
+      responses:
+        '200':
+          description: Cierre de sesión exitoso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: No autorizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        role:
+          type: string
+    UserInput:
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+    Category:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        link:
+          type: string
+    CategoryInput:
+      type: object
+      properties:
+        name:
+          type: string
+        link:
+          type: string
+    Question:
+      type: object
+      properties:
+        _id:
+          type: string
+        category:
+          type: string
+        level:
+          type: string
+        question:
+          type: string
+        answers:
+          type: object
+          properties:
+            answer_a:
+              type: string
+            answer_b:
+              type: string
+            answer_c:
+              type: string
+            answer_d:
+              type: string
+        correct_answer:
+          type: string
+        status:
+          type: string
+        owner:
+          type: string
+    QuestionInput:
+      type: object
+      properties:
+        category:
+          type: string
+        level:
+          type: string
+        question:
+          type: string
+        answers:
+          type: object
+          properties:
+            answer_a:
+              type: string
+            answer_b:
+              type: string
+            answer_c:
+              type: string
+            answer_d:
+              type: string
+        correct_answer:
+          type: string
+        status:
+          type: string
+        owner:
+          type: string
+    Score:
+      type: object
+      properties:
+        _id:
+          type: string
+        username:
+          type: string
+        category:
+          type: string
+        difficulty:
+          type: string
+        score:
+          type: number
+        totalQuestions:
+          type: number
+    ScoreInput:
+      type: object
+      properties:
+        username:
+          type: string
+        category:
+          type: string
+        difficulty:
+          type: string
+        score:
+          type: number
+        totalQuestions:
+          type: number
+    Error:
+      type: object
+      properties:
+        message:
+          type: string

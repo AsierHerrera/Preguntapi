@@ -35,11 +35,11 @@ const getByProperty = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        console.log("Llego a api controller desde navegador")
+
         //const owner = req.user._id
-        //console.log("El owner es:", owner)
-        const data = {...req.body};
-        console.log("La data es:", data)
+
+        const data = req.body;
+
         const question = await questionController.create(data);
         res.status(201).json({ data: question });
     } catch (error) {
@@ -50,7 +50,7 @@ const create = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        console.log("El reqbody es en update:", req.body)
+
         const id = req.params.id;
         const question = await questionController.update(id, req.body);
         if (question) {
@@ -65,8 +65,8 @@ const update = async (req, res) => {
 
 const globalUpdate = async (req, res) => {
     try {
-        console.log("llego aqui en el APICONTRROLLER")
-        console.log("El reqbody es:", req.body)
+
+
         const question = await questionController.globalUpdate(req.body);
         if (question) {
             res.json({ data: question });

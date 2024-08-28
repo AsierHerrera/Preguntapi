@@ -7,31 +7,92 @@
 
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .navbar-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .navbar-list.show {
+                display: flex;
+            }
+            .navbar-item {
+                margin: 10px 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none;
+            }
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
 
+        }
+        .navbar-item {
+            display: flex;
+            height: 100%; /* Asegura que ocupe toda la altura de la navbar */
+        }
+        .hamburger {
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+        }
+        .content {
+            margin-top: 80px;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-fredoka">
-    <nav class="navbar mb-4">
+    <nav class="navbar mb-4 flex justify-between items-center">
+        <div class="hamburger md:hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul class="navbar-list flex justify-end">
-            <li class="navbar-item"><a href="index.html">Inicio</a></li>
-            <li class="navbar-item ml-4"><a href="add-question.html">Añadir Pregunta</a></li>
+            <li class="navbar-item mt-4"><a href="index.html">Inicio</a></li>
+            <li class="navbar-item mt-4 ml-4"><a href="add-question.html">Añadir Pregunta</a></li>
+            <li><button id="logoutBtn" class="btn">Logout</button></li>
         </ul>
-        <button id="logoutBtn" class="btn">Logout</button> <!-- Aquí está tu botón de logout -->
     </nav>
 
-    <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="content max-w-4xl mx-auto px-4 py-8">
         <section class="container text-center mb-8">
-            <h1 class="text-7xl text-rgb(33, 194, 235) font-bold">PREGUNTAPI</h1>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl text-rgb(33, 194, 235) font-bold">PREGUNTAPI</h1>
         </section>
-        <section class="texto text-rgb(33, 194, 235) text-center p-8 rounded-md mb-8">
-            <p class="text-lg">Selecciona un lenguaje de programación y una dificultad para poner a prueba tus conocimientos. <br> Una vez finalizado el test dependiendo del resultado apareceras en el top 3, animo!</p>    
+        <section class="texto text-rgb(33, 194, 235) text-center p-4 md:p-8 rounded-md mb-8">
+            <p class="text-base md:text-lg">Selecciona un lenguaje de programación y una dificultad para poner a prueba tus conocimientos. <br> Una vez finalizado el test dependiendo del resultado apareceras en el top 3, animo!</p>    
         </section>
         <section class="Categorias max-w-lg mx-auto mb-8">
             <label for="select-categoria" class="block text-lg text-center mb-2">Lenguajes disponibles</label>
-            <select id="select-categoria" class="block w-full px-4 py-2 mb-4 text-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none">
+            <select id="select-categoria" class="block w-full px-4 py-2 mb-4 text-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none mt-4">
                 <option value="">Selecciona un lenguaje</option>
             </select>
             <label for="select-dificultad" class="block text-lg text-center mb-2">Dificultades disponibles</label>
-            <select id="select-dificultad" class="block w-full px-4 py-2 mb-4 bg-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none">
+            <select id="select-dificultad" class="block w-full px-4 py-2 mb-4 bg-rgb(33, 194, 235) border border-gray-300 rounded-lg focus:outline-none mt-4">
                 <option value="">Selecciona una dificultad</option>
                 <option value="facil">Fácil</option>
                 <option value="normal">Normal</option>
@@ -46,15 +107,27 @@
         <section id="resultado-container" class="text-center"></section>
     </div>
 
+    <script src="config.js"></script>
     <script src="../js/llamadasAPI.js" type="module"></script>
     <script src="../js/preguntas.js" type="module"></script>
     <script src="../index.js" type="module"></script>
     <script src="../js/logout.js"></script>
+
     <script>
         // Redirigir al login si no hay un token en localStorage
         if (!localStorage.getItem('token')) {
             window.location.href = 'login.html';
         }
+
+        // Funcionalidad del menú hamburguesa
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarList = document.querySelector('.navbar-list');
+
+            hamburger.addEventListener('click', () => {
+                navbarList.classList.toggle('show');
+            });
+        });
     </script>
 </body>
 </html>

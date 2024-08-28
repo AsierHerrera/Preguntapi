@@ -2,16 +2,20 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/mongo.js";
 import router from "./routes/router.js";
-
+import cors from "cors";
+import swaggerUi from "swagger-ui-express"
+import swaggerDocument from "../swagger.json" assert { type: "json" }
 
 
 dotenv.config();
 const CONTAINER_PORT = 3000;
 
 const app = express();
+app.use(cors());
 app.use(express.json()) ; // api
 app.use(express.urlencoded({extended:true})); // vistas
-app.use((_, res, next) => {
+app.use(express.static("html")); // static files
+/* app.use((_, res, next) => {
   res.set('Access-Control-Allow-Origin', '*'); // or 'localhost:8888'
   res.set('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
   res.set(
@@ -19,9 +23,12 @@ app.use((_, res, next) => {
     'Origin, X-Requested-With, Content-Type, Accept'
   );
   return next();
-}); // sets headers before routes
+}); // sets headers before routes */
 
 connectDB();
+
+app.use("/api-docs", swaggerUi.serve,swaggerUi.setup(swaggerDocument))
+
 app.get("/",(req,res)=>{
     res.json({message:"Hello World"});
 })
@@ -29,5 +36,5 @@ app.get("/",(req,res)=>{
 app.use("/api",router);
 
 app.listen(CONTAINER_PORT ,()=>{
-    console.log("Aplicacion en marcha en el puerto "+process.env.APP_PORT);
+
 })
