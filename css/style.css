@@ -447,3 +447,98 @@ button {
   color: white;
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    padding: 10px; /* Agregar padding para evitar que el contenido se pegue a los bordes */
+  }
+
+  h1 {
+    font-size: 4em; /* Reducir tamaño del título */
+  }
+
+  .texto, 
+  #pregunta-container, 
+  #resultado-container {
+    width: 100%; /* Contenedores ocupan todo el ancho disponible */
+    padding: 16px; /* Aumentar el padding para que el contenido respire */
+    font-size: 1em; /* Ajustar el tamaño de fuente */
+    margin-bottom: 20px; /* Espaciado más consistente */
+  }
+
+  .navbar {
+    flex-direction: column; /* Navbar en columna para evitar saturación de elementos */
+    align-items: flex-start;
+  }
+
+  .navbar-item {
+    margin-right: 0;
+    margin-bottom: 10px; /* Espaciado vertical entre los items del menú */
+  }
+
+  .navbar-item a {
+    font-size: 1em; /* Texto del menú más pequeño */
+  }
+
+  #logoutBtn {
+    width: 100%;
+    margin-top: 10px; /* Botón de logout ocupa todo el ancho */
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1em; /* Botón ocupa todo el ancho y texto más pequeño */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-size: cover;
+    font-size: 16px; /* Ajustar tamaño de fuente para tabletas */
+    padding: 20px; /* Espacio adicional en los márgenes */
+  }
+
+  h1 {
+    font-size: 5em; /* Título más grande que en móviles pero más pequeño que en escritorio */
+  }
+
+  .texto, 
+  #pregunta-container, 
+  #resultado-container {
+    width: 80%; /* Contenedores ocupan 80% del ancho disponible */
+    padding: 20px; /* Espaciado consistente */
+    font-size: 1.2em; /* Tamaño de fuente ajustado */
+    margin-bottom: 30px; /* Espaciado uniforme */
+  }
+
+  .navbar {
+    flex-direction: row; /* Mantener la barra de navegación en fila */
+    justify-content: space-between;
+  }
+
+  .navbar-item {
+    margin-right: 15px;
+  }
+
+  .navbar-item a {
+    font-size: 1.2em; /* Tamaño de fuente ligeramente mayor para tabletas */
+  }
+
+  #logoutBtn {
+    width: auto; /* Botón de logout no ocupa todo el ancho */
+    margin-top: 0;
+  }
+
+  button {
+    width: auto; /* Botón de inicio no ocupa todo el ancho */
+    font-size: 1.2em; /* Tamaño de fuente ligeramente mayor */
+    padding: 10px 20px; /* Botón más grande y con más padding */
+    margin-bottom: 30px;
+  }
+}
+
+

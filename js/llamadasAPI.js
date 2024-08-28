@@ -1,6 +1,7 @@
+import { API_URL } from "../config.js";
 class Info {
   constructor() {
-    this.url = "http://localhost:3015/api/categories";
+    this.url = API_URL + "/api/categories";
     this.userId = localStorage.getItem('userId');
   }
 
@@ -69,7 +70,7 @@ class Info {
 
   async obtenerMejoresPuntuaciones(category, difficulty) {
     try {
-      const response = await fetch(`http://localhost:3015/api/score/category/${category}`);
+      const response = await fetch(API_URL + `/api/score/category/${category}`);
 
       if (!response.ok) {
         throw new Error('Error al obtener las mejores puntuaciones');

@@ -1,8 +1,9 @@
+import { API_URL } from "../config.js";
 // Función para el logout
 const logout = async () => {
     try {
 
-        const response = await fetch('http://localhost:3015/api/logout', {
+        const response = await fetch(API_URL + '/api/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

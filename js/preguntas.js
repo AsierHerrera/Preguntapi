@@ -1,5 +1,5 @@
 import Info from './llamadasAPI.js';
-
+import { API_URL } from '../config.js';
 class Preguntas {
     constructor() {
         this.categorias = [];
@@ -200,7 +200,7 @@ class Preguntas {
 
     
         try {
-          const response = await fetch('http://localhost:3015/api/score', {
+          const response = await fetch(API_URL + '/api/score', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

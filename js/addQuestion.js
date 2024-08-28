@@ -1,3 +1,5 @@
+import { API_URL } from "../config.js";
+
 document.getElementById('addQuestionForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const category = document.getElementById('category').value;
@@ -21,7 +23,7 @@ document.getElementById('addQuestionForm').addEventListener('submit', async func
 
 
     try {
-        const response = await fetch('http://localhost:3015/api/questions', {
+        const response = await fetch(API_URL + '/api/questions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
