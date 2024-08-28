@@ -6,7 +6,7 @@ class Info {
 
 
   async obtenerInfoAPI(url) {
-    console.log("HOLAA MUNDO")
+
     try {
       if (this.userId == undefined) {
         alert("Por favor, inicia sesión para jugar");
@@ -17,7 +17,7 @@ class Info {
         throw new Error('Error al obtener los datos de la API: Respuesta no válida');
       }
       const data = await response.json();
-      console.log("LA DATA ES", data)
+
       if (!data || data.length === 0) {
         throw new Error('Error al obtener los datos de la API: Respuesta sin datos válidos');
       }
@@ -39,7 +39,7 @@ class Info {
             link: categoria.link            
           };
         }));
-        console.log(categoriasConSubcategorias)
+
         return categoriasConSubcategorias;
       } catch (error) {
         console.error('Error al extraer las categorías:', error.message);
@@ -59,7 +59,7 @@ class Info {
             respuestaCorrecta: pregunta.correct_answer,
             aceptada: pregunta.status
         }));
-          console.log("LA DATA DE OBTENER PREGUNTAS ES:", preguntasDetalladas)
+
           return preguntasDetalladas;
       } catch (error) {
           console.error('Error al obtener las preguntas de la categoría:', error.message);
@@ -70,7 +70,7 @@ class Info {
   async obtenerMejoresPuntuaciones(category, difficulty) {
     try {
       const response = await fetch(`http://localhost:3015/api/score/category/${category}`);
-      console.log("RESPUESTA DE SCORE", response)
+
       if (!response.ok) {
         throw new Error('Error al obtener las mejores puntuaciones');
       }

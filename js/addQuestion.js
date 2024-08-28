@@ -18,7 +18,7 @@ document.getElementById('addQuestionForm').addEventListener('submit', async func
         correct_answer,
         owner // Agregar el owner al objeto data
     };
-    console.log("la data para questions es:", data);
+
 
     try {
         const response = await fetch('http://localhost:3015/api/questions', {

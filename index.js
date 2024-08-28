@@ -2,7 +2,7 @@ import Preguntas from './js/preguntas.js';
 
 // Función para inicializar la aplicación
 function inicializarPreguntapi() {
-    console.log("HOLA PREGUNTAPI")
+
     const gestor = new Preguntas();
     gestor.obtenerInfo();
 }

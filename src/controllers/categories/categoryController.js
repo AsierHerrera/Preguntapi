@@ -70,7 +70,7 @@ const getAllCategories = async () => {
     try {
         const categories = await categoryModel.find();
         const categoryData = await Promise.all(categories.map(async (category) => {
-            console.log("CATEWGORIA", category)
+
             const count = await questionModel.countDocuments({ category: category.name });
             return {
                 name: category.name,
@@ -78,7 +78,7 @@ const getAllCategories = async () => {
                 link: category.link
             };
         }));
-        console.log("CATEGORY", categoryData)
+
         return categoryData;
     } catch (error) {
         console.error(error);

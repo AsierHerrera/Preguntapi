@@ -118,7 +118,7 @@
     "id": "70",
     "category": "javascript",
     "level": "normal",
-    "question": "console.log(3 > 2 > 1 === false) ... ¿Cuál es la salida de la consola?",
+
     "answers": {
       "answer_a": "true",
       "answer_b": "false"
@@ -169,7 +169,7 @@
     "id": "74",
     "category": "javascript",
     "level": "dificil",
-    "question": "console.log(0.2 + 0.1); ... ¿Cuál es la salida de la consola?",
+
     "answers": {
       "answer_a": "0.3",
       "answer_b": "0.31",
@@ -350,7 +350,7 @@
     "id": "88",
     "category": "javascript",
     "level": "normal",
-    "question": "console.log(10 + \"5\") ... ¿Cuál es la salida de la consola?",
+
     "answers": {
       "answer_a": "105",
       "answer_b": "'15'",
@@ -388,7 +388,7 @@
     "id": "322",
     "category": "javascript",
     "level": "normal",
-    "question": "Cuál es el resultado de ejecutar: console.log(typeof 42);",
+
     "answers": {
       "answer_a": "float",
       "answer_b": "object",

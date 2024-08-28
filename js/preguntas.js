@@ -69,7 +69,7 @@ class Preguntas {
             //Con el metodo .find cuando el usuario elige la dificultad igualamos el valor de this.categoriaseleccionada unicamente al elemento seleccionado
             //que contiene el nombre y el link de la categoria unicamente
             this.categoriaSeleccionada = this.categorias.find(categoria => categoria.link === event.target.value);
-            console.log(this.categoriaSeleccionada)
+
         });
         //Los valores de la dificultad estan definidas en el html, aqui solo se iguala el valor de this.dificultadSeleccionada a la opcion elegida por el usuario
         selectDificultad.addEventListener('change', (event) => {
@@ -106,7 +106,7 @@ class Preguntas {
             //Unicamente nos quedamos con las preguntas que en base a la dificultad seleccionada nos interesen
             this.preguntasFiltradas = preguntas.filter(pregunta => pregunta.nivel === this.dificultadSeleccionada && pregunta.aceptada === "Acepted");
             //Una vez tenemos las preguntas filtradas por categoria y dificultad, llamamos a la funcion mostrarPregunta
-            console.log(this.preguntasFiltradas)
+
             this.mostrarPregunta();
         } catch (error) {
             console.error('Error al filtrar las preguntas:', error);
@@ -122,7 +122,7 @@ class Preguntas {
             //Se obtiene el elemento del html pregunta-container y se vacia, de manera que si hay una pregunta anterior se limpie el contenedor
             const preguntaContainer = document.getElementById('pregunta-container');
             preguntaContainer.innerHTML = '';
-            //Se crea un elemento div y le igualamos el valor a la pregunta actual, arriba hay un console log de this.preguntasFiltradas
+
             //inicia el juego para ver el formato en el que se reciben las preguntas
             const preguntaElement = document.createElement('div');
             preguntaElement.textContent = preguntaActual.pregunta;
@@ -145,7 +145,7 @@ class Preguntas {
             //Metemos las opciones dentro del contenedor de pregunta
             preguntaContainer.appendChild(opcionesContainer);
         } else { // Si no hay mas preguntas llamamos a la funcion mostrarResultado
-            console.log("No hay más preguntas disponibles. Mostrando el resultado final.");
+
             this.mostrarResultado();
         }
     }
@@ -170,10 +170,10 @@ class Preguntas {
             if (index === indexRespuestaSeleccionada) {
                 if (respuestaSeleccionada === respuestaCorrecta) {
                     opcion.classList.add('success');
-                    console.log("Respuesta correcta. Respuestas correctas hasta ahora:", this.respuestasCorrectas);
+
                 } else {
                     opcion.classList.add('error');
-                    console.log("Respuesta incorrecta. Respuestas correctas hasta ahora:", this.respuestasCorrectas);
+
                 }
             }
         });
@@ -197,7 +197,7 @@ class Preguntas {
           score: this.respuestasCorrectas,
           totalQuestions: this.preguntasFiltradas.length
         };
-        console.log("EL SCORE DATA ES:", scoreData);
+
     
         try {
           const response = await fetch('http://localhost:3015/api/score', {
@@ -212,11 +212,11 @@ class Preguntas {
             throw new Error('Error al guardar la puntuación');
           }
     
-          console.log('Puntuación guardada correctamente');
+
     
           // Obtener las mejores puntuaciones
           const mejoresPuntuaciones = await this.info.obtenerMejoresPuntuaciones(this.categoriaSeleccionada.nombre, this.dificultadSeleccionada);
-          console.log("Las mejores puntuaciones son:",mejoresPuntuaciones )
+
           this.mostrarMejoresPuntuaciones(mejoresPuntuaciones);
         } catch (error) {
           console.error('Error:', error);

@@ -21,7 +21,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
         });
 
         const data = await response.json();
-        console.log("la data es:", data)
+
         if (data.error) {
             alert('El registro ha fallado: ' + data.error);            
         } else {
